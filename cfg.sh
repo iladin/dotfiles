@@ -1,4 +1,4 @@
-function config {
+config () {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 if [[ ! -d $HOME/.cfg ]]; then
