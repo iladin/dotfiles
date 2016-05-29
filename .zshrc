@@ -1,5 +1,5 @@
 [[ -d ~/.zplug ]] || {
-	curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
+  curl -sL get.zplug.sh | zsh
 	source ~/.zplug/zplug && zplug update --self
 }
 
