@@ -9,7 +9,9 @@ if [[ ! -d $HOME/.cfg ]]; then
    echo "Checked out config.";
    else
      echo "Backing up pre-existing dot files.";
-     config checkout 2>&1 | egrep "\s+\." | awk '$1=$1' | xargs -I{} mv {} .config-backup/{}
+     config checkout 2>&1 | egrep "\s+\." | awk '$1=$1' | while read -r file; do
+     test -L "$file" && unlink "$file" || mv "$HOME/.config-backup/$file"
+   done
  fi;
  config checkout
  config config status.showUntrackedFiles no
