@@ -3,7 +3,7 @@
 	source ~/.zplug/zplug && zplug update --self
 }
 
-source ~/Dotfiles/zsh/zplug/init.zsh
+source ~/.zplug/init.zsh
 if ! zplug check --verbose; then
   zplug install
 fi
