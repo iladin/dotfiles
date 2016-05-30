@@ -7,7 +7,7 @@ function add_to_path_once() {
 source ${0:a:h}/cfg.sh
 [[ -d ~/.zplug ]] || {
   curl -sL get.zplug.sh | zsh
-	source ~/.zplug/zplug && zplug update --self
+  source ~/.zplug/zplug && zplug update --self
 }
 
 source ~/.zplug/init.zsh
@@ -26,6 +26,8 @@ zplug "supercrabtree/k"
 zplug "raylee/tldr", from:github, as:command, of:"tldr"
 # peco/percol/fzf wrapper plugin for zsh
 zplug "mollifier/anyframe"
+# An oh-my-zsh plugin to help remembering those aliases you defined once
+zplug "djui/alias-tips"
 
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
