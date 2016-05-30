@@ -1,4 +1,4 @@
-git clone git://git.code.sf.net/p/zsh/code
+git clone git://git.code.sf.net/p/zsh/code zsh
 
 export CHROOT=$HOME/.root
 mkdir -p $CHROOT
