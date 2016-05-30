@@ -13,6 +13,8 @@ source ${0:a:h}/cfg.sh
 source ~/.zplug/init.zsh
 # Additional completion definitions for Zsh
 zplug "zsh-users/zsh-completions"
+# Fish-like fast/unobtrusive autosuggestions for zsh.
+zplug "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
 zplug "zsh-users/zsh-syntax-highlighting", nice:9
