@@ -1,15 +1,10 @@
-language: c
 os:
     - linux
 
-env:
-  global:
-
 install:
-    - source cfg.sh
+    - apt-get install zsh
 
-before_script:
-    - cd $HOME
 
 script:
+    - source cfg.sh
     - zsh
