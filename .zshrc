@@ -11,6 +11,13 @@ source ${0:a:h}/cfg.sh
 }
 
 source ~/.zplug/init.zsh
+# Additional completion definitions for Zsh
+zplug "zsh-users/zsh-completions"
+# Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
+# excuting compinit command and sourcing other plugins.
+zplug "zsh-users/zsh-syntax-highlighting", nice:9
+# ZSH port of Fish shell's history search feature
+zplug "zsh-users/zsh-history-substring-search", nice:10
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 if ! zplug check --verbose; then
