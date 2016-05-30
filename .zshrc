@@ -28,7 +28,8 @@ zplug "raylee/tldr", from:github, as:command, of:"tldr"
 zplug "mollifier/anyframe"
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 zplug "djui/alias-tips"
-
+# zsh anything.el-like widget.
+zplug "zsh-users/zaw"
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 if ! zplug check --verbose; then
