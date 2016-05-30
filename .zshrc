@@ -24,6 +24,8 @@ zplug "zsh-users/zsh-history-substring-search", nice:10
 zplug "supercrabtree/k"
 # A fully-functional bash client for tldr.
 zplug "raylee/tldr", from:github, as:command, of:"tldr"
+# peco/percol/fzf wrapper plugin for zsh
+zplug "mollifier/anyframe"
 
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
