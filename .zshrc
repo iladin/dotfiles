@@ -1,3 +1,4 @@
+source ${0:a:h}/cfg.sh
 [[ -d ~/.zplug ]] || {
   curl -sL get.zplug.sh | zsh
 	source ~/.zplug/zplug && zplug update --self
