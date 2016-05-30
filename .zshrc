@@ -18,6 +18,11 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", nice:9
 # ZSH port of Fish shell's history search feature
 zplug "zsh-users/zsh-history-substring-search", nice:10
+# k is a zsh script / plugin to make directory listings more readable
+zplug "supercrabtree/k"
+# A fully-functional bash client for tldr.
+zplug "raylee/tldr", from:github, as:command, of:"tldr"
+
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 if ! zplug check --verbose; then
