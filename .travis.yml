@@ -1,0 +1,15 @@
+language: c
+os:
+    - linux
+
+env:
+  global:
+
+install:
+    - source cfg.sh
+
+before_script:
+    - cd $HOME
+
+script:
+    - zsh
