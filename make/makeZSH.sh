@@ -13,7 +13,6 @@ autoconf
             --bindir=$CHROOT/bin \
             --infodir=$CHROOT/usr/share/info \
             --enable-maildir-support \
-            --enable-max-jobtable-size=256 \
             --enable-etcdir=$CHROOT/etc/zsh \
             --enable-function-subdirs \
             --enable-site-fndir=$CHROOT/usr/local/share/zsh/site-functions \
@@ -23,7 +22,6 @@ autoconf
             --enable-cap \
             --enable-pcre \
             --enable-readnullcmd=pager \
-            --enable-custom-patchlevel=Debian \
             LDFLAGS="-Wl,--as-needed -g"
 
 make
