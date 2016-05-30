@@ -5,6 +5,8 @@ export CHROOT=$HOME/.root
 mkdir -p $CHROOT
 cd zsh
 
+autoconf
+
 # Options from Ubuntu Zsh package rules file (http://launchpad.net/ubuntu/+source/zsh)
 ./configure --prefix=$CHROOT \
             --mandir=$CHROOT/man \
