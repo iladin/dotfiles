@@ -31,5 +31,3 @@ make
 make check
 
 make install
-
-make install.info
