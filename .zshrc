@@ -1,5 +1,9 @@
 typeset -U path
 
+function add_to_path_once() {
+  path=("$1" $path)
+}
+
 source ${0:a:h}/cfg.sh
 [[ -d ~/.zplug ]] || {
   curl -sL get.zplug.sh | zsh
