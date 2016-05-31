@@ -1,3 +1,4 @@
+export TERM="xterm-256color"
 typeset -U path
 
 function add_to_path_once() {
