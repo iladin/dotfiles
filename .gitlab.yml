@@ -1,0 +1,10 @@
+    
+before_install:
+    script:
+        - export PATH=.:$PATH
+        - before_install.sh
+
+zsh_cfg:
+    script:
+        - source cfg.sh
+    - zsh
