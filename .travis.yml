@@ -1,10 +1,12 @@
+language: bash
+
 os:
     - linux
-
-install:
-    - chmod a+x make/*
-    - make/makeZSH.sh
-
+    
+before_install:
+  - git clone git://github.com/fsquillace/junest ~/junest
+  - PATH=~/junest/bin:$PATH
+  - junest -f -- pacman --noconfirm -Sy fish zsh
 
 script:
     - source cfg.sh
