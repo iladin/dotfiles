@@ -1,8 +1,7 @@
 set -xv
 git clone git://git.code.sf.net/p/zsh/code zsh
 
-export CHROOT=$HOME/.root
-mkdir -p $CHROOT
+export CHROOT=$HOME
 cd zsh
 
 autoconf
