@@ -1,8 +1,6 @@
 typeset -U path
 
-function add_to_path_once() {
-  path=("$1" $path)
-}
+test -e ~/.functions.sh && source ~/.functions.sh
 
 source ${0:a:h}/cfg.sh
 
