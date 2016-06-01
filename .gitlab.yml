@@ -7,4 +7,5 @@ before_install:
 zsh_cfg:
       script:
         - source cfg.sh
+        - printenv
         - zsh
