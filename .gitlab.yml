@@ -5,6 +5,6 @@ before_install:
         - before_install.sh
 
 zsh_cfg:
-    script:
+      script:
         - source cfg.sh
-    - zsh
+        - zsh
