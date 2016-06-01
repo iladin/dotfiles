@@ -1,0 +1,3 @@
+if [[ -f ~/.proxy ]]; then
+		source ~/.proxy
+fi
