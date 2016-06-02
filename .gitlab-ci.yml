@@ -1,8 +1,7 @@
     
 before_install:
     script:
-        - export PATH=.:$PATH
-        - before_install.sh
+        - source .shrc
 
 zsh_cfg:
       script:

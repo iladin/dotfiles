@@ -4,8 +4,7 @@ os:
     - linux
     
 before_install:
-  - export PATH=.:$PATH
-  - before_install.sh
+  - source .shrc
 
 script:
     - source cfg.sh
