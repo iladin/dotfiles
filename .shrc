@@ -9,4 +9,5 @@ pathadd() {
 
 pathadd .
 pathadd $HOME/bin
+printenv
 test -d ~/.linuxbrew || makeLinuxBrew.sh
