@@ -12,7 +12,7 @@ brew doctor
 
 brew install gcc --with-glibc
 brew tap homebrew/dupes
-brew install git
+brew install perl git
 brew install coreutils findutils gawk gnu-sed gnu-which grep make ruby
 
 brew install hello && brew test hello; brew remove hello
