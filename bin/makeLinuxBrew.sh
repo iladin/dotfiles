@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # TODO: test if pathadd is defined
 
 pathadd ~/.linuxbrew/bin
