@@ -1,6 +1,7 @@
 if [[ -f ~/.proxy ]]; then
 		source ~/.proxy
 fi
+set -xv
 pathadd() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="${PATH:+"$PATH:"}$1"
