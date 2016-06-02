@@ -10,5 +10,5 @@ pathadd() {
 pathadd .
 pathadd $HOME/bin
 printenv
-ls -al
+find .
 test -d ~/.linuxbrew || makeLinuxBrew.sh
