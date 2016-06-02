@@ -8,8 +8,9 @@ pathadd ~/.linuxbrew/sbin
 
 unset LD_LIBRARY_PATH PKG_CONFIG_PATH
 yes | ruby -e "$(curl -fsSL https://raw.github.com/Linuxbrew/linuxbrew/go/install)"
+brew update
 brew doctor
-
+brew update
 brew install gcc --with-glibc
 brew tap homebrew/dupes
 brew install perl git
