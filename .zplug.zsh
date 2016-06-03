@@ -22,6 +22,18 @@ zplug "mollifier/anyframe"
 zplug "djui/alias-tips"
 # zsh anything.el-like widget.
 zplug "zsh-users/zaw"
+# A next-generation cd command with an interactive filter
+zplug "b4b4r07/enhancd", of:enhancd.sh
+#Emoji completion on the command line
+zplug "b4b4r07/emoji-cli", of:emoji-cli.zsh
+
+zplug "joshuarubin/zsh-homebrew"
+zplug "junegunn/fzf", of:shell/key-bindings.zsh
+
+zplug "sorin-ionescu/prezto", of:modules/git/alias.zsh
+zplug "sorin-ionescu/prezto", of:modules/gnu-utility
+zplug "mrowa44/emojify", as:command, of:emojify
+
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 if ! zplug check --verbose; then
