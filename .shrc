@@ -10,7 +10,6 @@ pathadd() {
 chmod a+x bin/*
 pathadd .
 pathadd $HOME/bin
-printenv
-find .
 test -d ~/.linuxbrew || source bin/makeLinuxBrew.sh
+bin/checkGCC.sh
 set +xv
