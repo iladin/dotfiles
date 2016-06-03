@@ -27,6 +27,13 @@ zplug "b4b4r07/enhancd", of:enhancd.sh
 #Emoji completion on the command line
 zplug "b4b4r07/emoji-cli", of:emoji-cli.zsh
 
+zplug "joshuarubin/zsh-homebrew"
+zplug "junegunn/fzf", of:shell/key-bindings.zsh
+
+zplug "sorin-ionescu/prezto", of:modules/git/alias.zsh
+zplug "mrowa44/emojify", as:command, of:emojify
+
+
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 if ! zplug check --verbose; then
   zplug install
