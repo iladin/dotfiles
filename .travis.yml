@@ -8,5 +8,5 @@ before_install:
 
 script:
     - source cfg.sh
-    - printenv
+    - bin/checkGCC.sh
     - zsh
