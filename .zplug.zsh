@@ -34,8 +34,17 @@ zplug "sorin-ionescu/prezto", of:modules/git/alias.zsh
 zplug "sorin-ionescu/prezto", of:modules/gnu-utility
 zplug "mrowa44/emojify", as:command, of:emojify
 
+# fix garish, unreadable green and yellow node segment colours
+POWERLEVEL9K_NODE_VERSION_BACKGROUND="red"
+POWERLEVEL9K_NODE_VERSION_FOREGROUND="white"
+zplug "bhilburn/powerlevel9k", of:powerlevel9k.zsh-theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time $TOOL_VERSION)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 if ! zplug check --verbose; then
   zplug install
 fi
