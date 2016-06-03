@@ -31,6 +31,7 @@ zplug "joshuarubin/zsh-homebrew"
 zplug "junegunn/fzf", of:shell/key-bindings.zsh
 
 zplug "sorin-ionescu/prezto", of:modules/git/alias.zsh
+zplug "sorin-ionescu/prezto", of:modules/gnu-utility
 zplug "mrowa44/emojify", as:command, of:emojify
 
 
