@@ -8,6 +8,7 @@ pathadd() {
     fi
 }
 chmod a+x bin/*
+export TMPDIR=~/tmp && mkdir ~/tmp || echo "Failed to make temporary directory"
 pathadd .
 pathadd $HOME/bin
 test -d ~/.linuxbrew || source bin/makeLinuxBrew.sh
