@@ -1,7 +1,6 @@
-set -xv
+
 git clone git://git.code.sf.net/p/zsh/code zsh
 
-$HOME
 cd zsh
 
 autoconf
