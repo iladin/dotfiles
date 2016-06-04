@@ -11,6 +11,6 @@ chmod a+x bin/*
 export TMPDIR=~/tmp && mkdir ~/tmp || echo "Failed to make temporary directory"
 pathadd .
 pathadd $HOME/bin
-test -d ~/.linuxbrew || source bin/makeLinuxBrew.sh
-bin/checkGCC.sh
+test -d ~/.linuxbrew || bin/makeLinuxBrew.sh
+hash zsh || bin/makeZSH.sh
 set +xv
