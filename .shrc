@@ -2,11 +2,7 @@ if [[ -f ~/.proxy ]]; then
 		source ~/.proxy
 fi
 set -xv
-pathadd() {
-    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH="${PATH:+"$PATH:"}$1"
-    fi
-}
+source ~/.functions.sh
 chmod a+x bin/*
 export TMPDIR=~/tmp && mkdir ~/tmp || echo "Failed to make temporary directory"
 pathadd .
