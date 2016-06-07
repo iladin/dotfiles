@@ -1,6 +1,6 @@
 set -xv
 cfg () {
-   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 if [[ ! -d $HOME/.cfg ]]; then
  git clone --bare https://github.com/iladin/dotty.git   $HOME/.cfg
