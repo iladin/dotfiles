@@ -7,5 +7,5 @@ before_install:
 zsh_cfg:
       script:
         - source cfg.sh
-        - bin/checkGCC.sh
-        - zsh true
+    #   - bin/checkGCC.sh
+        - zsh -c "source ~/bin/printUTF.sh"
