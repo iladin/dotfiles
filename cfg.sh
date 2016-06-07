@@ -3,7 +3,7 @@ cfg () {
    git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 if [[ ! -d $HOME/.cfg ]]; then
- git clone --bare https://github.com/iladin/dotty.git   $HOME/.cfg
+ git clone --bare $(git config --get remote.origin.url)  $HOME/.cfg
  mkdir -p "$HOME/.cfg-backup"
  cfg checkout
  if [ $? = 0 ]; then
