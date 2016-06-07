@@ -1,10 +1,11 @@
     
 before_install:
     script:
+        - source cfg.sh
         - source .shrc
 
 zsh_cfg:
       script:
         - source cfg.sh
         - bin/checkGCC.sh
-        - zsh
+        - zsh true
