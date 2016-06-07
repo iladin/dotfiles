@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# TODO: test if pathadd is defined
+source ~/.functions.sh
 mkdir -p ~/.linuxbrew/{,s}bin
 pathadd ~/.linuxbrew/bin
 pathadd ~/.linuxbrew/sbin
