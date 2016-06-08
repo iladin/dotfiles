@@ -64,5 +64,5 @@ zplugin load "zsh-users/zsh-syntax-highlighting" #, nice:9
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 autoload -Uz _zplugin
-(( \${+_comps} )) && _comps[zplugin]=_zplugin
+#(( ${+_comps} )) && _comps[zplugin]=_zplugin
 zcompile ~/.zplugin/bin/zplugin.zsh
