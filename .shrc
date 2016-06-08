@@ -8,5 +8,7 @@ export TMPDIR=~/tmp && mkdir ~/tmp || echo "Failed to make temporary directory"
 pathadd .
 pathadd $HOME/bin
 test -d ~/.linuxbrew || bin/makeLinuxBrew.sh
+pathadd ~/.linuxbrew/bin
+pathadd ~/.linuxbrew/sbin
 hash zsh || bin/makeZSH.sh
 set +xv
