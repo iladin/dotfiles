@@ -15,7 +15,9 @@ else
     git clone https://github.com/psprint/zplugin.git bin
 fi
 }
-source ~/.zplug/init.zsh
+source ~/.zplugin/bin/zplugin.zsh
+autoload -Uz compinit
+compinit
 # Additional completion definitions for Zsh
 zplug "zsh-users/zsh-completions"
 # Fish-like fast/unobtrusive autosuggestions for zsh.
