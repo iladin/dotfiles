@@ -18,7 +18,8 @@ test -e ~/.functions.sh && source ~/.functions.sh
 
 source ${0:a:h}/cfg.sh
 
-test -e ~/.zplug.zsh && source ~/.zplug.zsh 
+#test -e ~/.zplug.zsh && source ~/.zplug.zsh 
+test -e ~/.zplugin/zplugin.zsh && source ~/.zplugin/zplugin.zsh 
 
 
 ## Profiling code
