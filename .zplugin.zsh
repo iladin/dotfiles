@@ -6,7 +6,6 @@ if ! test -d "$ZPLG_HOME"; then
     chmod g-rwX "$ZPLG_HOME"
 fi
 
-echo ">>> Downloading zplugin to $ZPLG_HOME/bin"
 if test -d "$ZPLG_HOME/bin/.git"; then
     cd "$ZPLG_HOME/bin"
     git pull origin master
