@@ -7,7 +7,7 @@ pathadd ~/.linuxbrew/sbin
 #TODO: give pathadd a for loop
 
 unset LD_LIBRARY_PATH PKG_CONFIG_PATH
-apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+#apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
 yes | ruby -e "$(curl -fsSL https://raw.github.com/Linuxbrew/linuxbrew/go/install)"
 brew update
 brew doctor
