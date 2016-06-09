@@ -5,6 +5,7 @@ cfg () {
 if [[ ! -d $HOME/.cfg ]]; then
  git clone --bare $(git config --get remote.origin.url)  $HOME/.cfg
  mkdir -p "$HOME/.cfg-backup"
+fi
  cfg checkout
  if [ $? = 0 ]; then
    echo "Checked out config.";
@@ -18,5 +19,4 @@ if [[ ! -d $HOME/.cfg ]]; then
  fi;
  cfg checkout
  cfg config status.showUntrackedFiles no
- fi
  set +xv
