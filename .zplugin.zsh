@@ -43,6 +43,7 @@ zplugin load "junegunn/fzf" #, of:shell/key-bindings.zsh
 
 zplugin load "sorin-ionescu/prezto" #, of:modules/git/alias.zsh
 zplugin load "mrowa44/emojify" #, as:command, of:emojify
+zplugin load "psprint/zsnapshot"
 zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
 
 # fix garish, unreadable green and yellow node segment colours
