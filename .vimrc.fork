@@ -1,0 +1,8 @@
+" Two semicolons are easy to type.
+:imap ;; <Esc>
+" Press Shift-Space (may not work on your system).
+:imap <S-Space> <Esc>
+" Try the following so Shift-Space also enters insert mode.
+:nmap <S-Space> i
+" Or just Space to enter insert mode.
+:nmap <Space> i
