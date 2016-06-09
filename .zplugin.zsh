@@ -41,9 +41,8 @@ zplugin load "b4b4r07/emoji-cli" #, of:emoji-cli.zsh
 zplugin load "joshuarubin/zsh-homebrew"
 zplugin load "junegunn/fzf" #, of:shell/key-bindings.zsh
 
-zplugin "sorin-ionescu/prezto" #, of:modules/git/alias.zsh
-zplugin "sorin-ionescu/prezto" #, of:modules/gnu-utility
-zplugin "mrowa44/emojify" #, as:command, of:emojify
+zplugin load "sorin-ionescu/prezto" #, of:modules/git/alias.zsh
+zplugin load "mrowa44/emojify" #, as:command, of:emojify
 zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
 
 # fix garish, unreadable green and yellow node segment colours
