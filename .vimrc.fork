@@ -1,8 +1,11 @@
 " Two semicolons are easy to type.
-:imap ;; <Esc>
+imap ;; <Esc>
 " Press Shift-Space (may not work on your system).
-:imap <S-Space> <Esc>
+imap <S-Space> <Esc>
 " Try the following so Shift-Space also enters insert mode.
-:nmap <S-Space> i
+nmap <S-Space> i
 " Or just Space to enter insert mode.
-:nmap <Space> i
+nmap <Space> i
+" Turn on line numbers and relative line numbers
+set nu
+set rn
