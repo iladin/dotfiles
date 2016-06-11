@@ -10,8 +10,6 @@
 	editor = vim
 	eol = lf
 	trustctime = false
-[url "https://"]
-	insteadOf = git://
 [alias]
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
     lastestSubmodules = "submodule foreach --recursive git pull origin master"
