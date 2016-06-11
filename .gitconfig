@@ -1,0 +1,24 @@
+[color]
+	branch = true
+	diff = true
+	grep = true
+	interactive = true
+	log = true
+	status = true
+	ui = true
+[core]
+	editor = vim
+	eol = lf
+	trustctime = false
+[url "https://"]
+	insteadOf = git://
+[alias]
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+    lastestSubmodules = "submodule foreach --recursive git pull origin master"
+    showUntracked = "git ls-files --others --exclude-standard"
+[push]
+	default = matching
+[credential]
+	helper = cache --timeout=2592000
+[include]
+    path = ../.gitconfig
