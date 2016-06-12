@@ -41,6 +41,8 @@ zplugin load "b4b4r07/emoji-cli" #, of:emoji-cli.zsh
 zplugin load "joshuarubin/zsh-homebrew"
 zplugin load "junegunn/fzf" #, of:shell/key-bindings.zsh
 
+hash docker &> /dev/null && zplugin load  "felixr/docker-zsh-completion"
+
 zplugin load "sorin-ionescu/prezto" #, of:modules/git/alias.zsh
 zplugin load "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
