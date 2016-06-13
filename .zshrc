@@ -1,6 +1,6 @@
 
 
-export PS4=$'Date: %D File: %x Lineno: %I In: %N Depth: %e'
+export PS4=$'Time: %* File: %x Lineno: %I In: %N Depth: %e'
 ## Profiling code
 #exec 3>&2 2>/tmp/zshstart.$$.log
 #setopt xtrace prompt_subst
