@@ -17,7 +17,7 @@ typeset -U path
 
 declare -f pathadd || source ~/.shrc
 
-source ${0:a:h}/cfg.sh
+source ~/cfg.sh
 
 #source ~/.zplug.zsh 
 source ~/.zplugin.zsh 
