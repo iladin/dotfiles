@@ -33,13 +33,14 @@ zplugin load "mollifier/anyframe"
 zplugin load "djui/alias-tips"
 # zsh anything.el-like widget.
 zplugin load "zsh-users/zaw"
+# fzf is a general-purpose command-line fuzzy finder.
+zplugin load "junegunn/fzf" #, of:shell/key-bindings.zsh
 # A next-generation cd command with an interactive filter
 zplugin load "b4b4r07/enhancd" #, of:enhancd.sh
 #Emoji completion on the command line
 zplugin load "b4b4r07/emoji-cli" #, of:emoji-cli.zsh
 
 zplugin load "joshuarubin/zsh-homebrew"
-zplugin load "junegunn/fzf" #, of:shell/key-bindings.zsh
 
 hash docker &> /dev/null && zplugin load  "felixr/docker-zsh-completion"
 
