@@ -1,6 +1,7 @@
 
+
+export PS4=$'\\\011%D{%s%6.}\011%x\011%I\011%N\011%e\011'
 ## Profiling code
-#PS4=$'\\\011%D{%s%6.}\011%x\011%I\011%N\011%e\011'
 #exec 3>&2 2>/tmp/zshstart.$$.log
 #setopt xtrace prompt_subst
 
