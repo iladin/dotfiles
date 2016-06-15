@@ -1,0 +1,13 @@
+./configure \
+--with-features=huge \
+--enable-multibyte \
+--enable-gui=gtk2 \
+--enable-rubyinterp \
+--enable-python3interp \
+--enable-luainterp \
+--with-luajit \
+--enable-gpm \
+--enable-cscope \
+--enable-fontset \
+--enable-termtruecolor \
+--enable-fail-if-missing
