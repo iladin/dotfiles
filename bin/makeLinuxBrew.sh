@@ -16,6 +16,6 @@ brew install gcc --with-glibc
 brew tap homebrew/dupes
 brew install perl git
 brew install coreutils findutils gawk gnu-sed gnu-which grep make ruby
-brew install zsh
+brew install zsh git-extras
 
 brew install hello && brew test hello; brew remove hello
