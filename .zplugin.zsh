@@ -53,6 +53,8 @@ grep metaSendsEscape ~/.Xresources &> /dev/null || echo 'XTerm*metaSendsEscape: 
 #Plugin that provides zsnapshot command which dumps current ZSH state into a file, for restoration by sourcing the file
 zplugin load "psprint/zsnapshot"
 
+# A script to make using 256 colors in zsh less painful.
+zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
 
 zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
 
