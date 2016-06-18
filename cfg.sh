@@ -17,6 +17,6 @@ fi
              test -L "$HOME/$file" && unlink "$HOME/$file" || mv "$HOME/$file" "$HOME/.cfg-backup/$file"
          done
  fi;
- cfg checkout
+ cfg checkout --force
  cfg config status.showUntrackedFiles no
  set +xv
