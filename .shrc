@@ -4,7 +4,7 @@ fi
 set -xv
 source ~/.functions.sh
 chmod a+x bin/*
-export TMPDIR=~/tmp && mkdir ~/tmp || echo "Failed to make temporary directory"
+export TMPDIR=~/tmp && test -d $TMPDIR || mkdir $TMPDIR || echo "Failed to make temporary directory"
 chmod +t $TMPDIR || echo "Failed to set sticky bit on $TMPDIR"
 pathadd .
 pathadd $HOME/bin
