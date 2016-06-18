@@ -14,7 +14,7 @@ fi
      cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
          while read -r file
          do
-             test -L "$HOME/$file" && unlink "$HOME/$file" || mv "$HOME/$file" "$HOME/.cfg-backup/$file"
+              mv "$HOME/$file" "$HOME/.cfg-backup/$file" || unlink "$HOME/$file"
          done
  fi;
  cfg checkout --force
