@@ -1,4 +1,3 @@
-set -xv
 cfg () {
    git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
@@ -19,4 +18,3 @@ fi
  fi;
  cfg checkout --force
  cfg config status.showUntrackedFiles no
- set +xv
