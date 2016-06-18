@@ -25,4 +25,4 @@
     path = ../.gitconfig.local
 [commit]
     template = ~/.gitmessage
-    commit.verbose = true
+    verbose = true
