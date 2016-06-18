@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set source and target directories
-powerline_fonts_dir="${PWD}/patched-fonts"
+powerline_fonts_dir="${HOME}/.fonts"
 
 # Accept a font / directory name, to avoid installing all fonts
 if [ ! -z "$1" ];
