@@ -1,7 +1,6 @@
 if [[ -f ~/.proxy ]]; then
 		source ~/.proxy
 fi
-set -xv
 source ~/.functions.sh
 chmod a+x bin/*
 export TMPDIR=~/tmp && test -d $TMPDIR || mkdir $TMPDIR || echo "Failed to make temporary directory"
@@ -15,4 +14,3 @@ hash zsh || bin/makeZSH.sh
 # A package manager for shell scripts and functions.
 hash basher || git clone https://github.com/basherpm/basher.git ~/.basher
 pathadd ~/.basher 
-set +xv
