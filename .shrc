@@ -12,5 +12,5 @@ pathadd ~/.linuxbrew/bin
 pathadd ~/.linuxbrew/sbin
 hash zsh || bin/makeZSH.sh
 # A package manager for shell scripts and functions.
-hash basher || git clone https://github.com/basherpm/basher.git ~/.basher
+test -d ~/.basher || git clone https://github.com/basherpm/basher.git ~/.basher
 pathadd ~/.basher 
