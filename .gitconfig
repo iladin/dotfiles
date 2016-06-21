@@ -1,5 +1,7 @@
 [apply]
     ignoreWhitespace = change
+[branch]
+    autosetuprebase = always
 [color]
 	grep = true
 	interactive = true
