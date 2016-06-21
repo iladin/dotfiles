@@ -10,6 +10,15 @@
 	editor = vim
 	eol = lf
 	trustctime = false
+[push]
+	default = matching
+[credential]
+	helper = cache --timeout=2592000
+[include]
+    path = ../.gitconfig.local
+[commit]
+    template = ~/.gitmessage
+    verbose = true
 [alias]
     clean-merged = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
@@ -847,12 +856,3 @@
   ull = pull
   ush = push
   
-[push]
-	default = matching
-[credential]
-	helper = cache --timeout=2592000
-[include]
-    path = ../.gitconfig.local
-[commit]
-    template = ~/.gitmessage
-    verbose = true
