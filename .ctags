@@ -1,0 +1,1 @@
+--regex-cobol='/%[A-Z]+/\1/m,macro/'
