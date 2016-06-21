@@ -1,5 +1,4 @@
 [color]
-	diff = true
 	grep = true
 	interactive = true
 	log = true
@@ -9,6 +8,11 @@
   current = yellow reverse
   local = yellow
   remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = green
 [core]
 	editor = vim
 	eol = lf
