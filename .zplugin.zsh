@@ -57,7 +57,8 @@ zplugin load "psprint/zsnapshot"
 zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
 
 zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
-
+#Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
+zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 # fix garish, unreadable green and yellow node segment colours
 POWERLEVEL9K_NODE_VERSION_BACKGROUND="red"
 POWERLEVEL9K_NODE_VERSION_FOREGROUND="white"
