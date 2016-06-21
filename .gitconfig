@@ -46,6 +46,10 @@
 [merge]
   summary = true
   verbosity = 1
+[rerere]
+  # Remember my merges
+  # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
+  enabled = true
 [alias]
     clean-merged = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
