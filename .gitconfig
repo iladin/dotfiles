@@ -10,6 +10,8 @@
   current = yellow reverse
   local = yellow
   remote = green
+  upstream = blue
+  plain = white
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
