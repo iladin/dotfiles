@@ -1,3 +1,5 @@
+[apply]
+    ignoreWhitespace = change
 [color]
 	grep = true
 	interactive = true
