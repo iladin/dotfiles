@@ -31,7 +31,7 @@
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [push]
-	default = matching
+	default = upstream
 [credential]
 	helper = cache --timeout=2592000
 [include]
