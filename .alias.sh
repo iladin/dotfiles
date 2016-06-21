@@ -1,4 +1,5 @@
 alias .=source
+alias gitp = git
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
