@@ -62,6 +62,7 @@ zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 
 zplugin load "iladin/oh-my-git"
 zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
+setopt prompt_subst
 
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 zplugin load "zsh-users/zsh-autosuggestions"
