@@ -39,6 +39,10 @@ alias -g X0='| xargs -0'
 alias -g XG='| xargs egrep'
 alias -g X='| xargs'
 
+# Use cut on space- or comma- delimited files:
+alias cuts="cut -d \" \""
+alias cutc="cut -d \",\""
+
 # Homebrew
 
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
