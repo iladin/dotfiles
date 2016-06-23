@@ -67,6 +67,9 @@ zplugin load "iladin/oh-my-git"
 zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
 setopt prompt_subst
 
+# Use Ctrl-x,Ctrl-l to get the output of the last command
+zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
+
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 zplugin load "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
