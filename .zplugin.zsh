@@ -19,7 +19,8 @@ autoload -Uz compinit
 compinit
 # Additional completion definitions for Zsh
 zplugin load "zsh-users/zsh-completions"
-
+#Curses-based tools for Zsh, e.g. multi-word history searcher
+zplugin load "psprint/zsh-navigation-tools"
 
 # ZSH port of Fish shell's history search feature
 zplugin load "zsh-users/zsh-history-substring-search" #, nice:10
@@ -44,7 +45,7 @@ zplugin load "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zplugin load  "felixr/docker-zsh-completion"
 
-zplugin snippet "https://github.com/sorin-ionescu/prezto/blob/master/modules/git/alias.zsh" 
+zplugin snippet "https://github.com/sorin-ionescu/prezto/blob/master/modules/git/alias.zsh"
 zplugin load "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zplugin load "psprint/zsh-editing-workbench"
