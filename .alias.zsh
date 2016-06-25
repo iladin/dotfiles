@@ -1,7 +1,4 @@
 alias .=source
-alias gitp='git'
-# Enable aliases to be sudoed
-alias sudo='sudo '
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -44,7 +41,10 @@ alias -g X='| xargs'
 # Use cut on space- or comma- delimited files:
 alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
-
+alias gitp='git'
+# Enable aliases to be sudoed
+alias sudo='sudo '
+alias vi=vim
 # Homebrew
 
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
