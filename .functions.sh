@@ -23,6 +23,9 @@ function pathpre() {
 }
 
 
+function grab(){
+    test -z $1 && echo "$grab" || grab=$("$@"); echo "$grab"
+}
 function gout() {
 if [[ -z $1 ]]; then
     echo "$gout"
