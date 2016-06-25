@@ -34,3 +34,48 @@ else
     echo "$gout"
 fi
 }
+function diskMap(){
+    paste -d= <(iostat -x | awk 'NR>2{print $1}') <(iostat -nx | awk 'NR>2{print "/dev/dsk/"$11}')
+}
+function settitle() {
+    printf "\033k$1\033\\"
+}
+function getSum(){
+    awk '{s+=$1} END {print s}' $1
+}
+function getColumn(){
+    first="awk '{print "
+    last="}'"
+    cmd="${first}\$${1}${last}"
+    eval $cmd
+}
+#Get memory usage by user
+function getUserMemoryUsage(){
+ps -eo user,rss | perl -e 'open(F, "/etc/passwd"); foreach $l (<F>) { if ($l=~/(.*?):.*?:(\d+)/) { $users{$2}=$1; }}; foreach (<>) { m/(\w+)\s+(\d+)/; $mem{$1} += $2; }; foreach $u (keys (%mem)) { $UN = $u; if ($UN=~/^\d+$/) { $UN = $users{$UN};}; if ($mem{$u}) { print "$UN - $mem{$u}\n" }}' | sort
+}
+function getProccessMemoryUsage(){
+sudo pmap -x $1 | tee >(head -1) >(tail -1) > /dev/null
+}
+function sortMemory(){
+sort -n -k3,3 <(getUserMemoryUsage)
+}
+function funWithtput(){
+for (( i = 0; i < 17; i++ ))
+do
+    echo "$(tput setaf $i)This is ($i) $(tput sgr0)"
+done
+}
+function showinodes(){
+find $1 -xdev -printf '%h\n' 2> /dev/null | sort | uniq -c | sort -k 1 -n
+}
+#Get Info from commandlinefu
+function cmdfu(){
+     curl "http://www.commandlinefu.com/commands/matching/$(echo "$@" \
+    | sed 's/ /-/g')/$(echo -n $@ | base64)/plaintext" ;
+}
+## DICTIONARY FUNCTIONS ##
+function dwordnet () { curl dict://dict.org/d:${1}:wn; }
+function dacron () { curl dict://dict.org/d:${1}:vera; }
+function djargon () { curl dict://dict.org/d:${1}:jargon; }
+function dfoldoc () { curl dict://dict.org/d:${1}:foldoc; }
+function dthesaurus () { curl dict://dict.org/d:${1}:moby-thes; }
