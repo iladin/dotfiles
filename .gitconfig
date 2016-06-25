@@ -21,6 +21,9 @@
   old = red
   new = green
 [core]
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
 	editor = vim
 	eol = lf
 	trustctime = false
@@ -64,7 +67,7 @@
   ##
   # One letter alias for our most frequent commands.
   #
-  # Guidelines: these aliases do not use options, because we want 
+  # Guidelines: these aliases do not use options, because we want
   # these aliases to be easy to compose and use in many ways.
   ##
 
@@ -85,7 +88,7 @@
   ##
   # Short aliases for our frequent commands.
   #
-  # Guidelines: 
+  # Guidelines:
   #
   #  * Generally speaking, the alias should be in the same
   #    order as the command name followed by its options.
@@ -98,10 +101,10 @@
   ##
 
   ### add ###
-  
+
   # add all
   aa = add --all
-  
+
   # add by patch - looks at each change, and asks if we want to put it in the repo.
   ap = add --patch
 
@@ -144,7 +147,7 @@
   cp-nx = cherry-pick --no-commit -x
 
   ### diff ###
-  
+
   # diff - show changes not yet staged
   dc = diff --cached
 
@@ -155,12 +158,12 @@
   dw = diff --word-diff
 
   ### grep ###
-  
+
   # grep with grouping of the output lines
   gg =  grep --break --heading --line-number
 
   ### log ###
-  
+
   # log with a text-based graphical representation of the commit history.
   lg = log --graph
 
@@ -177,7 +180,7 @@
   lk = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset'
 
   ## ls-files ##
-  
+
   # ls-files - show information about files in the index and the working tree; like Unix "ls" command.
   ls = ls-files
 
@@ -185,7 +188,7 @@
   ls-ignored = ls-files --others --i --exclude-standard
 
   ### merge ###
-  
+
   # merge but without autocommit, and with a commit even if the merge resolved as a fast-forward.
   me = merge --no-commit --no-ff
 
@@ -222,7 +225,7 @@
   pr = pull --rebase
 
   ### rebase ###
-  
+
   # rebase - forward-port local commits to the updated upstream head.
   rb = rebase
 
@@ -262,12 +265,12 @@
   rbi = !"git rebase -i @{u}"
 
   ### reflog ###
-  
+
   # reflog - reference log that manages when tips of branches are updated.
   rl = reflog
 
   ### remote ###
-  
+
   # remote - manage set of tracked repositories [same as "r"].
   rr = remote
 
@@ -281,7 +284,7 @@
   rrp = remote prune
 
   ### revert ###
-  
+
   # revert - undo the changes from some existing commits
   rv = revert
 
@@ -289,12 +292,12 @@
   rvnc = revert --no-commit
 
   ### show-branch ###
-  
+
   # show-branch - print a list of branches and their commits.
   sb = show-branch
 
   ### submodule ###
-  
+
   # submodule - enables foreign repositories to be embedded within a dedicated subdirectory of the source tree.
   sm = submodule
 
@@ -308,10 +311,10 @@
   smuir = submodule update --init --recursive
 
   ### status ###
-  
+
   # status with short format instead of full details
   ss = status --short
-  
+
   # status with short format and showing branch and tracking info.
   ssb = status --short --branch
 
@@ -469,7 +472,7 @@
 
   # List all issues mentioned in commit messages between range of commits
   #
-  # Replace `\\\"ISSUE-[0-9]\\+\\\"` regular expression with one matching your issue tracking system. 
+  # Replace `\\\"ISSUE-[0-9]\\+\\\"` regular expression with one matching your issue tracking system.
   # For Jira it should be as simple as putting your project name in place of `ISSUE`.
   #
   # Best used with tags:
@@ -477,7 +480,7 @@
   #
   # But will work with any valid commit range:
   #  $ git issues master..HEAD
-  
+
   issues = !sh -c \"git log $1 --oneline | grep -o \\\"ISSUE-[0-9]\\+\\\" | sort -u\"
 
   ### WORKFLOW ALIASES ###
@@ -513,7 +516,7 @@
   ##
   # Undo & Reset
   ##
-  
+
   # Undo aliases; these correspond to the reset aliases below
   undo-commit = reset --soft HEAD~1
   undo-commit-hard = reset --hard HEAD~1
@@ -523,12 +526,12 @@
   reset-commit = reset --soft HEAD~1
   reset-commit-hard = reset --hard HEAD~1
   reset-commit-clean = !git reset --hard HEAD~1 && git clean -fd
-  
+
   # Nicknames
   uncommit = reset --soft HEAD~1
   unadd = reset HEAD
   unstage = reset HEAD
-  
+
   # Editing and adding conflicted files: when we get many merge conflicts
   # and want to quickly solve them using an editor, then add the  files.
   edit-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; $EDITOR `f`"
@@ -877,14 +880,14 @@
   svn-cp = !GIT_EDITOR='sed -i /^git-svn-id:/d' git cherry-pick -e
 
  ##########################################################################
-  
+
   ##
   # Git aliases to correct common typing mistakes, which git built-in autocorrection
   # does not handle
   ##
 
   ### Use with shell alias `gitp = git` ###
-  
+
   ull = pull
   ush = push
-  
+
