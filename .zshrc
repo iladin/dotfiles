@@ -5,7 +5,7 @@ export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 #exec 3>&2 2>/tmp/zshstart.$$.log
 #setopt xtrace prompt_subst
 
-source ~/.alias.sh 
+source ~/.alias.zsh
 
 # language configuration
 export LANG=en_US.UTF-8
@@ -19,8 +19,8 @@ declare -f pathadd || source ~/.shrc
 
 source ~/cfg.sh
 
-#source ~/.zplug.zsh 
-source ~/.zplugin.zsh 
+#source ~/.zplug.zsh
+source ~/.zplugin.zsh
 
 
 ## Profiling code
