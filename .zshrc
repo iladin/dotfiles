@@ -15,7 +15,7 @@ export LC_ALL=en_US.UTF-8
 export TERM="xterm-256color"
 typeset -U path
 
-declare -f pathadd || source ~/.shrc
+declare -f pathadd || source ~/.functions.sh
 
 source ~/cfg.sh
 
