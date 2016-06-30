@@ -36,7 +36,7 @@ hash python && zplugin load "djui/alias-tips"
 # zsh anything.el-like widget.
 zplugin load "zsh-users/zaw"
 # fzf is a general-purpose command-line fuzzy finder.
-zplugin load "junegunn/fzf" #, of:shell/key-bindings.zsh
+zplugin snippet  "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh" #, of:shell/key-bindings.zsh
 # A next-generation cd command with an interactive filter
 zplugin load "b4b4r07/enhancd" #, of:enhancd.sh
 #Emoji completion on the command line
