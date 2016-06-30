@@ -17,13 +17,10 @@ fi
 source ~/.zplugin/bin/zplugin.zsh
 autoload -Uz compinit
 compinit
-# Additional completion definitions for Zsh
-zplugin load "zsh-users/zsh-completions"
-#Curses-based tools for Zsh, e.g. multi-word history searcher
-zplugin load "psprint/zsh-navigation-tools"
 
-# ZSH port of Fish shell's history search feature
-zplugin load "zsh-users/zsh-history-substring-search" #, nice:10
+
+
+
 # k is a zsh script / plugin to make directory listings more readable
 zplugin load "supercrabtree/k"
 # A fully-functional bash client for tldr.
@@ -33,8 +30,7 @@ zplugin load "mollifier/anyframe"
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 # Only use if you have python
 hash python && zplugin load "djui/alias-tips"
-# zsh anything.el-like widget.
-zplugin load "zsh-users/zaw"
+
 # fzf is a general-purpose command-line fuzzy finder.
 zplugin snippet  "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh" #, of:shell/key-bindings.zsh
 # A next-generation cd command with an interactive filter
@@ -56,6 +52,9 @@ grep metaSendsEscape ~/.Xresources &> /dev/null || echo 'XTerm*metaSendsEscape: 
 zplugin load "psprint/zsnapshot"
 #A shell command that will display selection list
 zplugin load "psprint/zsh-select"
+#Curses-based tools for Zsh, e.g. multi-word history searcher
+zplugin load "psprint/zsh-navigation-tools"
+
 # A script to make using 256 colors in zsh less painful.
 zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
 
@@ -73,6 +72,12 @@ setopt prompt_subst
 # Use Ctrl-x,Ctrl-l to get the output of the last command
 zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
 
+# zsh anything.el-like widget.
+zplugin load "zsh-users/zaw"
+# ZSH port of Fish shell's history search feature
+zplugin load "zsh-users/zsh-history-substring-search" #, nice:10
+# Additional completion definitions for Zsh
+zplugin load "zsh-users/zsh-completions"
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 zplugin load "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
