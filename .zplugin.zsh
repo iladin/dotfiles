@@ -54,7 +54,8 @@ zplugin load "psprint/zsh-editing-workbench"
 grep metaSendsEscape ~/.Xresources &> /dev/null || echo 'XTerm*metaSendsEscape: true' >> ~/.Xresources
 #Plugin that provides zsnapshot command which dumps current ZSH state into a file, for restoration by sourcing the file
 zplugin load "psprint/zsnapshot"
-
+#A shell command that will display selection list
+zplugin load "psprint/zsh-select"
 # A script to make using 256 colors in zsh less painful.
 zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
 
