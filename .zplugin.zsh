@@ -31,7 +31,8 @@ zplugin load "raylee/tldr" #, as:command
 # peco/percol/fzf wrapper plugin for zsh
 zplugin load "mollifier/anyframe"
 # An oh-my-zsh plugin to help remembering those aliases you defined once
-zplugin load "djui/alias-tips"
+# Only use if you have python
+hash python && zplugin load "djui/alias-tips"
 # zsh anything.el-like widget.
 zplugin load "zsh-users/zaw"
 # fzf is a general-purpose command-line fuzzy finder.
