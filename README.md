@@ -1,4 +1,5 @@
 # dotty
+
 [![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotty)
 
 My dotfiles
@@ -14,7 +15,6 @@ My dotfiles
 [![Code Climate](https://codeclimate.com/github/iladin/dotty/badges/gpa.svg)](https://codeclimate.com/github/iladin/dotty)
 
 ## TODO
-
 
 ### Files
 
