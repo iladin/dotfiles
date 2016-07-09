@@ -2,7 +2,7 @@ language: bash
 
 os:
     - linux
-    
+
 before_install:
   - source cfg.sh
   - source .shrc
@@ -11,3 +11,4 @@ script:
     - source cfg.sh
 #   - bin/checkGCC.sh
     - zsh -c "source ~/bin/printUTF.sh"
+
