@@ -79,3 +79,8 @@ function dacron () { curl dict://dict.org/d:${1}:vera; }
 function djargon () { curl dict://dict.org/d:${1}:jargon; }
 function dfoldoc () { curl dict://dict.org/d:${1}:foldoc; }
 function dthesaurus () { curl dict://dict.org/d:${1}:moby-thes; }
+
+# (f)ind by (n)ame
+# usage: fn foo
+# to find all files containing 'foo' in the name
+function fn() { ls **/*$1* }
