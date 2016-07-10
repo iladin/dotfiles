@@ -33,6 +33,8 @@
 	trustctime = false
 [fetch]
     prune = true
+[gc]
+    auto=1
 [help]
     autoCorrect = -1
 [format]
