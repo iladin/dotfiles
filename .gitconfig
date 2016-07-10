@@ -4,11 +4,12 @@
 [branch]
     autosetuprebase = always
 [color]
-	grep = true
-	interactive = true
-	log = true
-	status = true
-	ui = true
+    branch = auto
+    grep = auto
+    interactive = auto
+    log = auto
+    status = auto
+    ui = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
