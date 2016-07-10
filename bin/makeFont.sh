@@ -1,5 +1,8 @@
 #!/bin/bash
-
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git $TMPDIR/fonts
+cd $TMPDIR/fonts
+./build.sh && ./install.sh
+cd -
 # Set source and target directories
 powerline_fonts_dir="${HOME}/.fonts"
 
