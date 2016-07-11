@@ -1,6 +1,6 @@
 # dotty
 
-[![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotty)
+[![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://github.com/iladin/dotty)
 
 My dotfiles
 
