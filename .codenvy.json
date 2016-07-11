@@ -4,12 +4,18 @@
   "policies"  : {
       "count"    : "perUser"
   },             // (Optional) Restrictions that limit behaviors
-  "ide"       : {
+    "ide"       : {
+      "onProjectsLoaded" : {
       "actions" : {
           "id" : "openFile", // Opens a file in editor. Open addl files by repeating
-          "properties" : {              // Specifies which file to open (include project name)
-        "file" : "/dotfiles/README.md"
-      }
+        "properties" : {              // Specifies which file to open (include project name)
+            "file" : "/dotfiles/README.md"
+                    }
+                },
+    "onAppClosed" : {                 // Actions to be triggered when IDE is closed
+    "actions" : {
+      "id" : "warnOnClose"         // Show warning when closing browser tab
+    }
       }              // List of IDE actions to execute when event triggered
   },             // (Optional) Trigger IDE UI actions tied to workspace events
   "creator"   : {},             // (Optional) Identifying information of author
