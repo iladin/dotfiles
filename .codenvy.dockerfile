@@ -1,4 +1,4 @@
-FROM codenvy/codenvy/codenvy/ubuntu_jdk8_x11
+FROM codenvy/ubuntu_jdk8_x11
 
 RUN apt-get update -y \
     && apt-get install -y zsh \
