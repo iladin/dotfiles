@@ -9,4 +9,6 @@ RUN apt-get update -y \
 
 ENV SHELL /usr/bin/zsh
 
+RUN git clone https://github.com/iladin/dotfiles.git
+
 WORKDIR /root
