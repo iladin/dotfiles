@@ -42,6 +42,12 @@ alias -g X='| xargs'
 alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
 alias gitp='git'
+
+#Color for ls
+alias ll='ls -lF --color=auto'
+alias la='ls -alF --color=auto'
+alias ls='ls -F --color=auto'
+
 # Enable aliases to be sudoed
 alias sudo='sudo '
 alias vi=vim
