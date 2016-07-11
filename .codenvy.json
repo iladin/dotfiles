@@ -4,7 +4,14 @@
   "policies"  : {
       "count"    : "perUser"
   },             // (Optional) Restrictions that limit behaviors
-  "ide"       : {},             // (Optional) Trigger IDE UI actions tied to workspace events
+  "ide"       : {
+      "actions" : {
+          "id" : "openFile", // Opens a file in editor. Open addl files by repeating
+          "properties" : {              // Specifies which file to open (include project name)
+        "file" : "/dotfiles/README.md"
+      }
+      }              // List of IDE actions to execute when event triggered
+  },             // (Optional) Trigger IDE UI actions tied to workspace events
   "creator"   : {},             // (Optional) Identifying information of author
   "button"    : {}              // (Optional) Style dynamic button for Factory URL
 }
