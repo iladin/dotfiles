@@ -1,0 +1,10 @@
+{
+  "v"         : 4.0,            // Version of configuration format
+  "workspace" : {},             // Defines workspace, projects, envs, and commands
+  "policies"  : {
+      "count"    : "perUser"
+  },             // (Optional) Restrictions that limit behaviors
+  "ide"       : {},             // (Optional) Trigger IDE UI actions tied to workspace events
+  "creator"   : {},             // (Optional) Identifying information of author
+  "button"    : {}              // (Optional) Style dynamic button for Factory URL
+}
