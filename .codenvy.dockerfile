@@ -10,4 +10,3 @@ RUN apt-get update -y \
 ENV SHELL /usr/bin/zsh
 
 WORKDIR /root
-ENTRYPOINT /usr/bin/zsh
