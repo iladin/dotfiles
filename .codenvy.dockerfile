@@ -1,5 +1,7 @@
 FROM codenvy/ubuntu_jdk8_x11
 
+USER root
+
 RUN apt-get update -y \
     && apt-get install -y zsh \
 	&& rm -rf /var/lib/apt/lists/* \
