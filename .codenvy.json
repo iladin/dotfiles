@@ -21,3 +21,4 @@
   "creator"   : {},             // (Optional) Identifying information of author
   "button"    : {}              // (Optional) Style dynamic button for Factory URL
 }
+}
