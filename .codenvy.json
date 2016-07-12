@@ -1,5 +1,6 @@
 {
   "v"         : 4.0,            // Version of configuration format
+  "name"      : "Generic",
   "workspace" : {},             // Defines workspace, projects, envs, and commands
   "policies"  : {
       "count"    : "perUser"
