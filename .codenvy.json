@@ -1,7 +1,6 @@
 {
 	"v": 4.0,
     "name": "Generic",
-	"workspace": {},
 	"policies": {
 		"count": "perUser"
 	},
@@ -19,7 +18,5 @@
 				}
 			}
 		}
-	},
-	"creator": {},
-	"button": {}
+	}
 }
