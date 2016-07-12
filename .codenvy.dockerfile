@@ -6,6 +6,7 @@ RUN apt-get update -y \
     && apt-get install -y zsh \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& chsh -s /usr/bin/zsh
+    && rm /bin/sh && ln -s /bin/zsh /bin/sh
 
 ENV SHELL /usr/bin/zsh
 
