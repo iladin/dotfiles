@@ -4,7 +4,7 @@ USER root
 
 RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get update -y \
-    && apt-get install -y neovim zsh httpie ssh git ruby htop curl \
+    && apt-get install -y neovim zsh httpie tmux ssh git ruby htop curl \
     sudo python-pip  mercurial make binutils bison gcc build-essential
 	&& rm -rf /var/lib/apt/lists/* \
 	&& chsh -s /usr/bin/zsh
@@ -18,6 +18,10 @@ echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
 
 RUN chown -R iladin:iladin /home/iladin
 USER iladin
+
+# Install powerline for tmux
+RUN pip install --user powerline-status
+
 
 RUN git clone https://github.com/iladin/dotfiles.git
 
