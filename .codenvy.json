@@ -17,8 +17,8 @@
       "id" : "warnOnClose"         // Show warning when closing browser tab
     }
       }              // List of IDE actions to execute when event triggered
-  },             // (Optional) Trigger IDE UI actions tied to workspace events
+    }},             // (Optional) Trigger IDE UI actions tied to workspace events
   "creator"   : {},             // (Optional) Identifying information of author
   "button"    : {}              // (Optional) Style dynamic button for Factory URL
 }
-}
+
