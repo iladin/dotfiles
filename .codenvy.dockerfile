@@ -2,8 +2,10 @@ FROM codenvy/ubuntu_jdk8_x11
 
 USER root
 
-RUN apt-get update -y \
-    && apt-get install -y zsh \
+RUN add-apt-repository ppa:neovim-ppa/unstable \
+    && apt-get update -y \
+    && apt-get install -y neovim zsh httpie ssh git ruby htop curl \
+    sudo python-pip  mercurial make binutils bison gcc build-essential
 	&& rm -rf /var/lib/apt/lists/* \
 	&& chsh -s /usr/bin/zsh
     && rm /bin/sh && ln -s /bin/zsh /bin/sh
