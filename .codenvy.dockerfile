@@ -12,6 +12,13 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
 
 ENV SHELL /usr/bin/zsh
 
+RUN useradd -m iladin
+echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+ chsh -s /bin/zsh iladin
+
+RUN chown -R iladin:iladin /home/iladin
+USER iladin
+
 RUN git clone https://github.com/iladin/dotfiles.git
 
-WORKDIR /root
+WORKDIR /home/iladin
