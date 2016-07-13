@@ -5,22 +5,19 @@ USER root
 RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get update -y \
     && apt-get install -y neovim zsh httpie tmux ssh git ruby htop curl \
-    sudo python-pip  mercurial make binutils bison gcc build-essential
-	&& rm -rf /var/lib/apt/lists/* \
-	&& chsh -s /usr/bin/zsh
-    && rm /bin/sh && ln -s /bin/zsh /bin/sh
+    sudo python-pip  mercurial make binutils bison gcc build-essential \
+    && rm -rf /var/lib/apt/lists/* \
+    && chsh -s /usr/bin/zsh \
+    && rm /bin/sh \
+    && ln -s /bin/zsh /bin/sh \
+    && useradd -m iladin \
+    && echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && chsh -s /bin/zsh iladin \
+    && chown -R iladin:iladin /home/iladin \
+    && pip install  powerline-status
+    && git clone https://github.com/iladin/dotfiles.git
 
-ENV SHELL /usr/bin/zsh
-
-RUN useradd -m iladin && \
- echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
- chsh -s /bin/zsh iladin
-
-RUN chown -R iladin:iladin /home/iladin
 USER iladin
-
-# Install powerline for tmux
-RUN pip install --user powerline-status
 
 
 RUN git clone https://github.com/iladin/dotfiles.git
