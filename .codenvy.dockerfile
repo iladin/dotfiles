@@ -12,8 +12,8 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
 
 ENV SHELL /usr/bin/zsh
 
-RUN useradd -m iladin
-echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+RUN useradd -m iladin && \
+ echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
  chsh -s /bin/zsh iladin
 
 RUN chown -R iladin:iladin /home/iladin
