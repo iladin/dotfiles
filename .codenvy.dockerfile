@@ -6,7 +6,6 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get update -y \
     && apt-get install -y neovim zsh httpie tmux ssh git ruby htop curl \
     sudo python-pip  mercurial make binutils bison gcc build-essential \
-    && rm -rf /var/lib/apt/lists/* \
     && chsh -s /usr/bin/zsh \
     && rm /bin/sh \
     && ln -s /bin/zsh /bin/sh \
@@ -15,6 +14,7 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && chsh -s /bin/zsh iladin \
     && chown -R iladin:iladin /home/iladin \
     && pip install  powerline-status \
+    && rm -rf /var/lib/apt/lists/* \
     && git clone https://github.com/iladin/dotfiles.git
 
 USER iladin
