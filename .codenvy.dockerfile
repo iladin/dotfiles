@@ -14,12 +14,8 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && chsh -s /bin/zsh iladin \
     && chown -R iladin:iladin /home/iladin \
     && pip install  powerline-status \
-    && rm -rf /var/lib/apt/lists/* \
-    && git clone https://github.com/iladin/dotfiles.git
+    && rm -rf /var/lib/apt/lists/*
 
 USER iladin
-
-
-RUN git clone https://github.com/iladin/dotfiles.git
 
 WORKDIR /home/iladin
