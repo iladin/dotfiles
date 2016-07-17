@@ -1,0 +1,61 @@
+{
+  "v": "4.0",
+  "name": "FirstFact",
+  "workspace": {
+    "environments": [
+      {
+        "name": "dotfiles",
+        "machineConfigs": [
+          {
+            "limits": {
+              "ram": 1500
+            },
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "location": "https://raw.githubusercontent.com/iladin/dotfiles/master/.codenvy.dockerfile",
+              "type": "dockerfile"
+            },
+            "dev": true,
+            "servers": [],
+            "envVariables": {},
+            "links": []
+          }
+        ]
+      }
+    ],
+    "defaultEnv": "dotfiles",
+    "projects": [
+      {
+        "links": [],
+        "name": "dotfiles",
+        "attributes": {
+          "contribute_to_branch": [
+            "master"
+          ]
+        },
+        "type": "blank",
+        "source": {
+          "location": "https://github.com/iladin/dotfiles",
+          "type": "git",
+          "parameters": {
+            "branch": "master"
+          }
+        },
+        "path": "/dotfiles",
+        "problems": [],
+        "mixins": [
+          "pullrequest"
+        ]
+      }
+    ],
+    "name": "iladin",
+    "commands": [],
+    "links": []
+  },
+  "id": "naxs75xt6jehg982",
+  "creator": {
+    "created": 1468728771312,
+    "userId": "userfkz29oshkbr2htqe"
+  }
+}
