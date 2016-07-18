@@ -32,7 +32,7 @@ zplugin load "mollifier/anyframe"
 hash python && zplugin load "djui/alias-tips"
 
 # fzf is a general-purpose command-line fuzzy finder.
-hash fzf || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --all)
+hash fzf 2> /dev/null || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --all)
 hash fzf && zplugin snippet  "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh" #, of:shell/key-bindings.zsh
 # A next-generation cd command with an interactive filter
 zplugin load "b4b4r07/enhancd" #, of:enhancd.sh
