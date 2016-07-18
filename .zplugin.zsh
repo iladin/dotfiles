@@ -1,25 +1,26 @@
-[[ -d ~/.zplugin ]] || {
-    ZPLG_HOME="${ZDOTDIR:-$HOME}/.zplugin"
 
-if ! test -d "$ZPLG_HOME"; then
-    mkdir "$ZPLG_HOME"
-    chmod g-rwX "$ZPLG_HOME"
-fi
+function zzplugin(){
+    [[ -d ~/.zplugin ]] || {
+       ZPLG_HOME="${ZDOTDIR:-$HOME}/.zplugin"
 
-if test -d "$ZPLG_HOME/bin/.git"; then
-    cd "$ZPLG_HOME/bin"
-    git pull origin master
-else
-    cd "$ZPLG_HOME"
-    git clone https://github.com/psprint/zplugin.git bin
-fi
+    if ! test -d "$ZPLG_HOME"; then
+      mkdir "$ZPLG_HOME"
+      chmod g-rwX "$ZPLG_HOME"
+    fi
+
+    if test -d "$ZPLG_HOME/bin/.git"; then
+       cd "$ZPLG_HOME/bin"
+       git pull origin master
+    else
+       cd "$ZPLG_HOME"
+       git clone https://github.com/psprint/zplugin.git bin
+    fi
+    }
+    source ~/.zplugin/bin/zplugin.zsh
 }
-source ~/.zplugin/bin/zplugin.zsh
+zzplugin
 autoload -Uz compinit
 compinit
-
-
-
 
 # k is a zsh script / plugin to make directory listings more readable
 zplugin load "supercrabtree/k"
@@ -37,7 +38,7 @@ hash fzf 2> /dev/null || (git clone --depth 1 https://github.com/junegunn/fzf.gi
 # A next-generation cd command with an interactive filter
 zplugin load "b4b4r07/enhancd" #, of:enhancd.sh
 #Emoji completion on the command line
-zplugin load "b4b4r07/emoji-cli" #, of:emoji-cli.zsh
+zplugin load "b4b4r07/emoji-cli"
 
 zplugin load "joshuarubin/zsh-homebrew"
 
