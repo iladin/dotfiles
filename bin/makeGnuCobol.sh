@@ -11,8 +11,7 @@ sudo apt-get install libdb-dev
 make
 sudo make install
 cd ~/tmp
-wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/contrib/open-cobol-contrib-175.zip
-zip
+wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/contrib/open-cobol-contrib-175-trunk.zip
 unzip open-cobol-contrib*.zip
 rm open-cobol-contrib*.zip
 cd open-cobol-contrib*/tools/cobolmac
