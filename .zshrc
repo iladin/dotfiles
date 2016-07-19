@@ -12,9 +12,7 @@ cfg checkout || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '
 cfg checkout --force
 cfg config status.showUntrackedFiles no
 
-export wd="$(dirname -- ${0})"
-
-source $wd/.alias.zsh
+source $HOME/.alias.zsh
 
 # language configuration
 export LANG=en_US.UTF-8
@@ -24,11 +22,11 @@ export LC_ALL=en_US.UTF-8
 export TERM="xterm-256color"
 typeset -U path
 
-declare -f pathadd || source $wd/.functions.sh
+declare -f pathadd || source $HOME/.functions.sh
 
 
 #source ~/.zplug.zsh
-source $wd/.zplugin.zsh
+source $HOME/.zplugin.zsh
 
 
 ## Profiling code
