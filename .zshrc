@@ -4,7 +4,7 @@ export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 ## Profiling code
 #exec 3>&2 2>/tmp/zshstart.$$.log
 #setopt xtrace prompt_subst
-export wd="$(dirname ${0})"
+export wd="$(dirname -- ${0})"
 
 source $wd/.alias.zsh
 
