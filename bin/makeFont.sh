@@ -1,4 +1,5 @@
 #!/bin/bash
+#TODO: sudo check
 grep "en_US.UTF-8" <(locale -a) || sudo locale-gen "en_US.UTF-8"
 localectl set-locale LANG=en_US.UTF-8
 test -d $HOME/fonts || \
