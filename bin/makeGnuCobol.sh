@@ -5,7 +5,7 @@ cd ~/tmp
 rm -rf open-cobol*
 wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/code/open-cobol-code-999-branches-gnu-cobol-2.0.zip
 unzip open-cobol-code*.zip
-cd open-cobol-code*/gnu-cobol
+cd open-cobol-code*
 sudo apt-get install libdb-dev
 ./configure
 make
