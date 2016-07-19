@@ -14,6 +14,7 @@ cd ~/tmp
 wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/contrib/open-cobol-contrib-175
 zip
 unzip open-cobol-contrib*.zip
+rm open-cobol-contrib*.zip
 cd open-cobol-contrib*/tools/cobolmac
 source comp-cobolmac.sh
 sudo cp cobolmac /usr/bin/
