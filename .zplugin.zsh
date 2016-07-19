@@ -69,7 +69,7 @@ zplugin load "supercrabtree/k"
 
 source $HOME/.powerlevel9k
 zplugin load "iladin/oh-my-git"
-zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
+#zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
 setopt prompt_subst
 
 # Use Ctrl-x,Ctrl-l to get the output of the last command
