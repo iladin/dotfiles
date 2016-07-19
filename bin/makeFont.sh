@@ -1,8 +1,9 @@
 #!/bin/bash
-git clone https://github.com/gabrielelana/awesome-terminal-fonts.git $HOME/fonts
-cd $HOME/fonts
-./build.sh && ./install.sh
-cd -
+localectl set-locale LANG=en_US.UTF-8
+test -d $HOME/fonts || \
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git $HOME/fonts && \
+cd $HOME/fonts && \
+./build.sh && ./install.sh && cd -
 # Set source and target directories
 powerline_fonts_dir="${HOME}/.fonts"
 
