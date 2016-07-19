@@ -10,6 +10,7 @@ sudo apt-get install libdb-dev
 ./configure
 make
 sudo make install
+sudo ldconfig
 cd ~/tmp
 wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/contrib/open-cobol-contrib-175-trunk.zip
 unzip open-cobol-contrib*.zip
