@@ -67,6 +67,7 @@ zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 #adding a bit of color and some git status information on files and directories.
 zplugin load "supercrabtree/k"
 
+source $HOME/.powerlevel9k
 zplugin load "iladin/oh-my-git"
 zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
 setopt prompt_subst
