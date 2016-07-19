@@ -1,4 +1,6 @@
 
+
+function nosudo(){
 git clone git://git.code.sf.net/p/zsh/code zsh
 
 cd zsh
@@ -27,3 +29,8 @@ make
 make check
 
 make install
+}
+function wsudo(){
+    sudo apt-get update && sudo apt-get install zsh
+}
+sudo -l apt-get && wsudo || nosudo
