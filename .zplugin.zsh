@@ -70,6 +70,8 @@ zplugin load "supercrabtree/k"
 source $HOME/.powerlevel9k
 zplugin load "iladin/oh-my-git"
 zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
+test -d .git-radar || git clone https://github.com/michaeldfallen/git-radar .git-radar ; export PATH=$PATH:$HOME/.git-radar && export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
+
 setopt prompt_subst
 
 # Use Ctrl-x,Ctrl-l to get the output of the last command
