@@ -19,3 +19,5 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
 USER iladin
 
 WORKDIR /home/iladin
+
+ADD . /home/iladin/
