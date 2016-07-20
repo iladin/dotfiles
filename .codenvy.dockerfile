@@ -21,3 +21,7 @@ USER iladin
 WORKDIR /home/iladin
 
 ADD . /home/iladin/
+ADD start.sh /
+
+USER root
+CMD ["/start.sh"]
