@@ -20,13 +20,15 @@ My dotfiles
 
 .codenvy.json  Inspired by <https://gitlab.com/gitlab-org/gitlab-ce/issues/12759>
 
-.codenvy.dockerfile
-
 .spacemacs
 
 ### Topics
 
 NixOS
+
+## Tools
+
+rr
 
 ## Links
 
