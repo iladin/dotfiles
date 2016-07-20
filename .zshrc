@@ -24,7 +24,7 @@ typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
 
-
+test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
