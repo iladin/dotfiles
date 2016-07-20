@@ -80,3 +80,6 @@ function djargon () { curl dict://dict.org/d:${1}:jargon; }
 function dfoldoc () { curl dict://dict.org/d:${1}:foldoc; }
 function dthesaurus () { curl dict://dict.org/d:${1}:moby-thes; }
 
+function getPath() {
+  type -p "$1" | cut -d ' ' -f 3
+}
