@@ -17,11 +17,9 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && rm -rf /var/lib/apt/lists/*
 
 USER iladin
+ADD . /home/iladin/
 
 WORKDIR /home/iladin
 
-ADD . /home/iladin/
-ADD ./start.sh /
 
-USER root
-CMD ["/start.sh"]
+
