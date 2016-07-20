@@ -24,7 +24,7 @@ typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
 
-test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit
+test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
