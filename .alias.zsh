@@ -41,7 +41,6 @@ alias -g X='| xargs'
 # Use cut on space- or comma- delimited files:
 alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
-alias gitp='git'
 
 #Color for ls
 alias ll='ls -lF --color=auto'
