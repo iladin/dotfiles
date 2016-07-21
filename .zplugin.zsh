@@ -44,8 +44,9 @@ zplugin load "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zplugin load  "felixr/docker-zsh-completion"
 
-zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
-zplugin snippet "https://github.com/sorin-ionescu/prezto/blob/master/modules/git/alias.zsh"
+zplugin snippet https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
+zplugin snippet https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh
+
 zplugin load "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zplugin load "psprint/zsh-editing-workbench"
