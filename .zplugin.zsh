@@ -60,6 +60,8 @@ zplugin load "psprint/zsh-select"
 zplugin load "psprint/zsh-navigation-tools"
 #Complete options from manual pages – press Ctrl-F to start the completer
 zplugin load "psprint/zzcomplete"
+#Record output of commands, reuse it via curses interface
+zplugin load "psprint/ztrace"
 
 # A script to make using 256 colors in zsh less painful.
 zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
