@@ -1,3 +1,5 @@
+XTerm*metaSendsEscape: true
+
 !## XTERM {{{1
 XTerm.background: #000000
 XTerm.VT100.background: #000000
