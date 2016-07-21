@@ -97,6 +97,7 @@ zplugin load "zsh-users/zsh-autosuggestions"
 zplugin load "zsh-users/zsh-syntax-highlighting" #, nice:9
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
+zplugin cdreplay -q # -q is for quiet
 autoload -Uz _zplugin
 #(( ${+_comps} )) && _comps[zplugin]=_zplugin
 zcompile ~/.zplugin/bin/zplugin.zsh
