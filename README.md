@@ -30,6 +30,8 @@ NixOS
 
 rr
 
+silversearcher-ag
+
 ## Links
 
 [http://dockerfile-linter.com/?lang=en](http://dockerfile-linter.com/?lang=en)
