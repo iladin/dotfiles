@@ -28,7 +28,7 @@ test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-a
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
-
+test -e $HOME/.zsh.local && source $HOME/.zsh.local
 ## Profiling code
 #unsetopt xtrace
 #exec 2>&3 3>&-
