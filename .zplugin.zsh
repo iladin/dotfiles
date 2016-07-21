@@ -44,6 +44,7 @@ zplugin load "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zplugin load  "felixr/docker-zsh-completion"
 
+zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
 zplugin snippet "https://github.com/sorin-ionescu/prezto/blob/master/modules/git/alias.zsh"
 zplugin load "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
@@ -60,7 +61,7 @@ zplugin load "psprint/zsh-navigation-tools"
 # A script to make using 256 colors in zsh less painful.
 zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
 
-zplugin snippet 'http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh'
+
 #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
 zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 #k is a zsh script / plugin to make directory listings more readable,
