@@ -1,4 +1,6 @@
 alias .=source
+alias ~="cd ~"
+alias -- -="cd -"
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
