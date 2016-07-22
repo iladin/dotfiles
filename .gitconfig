@@ -51,7 +51,8 @@
 [credential]
 	helper = cache --timeout=2592000
 [include]
-    path = ../.gitconfig.local
+    path = ~/.gitconfig.local
+    path = ~/.gitconfig.user
 [commit]
     template = ~/.gitmessage
     verbose = true
