@@ -66,14 +66,7 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
-[alias]
-    clean-merged = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-    lastestSubmodules = "submodule foreach --recursive git pull origin master"
-    showUntracked = "git ls-files --others --exclude-standard"
-    up = '!git fetch && git rebase --autostash FETCH_HEAD'
-    undo-commit = reset --soft HEAD~1
-  # From http://github.com/gitalias
+  [alias]
 
   ##
   # One letter alias for our most frequent commands.
@@ -213,7 +206,7 @@
   # To integrate changes between branches, you can merge or rebase.
   #
   # When we use "git pull", git does a fetch then a merge.
-  # If we’ve made changes locally and someone else has pushed changes
+  # If we've made changes locally and someone else has pushed changes
   # to our git host then git will automatically merge these together
   # and create a merge commit that looks like this in the history:
   #
@@ -222,7 +215,7 @@
   # When we use "git pull --rebase", git does a fetch then a rebase.
   # A rebase resets the HEAD of your local branch to be the same as
   # the remote HEAD, then replays your local commits back into repo.
-  # This means you don’t get any noisy merge messages in your history.
+  # This means you don't get any noisy merge messages in your history.
   # This gives us a linear history, and also helps with git bisect.
   #
   # To automatically do "pull --rebase" for any branch based on master:
@@ -251,7 +244,7 @@
   # Before we push our local changes, we may want to do some cleanup,
   # to improve our commit messages or squash related commits together.
   #
-  # Let’s say I’ve pushed two commits that are related to a new feature and
+  # Let's say I've pushed two commits that are related to a new feature and
   # I have another where I made a spelling mistake in the commit message.
   # When I run "git rbi" I get dropped into my editor with this:
   #
@@ -273,7 +266,7 @@
   #     3400455 - foo
   #     5dae0a0 - whatever
   #
-  rbi = !"git rebase -i @{u}"
+  rbi = rebase --interactive @{upstream}
 
   # See https://blog.filippo.io/git-fixup-amending-an-older-commit/
   # This is a slightly modified version
@@ -297,6 +290,12 @@
 
   # remote prune - deletes all stale remote-tracking branches under <name>.
   rrp = remote prune
+
+  incoming = !git remote update --prune; git log ..@{upstream}
+  outgoing = log @{upstream}..
+
+  # Push to all remotes
+  push-to-all-remotes = !git remote | xargs -I% -n1 git push %
 
   ### revert ###
 
@@ -333,27 +332,31 @@
   # status with short format and showing branch and tracking info.
   ssb = status --short --branch
 
-  ### INSPECTION ALIASES ###
+  ### ALIAS MANAGEMENT ###
 
-  # Show our defined aliases
-  aliases = !"git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'"
+  # Show our defined alias list
+  alias = !"git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'"
+
+  add-alias = "!f() { [ $# = 3 ] && git config $1 alias.\"$2\" \"$3\" && return 0 || echo \"Usage: git add-(local|global)-alias <new alias> <original command>\" >&2 && return 1; }; f"
+  add-global-alias = "!git add-alias --global"
+  add-local-alias = "!git add-alias --local"
 
   # Show our tags
-  tags = tag -n1 -l
+  tags = tag -n1 --list
 
   # Diffs
   diff-all = !"for name in $(git diff --name-only $1); do git difftool $1 $name & done"
   diff-changes = diff --name-status -r
-  diff-stat = diff --stat -b -r
+  diff-stat = diff --stat --ignore-space-change -r
   diff-staged = diff --cached
 
   # From https://gist.github.com/492227
-  head = !"git log -n1"
+  head = log -n1
   heads = !"git log origin/master.. --format='%Cred%h%Creset;%C(yellow)%an%Creset;%H;%Cblue%f%Creset' | git name-rev --stdin --always --name-only | column -t -s';'"
   lost = !"git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
 
   # Find text in any commit ever
-  grep-all = !"git rev-list --all | xargs git grep '$1'"
+  grep-all = !"f() { git rev-list --all | xargs git grep \"$@\"; }; f"
 
   # Given a merge commit, find the span of commits that exist(ed).
   # Not so useful in itself, but used by other aliases.
@@ -370,7 +373,7 @@
   merge-span-difftool = !"git difftool `git merge-span ... $1`"
 
   # Interactively rebase all the commits on the current branch
-  rebase-branch = !"git rebase -i `git merge-base master HEAD`"
+  rebase-branch = !"git rebase --interactive `git merge-base master HEAD`"
 
   # Sort by date for branches; can be useful for spring cleaning
   refs-by-date = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)'
@@ -391,17 +394,11 @@
 
   ### LOG ALIASES ###
 
-  log-graph = log --all --graph --decorate
-  log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
-  log-timeline = log --format='%h %an %ar - %s'
-  log-local = log --oneline origin..HEAD
-  log-fetched = log --oneline HEAD..origin/master
-
   # Show log of changes, most recent first
   log-changes = log --oneline --reverse
 
   # Show log of new commits after you fetched, with stats, excluding merges
-  log-commits = log ORIG_HEAD.. --stat --no-merges
+  log-fresh = log ORIG_HEAD.. --stat --no-merges
 
   # Show log with dates in our local timezone
   log-local = log --date=local
@@ -410,7 +407,7 @@
   log-me = !git log --author $(git config user.email)
 
   # Show log as a graph
-  log-graph = log --graph --oneline --decorate
+  log-graph = log --graph --all --oneline --decorate
 
   # Show the date of the first commit
   log-first-date = !"git log --date-order --date=iso --pretty=%ad --reverse | head -1"
@@ -419,7 +416,13 @@
   log-day = log --since yesterday
 
   # Summarize your own changes since yesterday, suitable for a daily standup meeting.
-  log-standup = !git log --since yesterday --pretty=short --author $(git config user.email)
+  log-standup = !git log --since yesterday --author $(git config user.email) --pretty=short
+
+  # TODO
+  log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+  log-timeline = log --format='%h %an %ar - %s'
+  log-local = log --oneline origin..HEAD
+  log-fetched = log --oneline HEAD..origin/master
 
   # churn: show log of files that have many changes
   #
@@ -443,7 +446,7 @@
   #
   # These are all standard arguments to `git log`.
   #
-  # It’s possible to get valuable insight from history of a project not only
+  # It's possible to get valuable insight from history of a project not only
   # by viewing individual commits, but by analyzing sets of changes as a whole.
   # For instance, git-log-churn compiles stats about which files change the most.
   #
@@ -468,22 +471,22 @@
   #    13 Bob Brown
   #    7 Carol Clark
   #
-  churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count\tfile"} {print $1 "\t" $2}' | sort -g
+  churn = !git log --all --find-copies --find-renames --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count\tfile"} {print $1 "\t" $2}' | sort -g
 
 
   ### LOOKUP ALIASES ###
 
   # whois: given a string for an author, try to figure out full name and email:
-  whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+  whois = "!sh -c 'git log --regexp-ignore-case -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
 
   # Given any git object, try to show it briefly
-  whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+  whatis = show --no-patch --pretty='tformat:%h (%s, %ad)' --date=short
 
   # Show who contributed with summarized changes
-  who = shortlog -s --
+  who = shortlog --summary --
 
   # Show who contributed, in descending order by number of commits
-  whorank = shortlog -sn --no-merges
+  whorank = shortlog --summary --numbered --no-merges
 
   # List all issues mentioned in commit messages between range of commits
   #
@@ -501,13 +504,13 @@
   ### WORKFLOW ALIASES ###
 
   # Stash aliases
-  save = !git stash save
-  pop = !git stash pop
+  save = stash save
+  pop = stash pop
 
   # Stash snapshot - from http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
   # Take a snapshot of your current working tree without removing changes.
-  # This is handy for refactoring where you can’t quite fit what you’ve done
-  # into a commit but daren’t stray too far from now without a backup.
+  # This is handy for refactoring where you can't quite fit what you've done
+  # into a commit but daren't stray too far from now without a backup.
   #
   # Running this:
   #
@@ -526,7 +529,7 @@
 
   # Do everything we can to synchronize all changes
   get = !git pull --rebase && git submodule update --init --recursive
-  put = !git commit -am "$1" && git push
+  put = !git commit --all --message="$1" && git push
 
   ##
   # Undo & Reset
@@ -548,17 +551,17 @@
   unstage = reset HEAD
 
   # Edit all files of the given type
-   edit-cached = !"f() { git ls-files --cached | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
-   edit-deleted = !"f() { git ls-files --deleted | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
-   edit-others = !"f() { git ls-files --others | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
-   edit-ignored = !"f() { git ls-files --ignored | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
-   edit-killed = !"f() { git ls-files --killed | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
-   edit-modified = !"f() { git ls-files --modified | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
-   edit-stage = !"f() { git ls-files --stage | cut -f2 | sort -u ; }; "${VISUAL:-${EDITOR:-vi}}" `f`"
+  edit-cached = !"f() { git ls-files --cached | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
+  edit-deleted = !"f() { git ls-files --deleted | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
+  edit-others = !"f() { git ls-files --others | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
+  edit-ignored = !"f() { git ls-files --ignored | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
+  edit-killed = !"f() { git ls-files --killed | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
+  edit-modified = !"f() { git ls-files --modified | sort -u ; }; \"${VISUAL:-${EDITOR:-vi}}\" `f`"
+  edit-stage = !"f() { git ls-files --stage | cut -f2 | sort -u ; }; "${VISUAL:-${EDITOR:-vi}}" `f`"
 
   # Editing and adding conflicted files: when we get many merge conflicts
   # and want to quickly solve them using an editor, then add the  files.
-  edit-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; $EDITOR `f`"
+  edit-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; "${VISUAL:-${EDITOR:-vi}}" `f`"
   add-unmerged = !"f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 
   # Ours & Theirs - easy merging when you know which files you want
@@ -583,7 +586,7 @@
   # this cleaning will facilite a rebase, because there won't be any conlfict
   # due to an "unclean" working directory (not in sync with the index).
   # The unwip will restore the deleted files to the working tree.
-  wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+  wip = !"git add --all; git ls-files --deleted -z | xargs -0 git rm; git commit --message=wip"
   unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
 
   # Assume: from http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
@@ -616,20 +619,20 @@
   master-cleanse = !git master-cleanse-local; git master-cleanse-remote
 
   # Delete all local branches that have been merged into the local master branch.
-  master-cleanse-local = "!git checkout master && git branch --merged | xargs git branch -d"
+  master-cleanse-local = "!git checkout master && git branch --merged | xargs git branch --delete"
 
   # Delete all remote branches that have been merged into the remote master branch.
-  master-cleanse-remote = !"git branch -r --merged origin/master | sed 's# *origin/##' | grep -v '^master$' xargs -I% git push origin :% 2>&1 | grep --colour=never 'deleted'"
+  master-cleanse-remote = !"git branch --remotes --merged origin/master | sed 's# *origin/##' | grep -v '^master$' xargs -I% git push origin :% 2>&1 | grep --colour=never 'deleted'"
 
   # Publish the current branch by pushing it to the remote "origin",
   # and setting the current branch to track the upstream branch.
-  publish = !"git push -u origin $(git branch-name)"
+  publish = !"git push --set-upstream origin $(git branch-name)"
 
   # Unpublish the current branch by deleting the
   # remote version of the current branch.
   unpublish = !"git push origin :$(git branch-name)"
 
-  # Delete a branch name, then create the same branch name based on master —
+  # Delete a branch name, then create the same branch name based on master -
   # useful if you have, for example, a development branch and master branch
   # and they go out of sync, and you want to nuke the development branch.
   #
@@ -641,10 +644,11 @@
   ### SHELL SCRIPTING ALIASES ###
 
   # Get the current branch name
-  branch-name = !"git rev-parse --abbrev-ref HEAD"
+  branch-name = rev-parse --abbrev-ref HEAD
 
   # Get the top level directory, regardless of what subdirectory we're in.
-  root = ! pwd
+  # root = ! pwd # this one is funny but slow
+  root = rev-parse --show-toplevel
 
   # Execute shell scripts. Git always runs scripts in the top directory.
   # For example "git exec pwd" will always show you the top directory.
@@ -692,7 +696,7 @@
   # We also add the --window-memory limit of 1 gig, which helps protect
   # us from a window that has very large objects such as binary blobs.
   #
-  repacker = !git repack -a -d -f --depth=300 --window=300 --window-memory=1g
+  repacker = repack -a -d -f --depth=300 --window=300 --window-memory=1g
 
   # Do everything we can to optimize the repository.
   #
@@ -742,12 +746,12 @@
   prune-all = !git remote | xargs -n 1 git remote prune
 
   # Thanks to cody cutrer
-  cherry-pick-merge = !"bash -c 'git cherry-pick -n -m 1 $0 && \
+  cherry-pick-merge = !"sh -c 'git cherry-pick --no-commit --mainline 1 $0 && \
     git log -1 --pretty=%P $0 | cut -b 42- > .git/MERGE_HEAD && \
-    git commit -v'"
+    git commit --verbose'"
 
   # Thanks to jtolds on stackoverflow
-  remote-ref = !"bash -c ' \
+  remote-ref = !"sh -c ' \
     local_ref=$(git symbolic-ref HEAD); \
     local_name=${local_ref##refs/heads/}; \
     remote=$(git config branch.\"#local_name\".remote || echo origin); \
@@ -756,7 +760,7 @@
     echo remotes/$remote/$remote_name'"
 
   # Thanks to jtolds on stackoverflow
-  rebase-recent = !git rebase -i $(git remote-ref)
+  rebase-recent = !git rebase --interactive $(git remote-ref)
 
   # Use graphviz for display.
   # This produces output that can be displayed using dotty, for example:
@@ -796,7 +800,7 @@
   # to ensure that your branch starts with all the tests succeeding.
   ##
 
-  topic-start = "!f(){ branch=$1; git checkout master; git pull; git checkout -b "$branch" master; };f"
+  topic-start = "!f(){ branch=$1; git checkout master; git fetch; git rebase; git checkout -b "$branch" master; };f"
 
   ##
   # Update the current topic branch by pulling changes.
@@ -840,7 +844,7 @@
   # the team provide feedback on the work-in-progress.
   ##
 
-  topic-push = "!f(){ branch=$(git branch-name); git push -u origin "$branch"; };f"
+  topic-push = "!f(){ branch=$(git branch-name); git push --set-upstream origin "$branch"; };f"
 
   ##
   # Finish the current topic branch.
@@ -868,7 +872,7 @@
   # To synchronize your branch list, use "git fetch --prune".
   ##
 
-  topic-finish = "!f(){ branch=$(git branch-name); git checkout master; git branch -d "$branch"; git push origin ":$branch"; };f"
+  topic-finish = "!f(){ branch=$(git branch-name); git checkout master; git branch --delete "$branch"; git push origin ":$branch"; };f"
 
   ##########################################################################
 
@@ -901,8 +905,16 @@
   svn-b = svn branch
   svn-m = merge --squash
   svn-c = svn dcommit
-  svn-cp = !GIT_EDITOR='sed -i /^git-svn-id:/d' git cherry-pick -e
+  svn-cp = !GIT_EDITOR='sed -i /^git-svn-id:/d' git cherry-pick --edit
 
- ##########################################################################
+  ##########################################################################
 
+  ##
+  # Git aliases to correct common typing mistakes, which git built-in autocorrection
+  # does not handle
+  ##
 
+  ### Use with shell alias `gitp = git` ###
+
+  ull = pull
+  ush = push
