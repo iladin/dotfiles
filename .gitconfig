@@ -1,5 +1,6 @@
 [user]
     username = iladin
+    useConfigOnly = true # Instruct Git to avoid trying to guess defaults for user.email and user.name
 [apply]
     ignoreWhitespace = change
     whitespace = nowarn
