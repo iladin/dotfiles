@@ -70,6 +70,7 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
+  autoUpdate = true #When set  updates the index  after  resolving conflicts with rerere.
 [submodule]
   # specifies how many submodules are fetched/cloned at the same time
   # A value of 0 will give some reasonable default.
