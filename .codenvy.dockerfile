@@ -1,4 +1,4 @@
-FROM codenvy/ubuntu_jdk8_x11
+FROM codenvy/ubuntu_jdk8_x11:lastest
 
 USER root
 
