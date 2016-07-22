@@ -5,8 +5,9 @@ USER root
 
 RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get update -y \
-    && apt-get install -y neovim zsh httpie tmux ssh git ruby htop curl \
-    sudo python-pip  mercurial make binutils bison gcc build-essential \
+    # httpie tmux ruby htop mercurial
+    && apt-get install -y neovim  zsh   ssh git   curl \
+    sudo python-pip   make binutils bison gcc build-essential \
     && chsh -s /usr/bin/zsh \
     && rm /bin/sh \
     && ln -s /bin/zsh /bin/sh \
@@ -18,7 +19,7 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && rm -rf /var/lib/apt/lists/*
 
 USER iladin
-ADD . /home/iladin/
+COPY . /home/iladin/
 
 EXPOSE 22
 
