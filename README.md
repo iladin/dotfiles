@@ -32,6 +32,18 @@ rr
 
 silversearcher-ag
 
+catimg
+
+ptop
+
+nethogs
+
+bashtrace
+
+NcursesFM
+
+vcat
+
 ## Links
 
 [http://dockerfile-linter.com/?lang=en](http://dockerfile-linter.com/?lang=en)
