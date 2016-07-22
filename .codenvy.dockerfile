@@ -7,7 +7,7 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get update -y \
     # httpie tmux ruby htop mercurial
     && apt-get install -y neovim  zsh   ssh git   curl \
-    sudo python-pip   make binutils bison gcc build-essential \
+    sudo python-pip automake  make binutils bison gcc build-essential \
     && chsh -s /usr/bin/zsh \
     && rm /bin/sh \
     && ln -s /bin/zsh /bin/sh \
