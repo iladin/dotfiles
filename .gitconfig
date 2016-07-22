@@ -60,6 +60,7 @@
 [log]
     follow = true
 [merge]
+  log = true
   summary = true
   verbosity = 1
   renormalize = true
