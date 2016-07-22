@@ -66,6 +66,7 @@
   verbosity = 1
 [rebase]
     autostash = true
+    stat = true # Whether to show a diffstat of what changed upstream since the last rebase
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
