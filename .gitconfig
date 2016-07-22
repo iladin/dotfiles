@@ -47,8 +47,7 @@
     autoCorrect = -1
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
-[push]
-	default = current
+
 [credential]
 	helper = cache --timeout=2592000
 [include]
@@ -64,6 +63,8 @@
 [merge]
   summary = true
   verbosity = 1
+  [push]
+	default = current
 [rebase]
     autostash = true
     stat = true # Whether to show a diffstat of what changed upstream since the last rebase
