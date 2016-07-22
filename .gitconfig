@@ -70,7 +70,12 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
-  [alias]
+[submodule]
+  # specifies how many submodules are fetched/cloned at the same time
+  # A value of 0 will give some reasonable default.
+  fetchJobs = 0
+
+[alias]
 
   ##
   # One letter alias for our most frequent commands.
