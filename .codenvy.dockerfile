@@ -1,4 +1,5 @@
 FROM codenvy/ubuntu_jdk8_x11:lastest
+MAINTAINER iladin
 
 USER root
 
