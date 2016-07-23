@@ -21,7 +21,6 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
 USER iladin
 COPY . /home/iladin/
 
-VOLUME /home/iladin
 
 EXPOSE 22
 
