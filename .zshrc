@@ -7,7 +7,7 @@ export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 
 cfg () {   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@ }
 test -d $HOME/.cfg || (git clone --bare https://github.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
-cfg checkout || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
+cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
     while read -r file; do mv "$HOME/$file" "$HOME/.cfg-backup/$file" || unlink "$HOME/$file" ;done
 cfg checkout --force
 cfg config status.showUntrackedFiles no
