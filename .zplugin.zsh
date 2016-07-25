@@ -71,7 +71,7 @@ zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master
 zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 #k is a zsh script / plugin to make directory listings more readable,
 #adding a bit of color and some git status information on files and directories.
-zplugin load "supercrabtree/k"
+#zplugin load "supercrabtree/k" Is this already installeded?
 
 source $HOME/.powerlevel9k
 #zplugin load "iladin/oh-my-git"

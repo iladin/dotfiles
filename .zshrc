@@ -16,6 +16,7 @@ source $HOME/.alias.zsh
 
 # language configuration
 export LANG=en_US.UTF-8
+export LOCALE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 
