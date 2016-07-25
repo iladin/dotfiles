@@ -26,5 +26,4 @@ EXPOSE 22
 
 WORKDIR /home/iladin
 
-CMD /bin/zsh
 
