@@ -76,8 +76,8 @@ zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 source $HOME/.powerlevel9k
 #zplugin load "iladin/oh-my-git"
 #zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
-test -d $HOME/.git-radar || git clone https://github.com/michaeldfallen/git-radar $HOME/.git-radar;
-test -d $HOME/.git-radar && pathadd $HOME/.git-radar && export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
+#test -d $HOME/.git-radar || git clone https://github.com/michaeldfallen/git-radar $HOME/.git-radar;
+#test -d $HOME/.git-radar && pathadd $HOME/.git-radar && export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
 
 setopt prompt_subst
 
