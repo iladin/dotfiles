@@ -23,6 +23,4 @@ COPY . /home/iladin/
 
 EXPOSE 22
 
-WORKDIR /home/iladin
-
 
