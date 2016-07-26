@@ -25,7 +25,8 @@ export TERM="xterm-256color"
 typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
-
+pathadd .
+pathadd $HOME/bin
 test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
