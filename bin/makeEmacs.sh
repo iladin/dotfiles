@@ -7,6 +7,13 @@
 
 set -eu
 
+function easySnapshot(){
+sudo add-apt-repository -y ppa:ubuntu-elisp
+sudo apt-get update
+sudo apt-get install emacs-snapshot
+}
+easySnapshot
+function old(){
 readonly version="24.5"
 
 # install dependencies
@@ -40,3 +47,4 @@ sudo make \
 
 cd /usr/local/stow
 sudo stow emacs-"$version"
+}
