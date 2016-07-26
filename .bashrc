@@ -1,1 +1,1 @@
-test -e ~/.zshrc && exec zsh
+hash zsh 2> /dev/null && exec zsh
