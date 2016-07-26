@@ -5,8 +5,6 @@ source ~/.functions.sh
 chmod a+x bin/*
 export TMPDIR=~/tmp && test -d $TMPDIR || mkdir $TMPDIR || echo "Failed to make temporary directory"
 chmod +t $TMPDIR || echo "Failed to set sticky bit on $TMPDIR"
-pathadd .
-pathadd $HOME/bin
 test -d ~/.linuxbrew || bin/makeLinuxBrew.sh
 pathadd ~/.linuxbrew/bin
 pathadd ~/.linuxbrew/sbin
