@@ -83,3 +83,5 @@ function dthesaurus () { curl dict://dict.org/d:${1}:moby-thes; }
 function getPath() {
   type -p "$1" | cut -d ' ' -f 3
 }
+function beiladin(){ test -e ~/.gitconfig.user || echo "[user]\nname=iladin\nemail=iladin@gmail.com" > ~/.gitconfig.user && cat ~/gitconfig.user }
+
