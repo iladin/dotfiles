@@ -8,8 +8,9 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get install -y neovim zsh ssh git curl \
     sudo python-pip automake make binutils bison gcc build-essential \
     && chsh -s /usr/bin/zsh \
-    && rm /bin/sh \
-    && ln -s /bin/zsh /bin/sh \
+    && cd /etc/skel/ && git init .add \
+    && git remote add -t \* -f origin https://github.com/iladin/dotfiles.git \
+    && git checkout --force
     && useradd -m iladin \
     && echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && chsh -s /bin/zsh iladin \
