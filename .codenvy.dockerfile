@@ -8,7 +8,7 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && apt-get install -y neovim zsh ssh git curl \
     sudo python-pip automake make binutils bison gcc build-essential \
     && chsh -s /usr/bin/zsh \
-    && cd /etc/skel/ && git init .add \
+    && cd /etc/skel/ && git init . \
     && git remote add -t \* -f origin https://github.com/iladin/dotfiles.git \
     && git checkout --force
     && useradd -m iladin \
