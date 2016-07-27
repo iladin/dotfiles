@@ -17,7 +17,8 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && chown -R iladin:iladin /home/iladin \
     && pip install powerline-status \
     && rm -rf /var/lib/apt/lists/* \
-    && su - iladin
+
+USER iladin
 
 
 
