@@ -2,11 +2,8 @@
 #TODO: ERROR CHECKING JEEZ
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
-rm -rf open-cobol*
-wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/code/open-cobol-code-1006-branches-gnu-cobol-2.0-debugger.zip
-unzip open-cobol-code*.zip
-cd open-cobol-code*
-sudo apt-get install libdb-dev
+git svn clone svn://svn.code.sf.net/p/open-cobol/code
+
 ./configure
 make
 sudo make install
