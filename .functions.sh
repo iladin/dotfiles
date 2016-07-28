@@ -86,3 +86,21 @@ function getPath() {
 #TODO: Have this work for everyone
 function beiladin(){ test -e ~/.gitconfig.user || echo "[user]\nname=iladin\nemail=iladin@gmail.com" > ~/.gitconfig.user && cat ~/gitconfig.user }
 
+# =: front for the `bc` utility  {{{
+
+# credits: original idea by github.com/arzzen/calc.plugin.zsh
+# usage: = '1+1'
+= () {
+  bc -l <<< "$@"
+}
+
+# }}}
+
+# md: faster dir creation {{{
+
+md() {
+  mkdir -p $1
+  builtin cd $1
+}
+
+# }}}

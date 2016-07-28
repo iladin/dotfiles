@@ -146,6 +146,7 @@
   ### commit ###
 
   # commit - amend the tip of the current branch rather than creating a new commit.
+  amend = commit --amend
   ca = commit --amend
 
   # commit interactive

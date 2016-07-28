@@ -25,11 +25,18 @@ export TERM="xterm-256color"
 typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
-pathadd .
-pathadd $HOME/bin
+pathadd . $HOME/bin /usr/local/bin
 test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
+
+
+# Hash section
+if hash nvim 2>/dev/null; then
+  alias 'vim'='nvim'
+  alias 'vi'='nvim'
+fi
+
 
 test -e $HOME/.zsh.local && source $HOME/.zsh.local
 ## Profiling code
