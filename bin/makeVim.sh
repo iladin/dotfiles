@@ -3,11 +3,15 @@
 --enable-multibyte \
 --enable-gui=gtk2 \
 --enable-rubyinterp \
+--enable-perlinterp \
+--enable-tclinterp \
+--enable-pythoninterp \
 --enable-python3interp \
 --enable-luainterp \
 --with-luajit \
 --enable-gpm \
 --enable-cscope \
 --enable-fontset \
+--enable-xim \
 --enable-termtruecolor \
 --enable-fail-if-missing
