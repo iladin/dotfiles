@@ -80,7 +80,6 @@ source $HOME/.powerlevel9k
 #test -d $HOME/.git-radar || git clone https://github.com/michaeldfallen/git-radar $HOME/.git-radar;
 #test -d $HOME/.git-radar && pathadd $HOME/.git-radar && export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
 
-setopt prompt_subst
 
 # Use Ctrl-x,Ctrl-l to get the output of the last command
 zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
@@ -98,7 +97,7 @@ zplugin load "zsh-users/zsh-autosuggestions"
 zplugin load "zsh-users/zsh-syntax-highlighting" #, nice:9
 
 #Custom zsh plugin to easy create custom zsh plugins from a boilerplate template.
-zplugin "hellodarren/plugin"
+zplugin load "hellodarren/plugin"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 zplugin cdreplay -q # -q is for quiet
 autoload -Uz _zplugin
