@@ -40,6 +40,9 @@ alias -g X0='| xargs -0'
 alias -g XG='| xargs egrep'
 alias -g X='| xargs'
 
+#Alias Alias
+alias aliases=" (alias | cut -f1 -d= ; hash -f; hash -v | cut -f 1 -d= ; typeset +f) | sort"
+
 # Use cut on space- or comma- delimited files:
 alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
