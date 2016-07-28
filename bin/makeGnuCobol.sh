@@ -2,11 +2,12 @@
 #TODO: ERROR CHECKING JEEZ
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
-git svn clone svn://svn.code.sf.net/p/open-cobol/code
-
-./configure
-make
-sudo make install
+git clone https://gitlab.com/iladin/gnucobol.git
+cd gnucobol/branches/gnu-cobol-2.0-debugger
+./configure --without-db
+make || exit 1
+make check
+sudo make install || exit 1
 sudo ldconfig
 cd ~/tmp
 wget https://sourceforge.net/code-snapshots/svn/o/op/open-cobol/contrib/open-cobol-contrib-175-trunk.zip

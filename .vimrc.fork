@@ -7,5 +7,5 @@ nmap <S-Space> i
 " Or just Space to enter insert mode.
 nmap <Space> i
 " Turn on line numbers and relative line numbers
-set nu
-set rn
+set number
+set relativenumber
