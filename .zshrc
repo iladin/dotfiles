@@ -27,6 +27,12 @@ typeset -U path
 declare -f pathadd || source $HOME/.functions.sh
 pathadd . $HOME/bin /usr/local/bin
 test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
+# fzf is a general-purpose command-line fuzzy finder.
+[ -f ~/.fzf.zsh ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--extended --ansi --multi"
+
+
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
