@@ -99,7 +99,7 @@ zplugin load "zsh-users/zsh-syntax-highlighting" #, nice:9
 #Custom zsh plugin to easy create custom zsh plugins from a boilerplate template.
 zplugin load "hellodarren/plugin"
 
-zplugin snippet "https://gist.github.com/iladin/795aa07ce7104093c66d69dcd6747698#file-zstyle-zsh"
+zplugin snippet "https://gist.githubusercontent.com/iladin/795aa07ce7104093c66d69dcd6747698/raw/2192e58c96a3fd55facf982768775ac6fbd099d6/zstyle.zsh"
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 zplugin cdreplay -q # -q is for quiet
