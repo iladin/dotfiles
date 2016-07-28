@@ -89,6 +89,8 @@ setopt pushd_silent
 setopt short_loops
 # Ignore history (fc -l) command in history
 setopt hist_no_store
+# Save history line by line
+setopt inc_append_history
 setopt transient_rprompt
 unsetopt promptcr
 setopt hash_cmds
