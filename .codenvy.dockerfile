@@ -15,7 +15,7 @@ RUN add-apt-repository ppa:neovim-ppa/unstable \
     && echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && chsh -s /bin/zsh iladin \
     && chown -R iladin:iladin /home/iladin \
-    && pip install powerline-status \
+    && pip install powerline-status mdv \
     && rm -rf /var/lib/apt/lists/*
 
 USER iladin
