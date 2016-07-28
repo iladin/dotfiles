@@ -95,3 +95,12 @@ function beiladin(){ test -e ~/.gitconfig.user || echo "[user]\nname=iladin\nema
 }
 
 # }}}
+
+# md: faster dir creation {{{
+
+md() {
+  mkdir -p $1
+  builtin cd $1
+}
+
+# }}}
