@@ -97,6 +97,8 @@ zplugin load "zsh-users/zsh-autosuggestions"
 # excuting compinit command and sourcing other plugins.
 zplugin load "zsh-users/zsh-syntax-highlighting" #, nice:9
 
+#Custom zsh plugin to easy create custom zsh plugins from a boilerplate template.
+zplugin "hellodarren/plugin"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 zplugin cdreplay -q # -q is for quiet
 autoload -Uz _zplugin
