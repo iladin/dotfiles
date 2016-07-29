@@ -2,6 +2,12 @@
 #TODO: ERROR CHECKING JEEZ
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
+rm -rf opensource-cobol/vbisam
+git clone https://github.com/opensourcecobol/opensource-cobol.git
+cd opensource-cobol/vbisam
+./configure
+make
+sudo make install
 test -d gnucobol && rm -rf gnucobol
 git clone https://gitlab.com/iladin/gnucobol.git
 cd gnucobol/branches/gnu-cobol-2.0-debugger
@@ -14,5 +20,5 @@ cd ~/tmp
 git svn checkout svn://svn.code.sf.net/p/open-cobol/contrib/ open-cobol-contrib
 cd open-cobol-contrib*/trunk/tools/cobolmac
 source comp-cobolmac.sh
-cp cobolmac $HOME/bin
+sudo cp cobolmac /usr/bin
 
