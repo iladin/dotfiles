@@ -5,9 +5,11 @@ cd ~/tmp
 rm -rf opensource-cobol/vbisam
 git clone https://github.com/opensourcecobol/opensource-cobol.git
 cd opensource-cobol/vbisam
+chmod a+x configure
 ./configure
 make
 sudo make install
+sudo ldconfig
 cd ~/tmp
 test -d gnucobol && rm -rf gnucobol
 git clone https://gitlab.com/iladin/gnucobol.git
@@ -20,6 +22,7 @@ sudo ldconfig
 cd ~/tmp
 git svn checkout svn://svn.code.sf.net/p/open-cobol/contrib/ open-cobol-contrib
 cd open-cobol-contrib*/trunk/tools/cobolmac
+sudo lfconfig
 source comp-cobolmac.sh
 sudo cp cobolmac /usr/bin
 
