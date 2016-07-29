@@ -119,8 +119,6 @@ if [[ "$(tput colors)" == "256" ]]; then
     ZSH_HIGHLIGHT_STYLES[assign]=fg=037
 fi
 
-#Custom zsh plugin to easy create custom zsh plugins from a boilerplate template.
-zplugin load "hellodarren/plugin"
 
 zplugin load "iladin/zstyle"
 
