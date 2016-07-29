@@ -8,10 +8,11 @@ cd opensource-cobol/vbisam
 ./configure
 make
 sudo make install
+cd ~/tmp
 test -d gnucobol && rm -rf gnucobol
 git clone https://gitlab.com/iladin/gnucobol.git
 cd gnucobol/branches/gnu-cobol-2.0-debugger
-./configure --without-db
+./configure --with-vbisam
 make || exit 1
 make check
 sudo make install || exit 1
