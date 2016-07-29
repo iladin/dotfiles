@@ -2,7 +2,7 @@
 #TODO: ERROR CHECKING JEEZ
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
-rm -rf opensource-cobol/vbisam
+rm -rf opensource-cobol
 git clone https://github.com/opensourcecobol/opensource-cobol.git
 cd opensource-cobol/vbisam
 chmod a+x configure
