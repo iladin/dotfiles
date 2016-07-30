@@ -7,7 +7,7 @@ git clone https://github.com/opensourcecobol/opensource-cobol.git
 cd opensource-cobol/vbisam
 chmod a+x configure
 ./configure
-make
+make cycle
 sudo make install
 sudo ldconfig
 cd ~/tmp
