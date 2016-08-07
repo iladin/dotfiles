@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #TODO: ERROR CHECKING JEEZ
+sudo apt-get update
+sudo apt-get -yqq install help2man texinfo
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 rm -rf opensource-cobol
