@@ -1,11 +1,9 @@
-    
+
 before_install:
     script:
-        - source cfg.sh
-        - source .shrc
+        - source bin/makeEnvy.sh
+
 
 zsh_cfg:
       script:
-        - source cfg.sh
-    #   - bin/checkGCC.sh
         - zsh -c "source ~/bin/printUTF.sh"
