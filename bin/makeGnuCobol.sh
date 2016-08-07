@@ -24,7 +24,6 @@ sudo ldconfig
 cd ~/tmp
 git svn checkout svn://svn.code.sf.net/p/open-cobol/contrib/ open-cobol-contrib
 cd open-cobol-contrib*/trunk/tools/cobolmac
-sudo lfconfig
+sudo ldconfig
 source comp-cobolmac.sh
 sudo cp cobolmac /usr/bin
-
