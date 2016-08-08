@@ -5,6 +5,9 @@ export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 #exec 3>&2 2>/tmp/zshstart.$$.log
 #setopt xtrace prompt_subst
 
+test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
+
+
 cfg () {   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@ }
 test -d $HOME/.cfg || (git clone --bare https://github.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
 cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
@@ -134,7 +137,7 @@ unsetopt hist_verify
 # }}}
 
 
-test -e $HOME/.zsh.local && source $HOME/.zsh.local
+test -e $HOME/.zsh.local.after && source $HOME/.zsh.local.after
 ## Profiling code
 #unsetopt xtrace
 #exec 2>&3 3>&-
