@@ -22,6 +22,8 @@ zzplugin
 autoload -Uz compinit
 compinit
 
+zplugin load "iladin/zstyle"
+
 # k is a zsh script / plugin to make directory listings more readable
 #adding a bit of color and some git status information on files and directories.
 zplugin load "supercrabtree/k"
@@ -118,7 +120,7 @@ if [[ "$(tput colors)" == "256" ]]; then
 fi
 
 
-zplugin load "iladin/zstyle"
+
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 zplugin cdreplay -q # -q is for quiet
