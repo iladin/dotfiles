@@ -1,2 +1,2 @@
-Bundle 'showhide'
+Bundle 'vim-scripts/showhide'
 Bundle 'justinmk/vim-sneak'
