@@ -8,9 +8,7 @@ RUN apt-get update -y \
     sudo python-pip automake make binutils bison gcc build-essential \
     && pip install powerline-status \
     && chsh -s /usr/bin/zsh \
-    && cd /etc/skel/ && git init . \
-    && git remote add -t \* -f origin https://gitlab.com/iladin/dotfiles.git \
-    && git pull origin master \
+    && cd /etc/skel/ && git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg. \
     && useradd -m iladin \
     && echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && chsh -s /bin/zsh iladin \
