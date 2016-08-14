@@ -1,9 +1,4 @@
-
-before_install:
-    script:
-        - source bin/makeEnvy.sh
-
-
 zsh_cfg:
       script:
+        - source bin/makeEnvy.sh
         - zsh -c "source ~/bin/printUTF.sh"
