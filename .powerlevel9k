@@ -1,6 +1,6 @@
 # fix garish, unreadable green and yellow node segment colours
 #POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='awesome-patched' #If you chose to use already patched fonts, use instead :
+#POWERLEVEL9K_MODE='awesome-patched' #If you chose to use already patched fonts, use instead :
 POWERLEVEL9K_MODE='compatible' # This option is best if you prefer not to install additional fonts.
 #POWERLEVEL9K_MODE='flat' # Note that if you prefer flat segment transitions, you can use the following with Awesome Powerline Fonts installed:
 
