@@ -3,9 +3,8 @@ MAINTAINER iladin
 
 USER root
 
-RUN add-apt-repository ppa:neovim-ppa/unstable \
-    && apt-get update -y \
-    && apt-get install -y neovim zsh ssh git curl \
+RUN apt-get update -y \
+    && apt-get install -y vim zsh ssh git curl \
     sudo python-pip automake make binutils bison gcc build-essential \
     && pip install powerline-status \
     && chsh -s /usr/bin/zsh \
