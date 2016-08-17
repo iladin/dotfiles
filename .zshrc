@@ -7,7 +7,7 @@ export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 
 test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 
-
+fpath=(~/.zsh $fpath)
 cfg () {   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@ }
 test -d $HOME/.cfg || (git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
 cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
