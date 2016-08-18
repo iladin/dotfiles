@@ -47,6 +47,9 @@ alias aliases=" (alias | cut -f1 -d= ; hash -f; hash -v | cut -f 1 -d= ; typeset
 alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
 
+#Get your external IP address
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 #Color for ls
 export CLICOLOR=1
 ls --color=auto &> /dev/null && alias ll='ls -lF --color=auto' \
