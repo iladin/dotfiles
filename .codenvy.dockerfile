@@ -7,7 +7,7 @@ RUN apt-get update -y \
     && apt-get install -y vim zsh ssh git curl \
     sudo python-pip automake make binutils bison gcc build-essential \
     && chsh -s /usr/bin/zsh \
-    && cd /etc/skel/ && git clone --bare https://gitlab.com/iladin/dotfiles.git  /etc/skel/.cfg && git --git-dir=.cfg/ checkout --force \
+    && cd /etc/skel/ && git clone --bare https://gitlab.com/iladin/dotfiles.git  /etc/skel/.cfg && git --git-dir=.cfg/ --work-tree=$PWD checkout --force \
     && useradd -m iladin \
     && echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && chsh -s /bin/zsh iladin \
