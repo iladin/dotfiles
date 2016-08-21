@@ -12,10 +12,8 @@ RUN apt-get update -y \
     && echo "iladin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && chsh -s /bin/zsh iladin \
     && chown -R iladin:iladin /home/iladin \
-
-    && rm -rf /var/lib/apt/lists/*
-
-USER iladin
+    && rm -rf /var/lib/apt/lists/* \
+    && su - iladin
 
 
 
