@@ -10,7 +10,7 @@ RUN apt-get update -y \
     && cd /etc/skel/ && git clone --bare https://gitlab.com/iladin/dotfiles.git  /etc/skel/.cfg && git --git-dir=.cfg/ --work-tree=$PWD checkout --force \
     && useradd -m Developer \
     && echo "Developer ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
-    && chsh -s /bin/zshDeveloperiladin \
+    && chsh -s /bin/zsh Developer \
     && chown -R Developer:Developer /home/Developer \
     && rm -rf /var/lib/apt/lists/* \
     && su - Developer "true"
