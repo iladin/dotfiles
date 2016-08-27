@@ -13,7 +13,6 @@ RUN apt-get update -y \
     && chsh -s /bin/zsh Developer \
     && chown -R Developer:Developer /home/Developer \
     && rm -rf /var/lib/apt/lists/* \
-    && su - Developer "true"
 
 USER Developer
 
