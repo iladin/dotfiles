@@ -23,24 +23,131 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-      auto-completion
-      better-defaults
+     vimscript
+     nginx
+     ;; MY Own layers
+     ;; no-dots
+     appearance
+     ;;(blog :variables
+     ;;     org-page-use-melpa-version nil
+     ;;     org-page-built-directory "~/Documents/Projects/le_blog_built/")
+     org-cestdiego
+     presentations
+     soundcloud
+     twitter
+     utils
+     ;; (exwm :variables
+     ;;       exwm-app-launcher--prompt " "
+     ;;       exwm--hide-tiling-modeline t
+     ;;       exwm--terminal-command "termite")
+     ;; nand2tetris
+
+     ;; Spacemacs
+     pdf-tools
+     gnus
+     ;;(elfeed :variables
+     ;;        elfeed-enable-web-interface t
+     ;;        rmh-elfeed-org-files (list "~/Google Drive/Org-Notes/elfeed.org"))
+     ;; ,(unless (eq system-type 'darwin) nixos)
+     dash
+     ;; Version Control
+     version-control
+     (git :variables
+          git-magit-status-fullscreen t)
+     github
+     ;; Other stuff
+     prodigy
+     (colors :variables
+             colors-enable-nyan-cat-progress-bar t
+             colors-enable-rainbow-identifiers nil)
+
+     ;; (perspectives :variables
+     ;;               spacemacs-persp-show-home-at-startup t
+     ;;               perspectives-display-help t)
+     chrome
+     (erc :variables
+          erc-enable-sasl-auth t)
+     (rcirc :variables
+            rcirc-default-nick "cestdiego"
+            rcirc-default-user-name "cestdiego"
+            rcirc-default-full-name "Diego Berrocal"
+            rcirc-enable-znc-support t)
+     restclient
+     ;; Org
+     (org :variables
+          org-mapping-style 'worf)
+     pandoc
+     ;; Miscellaneous
+     emoji
+     ;; (wakatime :variables
+     ;;           wakatime-api-key    "813b0d78-1f17-43eb-bede-a5c008651d4a"
+     ;;           wakatime-cli-path   "/run/current-system/sw/bin/wakatime"
+     ;;           wakatime-python-bin "/run/current-system/sw/bin/python")
+     ,(when (eq system-type 'darwin) 'osx)
+     ;; Completings Stuff
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-complete-with-key-sequence "jk")
+     ;; (ycmd :variables
+     ;;       ycmd-server-command "~/build/ycmd/")
+     ;; Syntax Checking Stuff
+     spell-checking
+     syntax-checking
+     ;; Shells
+     (shell :variables
+            shell-protect-eshell-prompt t
+            shell-default-shell 'ansi-term
+            shell-pop-autocd-to-working-dir nil
+            shell-default-term-shell "zsh")
+     ;; Lang
+     ;;; LIISSSSSPPPPPSSSS
+     ;; clojure
      emacs-lisp
-      git
-      markdown
-      org
-      (shell :variables
-             shell---insecuredefault-height 30
-             shell-default-position 'bottom)
-      spell-checking
-      syntax-checking
-      version-control
-     )
-   ;; List of additional packages that will be installed without being
+     scheme
+     ansible
+     markdown
+     html
+     latex
+     lua
+     c-c++
+     python
+     ipython-notebook
+     sql
+     ;; haskell
+     java
+     javascript
+     react
+     ruby
+     extra-langs
+     ;; Utils
+     ranger
+     selectric
+     search-engine
+     xkcd
+     games
+     spotify
+     Monfoku
+     vagrant)
+   ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
-   ;; packages, then consider creating a layer. You can also put the
-   ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   ;; packages then consider to create a layer, you can also put the
+   ;; configuration in `dostspacemacs/config'.
+   dotspacemacs-additional-packages '(visual-fill-column
+                                      company-flx
+                                      kite-mini
+                                      encourage-mode
+                                      key-chord
+                                      lice
+                                      editorconfig
+                                      nvm
+                                      focus
+                                      w3m
+                                      sicp
+                                      beacon
+                                      systemd)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
