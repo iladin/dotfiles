@@ -52,7 +52,8 @@ zplugin load "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zplugin load "psprint/zsh-editing-workbench"
 
-
+#Because your terminal should be able to perform tasks asynchronously without external tools!
+zplugin load "mafredri/zsh-async"
 #Plugin that provides zsnapshot command which dumps current ZSH state into a file, for restoration by sourcing the file
 zplugin load "psprint/zsnapshot"
 #A shell command that will display selection list
