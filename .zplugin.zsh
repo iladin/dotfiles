@@ -51,8 +51,8 @@ zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.z
 zplugin load "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zplugin load "psprint/zsh-editing-workbench"
-#To make Alt key work like expected under XTerm add XTerm*metaSendsEscape: true to your resource file, e.g.:
-#grep metaSendsEscape ~/.Xresources &> /dev/null || echo 'XTerm*metaSendsEscape: true' >> ~/.Xresources
+
+
 #Plugin that provides zsnapshot command which dumps current ZSH state into a file, for restoration by sourcing the file
 zplugin load "psprint/zsnapshot"
 #A shell command that will display selection list
