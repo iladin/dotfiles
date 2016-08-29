@@ -68,6 +68,9 @@ zplugin load "psprint/ztrace"
 zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
 
 
+#zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
+zplugin load "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
+
 #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
 zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
 
