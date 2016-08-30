@@ -17,7 +17,7 @@ function zzplugin(){
     fi
     }
     source ~/.zplugin/bin/zplugin.zsh
-    zp_cmd="zplugin load"
+    zp_cmd="eval zplugin load"
 }
 
 function zzplug(){
