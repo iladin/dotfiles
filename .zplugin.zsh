@@ -54,7 +54,7 @@ $zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && $zp_cmd  "felixr/docker-zsh-completion"
 
-if [[ zp_cmd = "zplugin load" ]]; then
+if [[ $zp_cmd = "zplugin load" ]]; then
     zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
     zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
     zplugin snippet 'https://raw.githubusercontent.com/mchav/with/master/with'
