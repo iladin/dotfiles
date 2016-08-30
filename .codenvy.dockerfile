@@ -11,7 +11,7 @@ RUN apt-get update -y \
     && echo "Developer ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && chsh -s /bin/zsh Developer \
     && chown -R Developer:Developer /home/Developer \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
 USER Developer
 
