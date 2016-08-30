@@ -57,7 +57,7 @@ zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
 
-if [[ $zp_cmd = "zplugin load" ]]; then
+if whence -f zplugin; then
     zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
     zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
     zplugin snippet 'https://raw.githubusercontent.com/mchav/with/master/with'
@@ -68,6 +68,7 @@ else
     zplug "lib/git", from:oh-my-zsh
     zplug "lib/git", from:oh-my-zsh
     zplug "mchav/with", as:command
+    # Use Ctrl-x,Ctrl-l to get the output of the last command
     #TODO zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
 fi
 zp_cmd "mrowa44/emojify" #, as:command, of:emojify
@@ -102,8 +103,7 @@ source $HOME/.powerlevel9k
 #test -d $HOME/.git-radar && pathadd $HOME/.git-radar && export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
 
 
-# Use Ctrl-x,Ctrl-l to get the output of the last command
-zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
+
 
 # zsh anything.el-like widget.
 zp_cmd "zsh-users/zaw"
@@ -162,4 +162,4 @@ function zplugin_end(){}
     zcompile ~/.zplugin/bin/zplugin.zsh
 }
 
-if [[ zp_cmd = "zplugin load" ]]; then zplugin_end; else zplug_end; fi
+if whence -f zplugin; then zplugin_end; else zplug_end; fi
