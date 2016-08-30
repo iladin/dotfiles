@@ -17,13 +17,14 @@ function zzplugin(){
     fi
     }
     source ~/.zplugin/bin/zplugin.zsh
+    zp_cmd="zplugin load"
 }
 
 function zzplug(){
-    export ZPLUG_HOME=~/.zplug
+    export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
     test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
     source ~/.zplug/init.zsh
-
+    zp_cmd="zplug"
 }
 
 zzplugin
@@ -135,7 +136,19 @@ fi
 
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
-zplugin cdreplay -q # -q is for quiet
-autoload -Uz _zplugin
-#(( ${+_comps} )) && _comps[zplugin]=_zplugin
-zcompile ~/.zplugin/bin/zplugin.zsh
+
+function zplug_end() {
+    if ! zplug check --verbose; then
+           zplug install
+    fi
+    zplug load --verbose
+    }
+
+function zplugin_end(){}
+    zplugin cdreplay -q # -q is for quiet
+    autoload -Uz _zplugin
+    #(( ${+_comps} )) && _comps[zplugin]=_zplugin
+    zcompile ~/.zplugin/bin/zplugin.zsh
+}
+
+if [[ zp_cmd = "zplugin load" ]]; then zplugin_end; else zplug_end; fi
