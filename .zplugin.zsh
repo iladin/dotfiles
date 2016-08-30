@@ -18,6 +18,14 @@ function zzplugin(){
     }
     source ~/.zplugin/bin/zplugin.zsh
 }
+
+function zzplug(){
+    export ZPLUG_HOME=~/.zplug
+    test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    source ~/.zplug/init.zsh
+
+}
+
 zzplugin
 autoload -Uz compinit
 compinit
