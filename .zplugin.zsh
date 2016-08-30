@@ -17,42 +17,45 @@ function zzplugin(){
     fi
     }
     source ~/.zplugin/bin/zplugin.zsh
-    zp_cmd="eval zplugin load"
+    function zp_cmd(){
+         zplugin load "$@"
+    }
 }
-
 function zzplug(){
     export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
     test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
     source ~/.zplug/init.zsh
-    zp_cmd="zplug"
+    function zp_cmd(){
+         zplug "$@"
+    }
 }
 
 zzplugin
 autoload -Uz compinit
 compinit
 
-$zp_cmd "iladin/zstyle"
+zp_cmd "iladin/zstyle"
 
 # k is a zsh script / plugin to make directory listings more readable
 #adding a bit of color and some git status information on files and directories.
-$zp_cmd "supercrabtree/k"
+zp_cmd "supercrabtree/k"
 # A fully-functional bash client for tldr.
-$zp_cmd "raylee/tldr" , as:command
+zp_cmd "raylee/tldr" , as:command
 # peco/percol/fzf wrapper plugin for zsh
-$zp_cmd "mollifier/anyframe"
+zp_cmd "mollifier/anyframe"
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 # Only use if you have python
-hash python && $zp_cmd "djui/alias-tips"
+hash python && zp_cmd "djui/alias-tips"
 
 
 # A next-generation cd command with an interactive filter
-$zp_cmd "b4b4r07/enhancd" #, of:enhancd.sh
+zp_cmd "b4b4r07/enhancd" #, of:enhancd.sh
 #Emoji completion on the command line
-$zp_cmd "b4b4r07/emoji-cli"
+zp_cmd "b4b4r07/emoji-cli"
 
-$zp_cmd "joshuarubin/zsh-homebrew"
+zp_cmd "joshuarubin/zsh-homebrew"
 
-hash docker &> /dev/null && $zp_cmd  "felixr/docker-zsh-completion"
+hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
 
 if [[ $zp_cmd = "zplugin load" ]]; then
     zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
