@@ -4,7 +4,7 @@ MAINTAINER iladin
 USER root
 
 RUN apt-get update -y \
-    && apt-get install -yyq emacs vim zsh ssh git curl sudo python-pip automake make binutils bison gcc build-essential \
+    && apt-get install -yyq emacs vim zsh ssh git curl python-pip automake make binutils bison gcc build-essential \
     && chsh -s /usr/bin/zsh \
     && cd /etc/skel/ && git clone --bare https://gitlab.com/iladin/dotfiles.git  /etc/skel/.cfg && git --git-dir=.cfg/ --work-tree=$PWD checkout --force \
     && useradd -m Developer \
