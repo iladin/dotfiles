@@ -37,7 +37,7 @@ $zp_cmd "iladin/zstyle"
 #adding a bit of color and some git status information on files and directories.
 $zp_cmd "supercrabtree/k"
 # A fully-functional bash client for tldr.
-$zp_cmd "raylee/tldr" #, as:command
+$zp_cmd "raylee/tldr" , as:command
 # peco/percol/fzf wrapper plugin for zsh
 $zp_cmd "mollifier/anyframe"
 # An oh-my-zsh plugin to help remembering those aliases you defined once
@@ -54,9 +54,18 @@ $zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && $zp_cmd  "felixr/docker-zsh-completion"
 
-zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
-zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
-zplugin snippet 'https://raw.githubusercontent.com/mchav/with/master/with'
+if [[ zp_cmd = "zplugin load" ]]; then
+    zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
+    zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
+    zplugin snippet 'https://raw.githubusercontent.com/mchav/with/master/with'
+    #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
+    zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
+    # A script to make using 256 colors in zsh less painful.
+    zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
+else
+    zplug "plugins/git",   from:oh-my-zsh
+    zplug "lib/git", from:oh-my-zsh
+fi
 $zp_cmd "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 $zp_cmd "psprint/zsh-editing-workbench"
@@ -74,15 +83,13 @@ $zp_cmd "psprint/zzcomplete"
 #Record output of commands, reuse it via curses interface
 $zp_cmd "psprint/ztrace"
 
-# A script to make using 256 colors in zsh less painful.
-zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
+
 
 
 #zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 $zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 
-#Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
-zplugin snippet 'https://github.com/skwp/dotfiles/blob/master/bin/fasd'
+
 
 source $HOME/.powerlevel9k
 #$zp_cmd "iladin/oh-my-git"
