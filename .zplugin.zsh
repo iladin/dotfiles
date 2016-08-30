@@ -68,29 +68,30 @@ else
     zplug "lib/git", from:oh-my-zsh
     zplug "lib/git", from:oh-my-zsh
     zplug "mchav/with", as:command
+    #TODO zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
 fi
-$zp_cmd "mrowa44/emojify" #, as:command, of:emojify
+zp_cmd "mrowa44/emojify" #, as:command, of:emojify
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
-$zp_cmd "psprint/zsh-editing-workbench"
+zp_cmd "psprint/zsh-editing-workbench"
 
 #Because your terminal should be able to perform tasks asynchronously without external tools!
-$zp_cmd "mafredri/zsh-async"
+zp_cmd "mafredri/zsh-async"
 #Plugin that provides zsnapshot command which dumps current ZSH state into a file, for restoration by sourcing the file
-$zp_cmd "psprint/zsnapshot"
+zp_cmd "psprint/zsnapshot"
 #A shell command that will display selection list
-$zp_cmd "psprint/zsh-select"
+zp_cmd "psprint/zsh-select"
 #Curses-based tools for Zsh, e.g. multi-word history searcher
-$zp_cmd "psprint/zsh-navigation-tools"
+zp_cmd "psprint/zsh-navigation-tools"
 #Complete options from manual pages – press Ctrl-F to start the completer
-$zp_cmd "psprint/zzcomplete"
+zp_cmd "psprint/zzcomplete"
 #Record output of commands, reuse it via curses interface
-$zp_cmd "psprint/ztrace"
+zp_cmd "psprint/ztrace"
 
 
 
 
 #zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
-$zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
+zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 
 
 
@@ -105,16 +106,16 @@ source $HOME/.powerlevel9k
 zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
 
 # zsh anything.el-like widget.
-$zp_cmd "zsh-users/zaw"
+zp_cmd "zsh-users/zaw"
 # ZSH port of Fish shell's history search feature
-$zp_cmd "zsh-users/zsh-history-substring-search" #, nice:10
+zp_cmd "zsh-users/zsh-history-substring-search" #, nice:10
 # Additional completion definitions for Zsh
-$zp_cmd "zsh-users/zsh-completions"
+zp_cmd "zsh-users/zsh-completions"
 # Fish-like fast/unobtrusive autosuggestions for zsh.
-$zp_cmd "zsh-users/zsh-autosuggestions"
+zp_cmd "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
-$zp_cmd "zsh-users/zsh-syntax-highlighting" #, nice:9
+zp_cmd "zsh-users/zsh-syntax-highlighting" #, nice:9
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
