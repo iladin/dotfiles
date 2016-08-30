@@ -19,4 +19,4 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_OS_ICON_BACKGROUND="white"
 POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
 
-$zp_cmd "bhilburn/powerlevel9k" #, of:powerlevel9k.zsh-theme
+zp_cmd "bhilburn/powerlevel9k" #, of:powerlevel9k.zsh-theme
