@@ -35,6 +35,8 @@ test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-a
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--extended --ansi --multi"
 
+#Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
+hash fasd && eval "$(fasd --init auto)"
 
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
