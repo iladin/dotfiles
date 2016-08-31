@@ -64,7 +64,7 @@ zplug "lib/spectrum", from:oh-my-zsh
 zplug "mchav/with", as:command
 # A fully-functional bash client for tldr.
 zplug "raylee/tldr" , as:command
-zplug "mrowa44/emojify"  as:command
+zplug "mrowa44/emojify",  as:command
 
 
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
