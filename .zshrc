@@ -41,6 +41,14 @@ hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
+#TODO put this into last-command.zsh and source it, give credit to skpw
+# Use Ctrl-x,Ctrl-l to get the output of the last command
+zmodload -i zsh/parameter
+insert-last-command-output() {
+LBUFFER+="$(eval $history[$((HISTCMD-1))])"
+}
+zle -N insert-last-command-output
+bindkey "^X^L" insert-last-command-output
 
 # Hash section
 if hash nvim 2>/dev/null; then
