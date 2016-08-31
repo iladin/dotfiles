@@ -57,22 +57,15 @@ zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
 
-if whence -f zplugin; then
-    zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
-    zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
-    zplugin snippet 'https://raw.githubusercontent.com/mchav/with/master/with'
-    # A script to make using 256 colors in zsh less painful.
-    zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
-else
-    zplug "plugins/git",   from:oh-my-zsh
-    zplug "lib/git", from:oh-my-zsh
-    zplug "lib/spectrum", from:oh-my-zsh
-    zplug "mchav/with", as:command
-    # A fully-functional bash client for tldr.
-    zplug "raylee/tldr" , as:command
-    zplug "mrowa44/emojify"  as:command, of:emojify
 
-fi
+zplug "plugins/git",   from:oh-my-zsh
+zplug "lib/git", from:oh-my-zsh
+zplug "lib/spectrum", from:oh-my-zsh
+zplug "mchav/with", as:command
+# A fully-functional bash client for tldr.
+zplug "raylee/tldr" , as:command
+zplug "mrowa44/emojify"  as:command, of:emojify
+
 
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zp_cmd "psprint/zsh-editing-workbench"
