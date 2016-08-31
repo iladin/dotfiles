@@ -25,12 +25,13 @@ function zzplug(){
     export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
     test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
     source ~/.zplug/init.zsh
-    function zp_cmd(){
-         zplug "$@"
-    }
+  #  function zp_cmd(){
+  #       zplug "$@"
+  #  }
 }
 
 zzplugin
+zzplug
 autoload -Uz compinit
 compinit
 
@@ -39,8 +40,7 @@ zp_cmd "iladin/zstyle"
 # k is a zsh script / plugin to make directory listings more readable
 #adding a bit of color and some git status information on files and directories.
 zp_cmd "supercrabtree/k"
-# A fully-functional bash client for tldr.
-zp_cmd "raylee/tldr" , as:command
+
 # peco/percol/fzf wrapper plugin for zsh
 zp_cmd "mollifier/anyframe"
 # An oh-my-zsh plugin to help remembering those aliases you defined once
@@ -57,21 +57,15 @@ zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
 
-if whence -f zplugin; then
-    zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
-    zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
-    zplugin snippet 'https://raw.githubusercontent.com/mchav/with/master/with'
-    # A script to make using 256 colors in zsh less painful.
-    zplugin snippet 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/lib/spectrum.zsh'
-else
-    zplug "plugins/git",   from:oh-my-zsh
-    zplug "lib/git", from:oh-my-zsh
-    zplug "lib/git", from:oh-my-zsh
-    zplug "mchav/with", as:command
-    # Use Ctrl-x,Ctrl-l to get the output of the last command
-    #TODO zplugin snippet "https://github.com/skwp/dotfiles/blob/master/zsh/last-command.zsh"
-fi
-zp_cmd "mrowa44/emojify" #, as:command, of:emojify
+
+zplug "plugins/git",   from:oh-my-zsh
+zplug "lib/git", from:oh-my-zsh
+zplug "lib/spectrum", from:oh-my-zsh
+zplug "mchav/with", as:command
+# A fully-functional bash client for tldr.
+zplug "mrowa44/emojify",  as:command
+
+
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zp_cmd "psprint/zsh-editing-workbench"
 
@@ -155,11 +149,13 @@ function zplug_end() {
     zplug load --verbose
     }
 
-function zplugin_end(){}
+function zplugin_end(){
     zplugin cdreplay -q # -q is for quiet
     autoload -Uz _zplugin
     #(( ${+_comps} )) && _comps[zplugin]=_zplugin
     zcompile ~/.zplugin/bin/zplugin.zsh
 }
 
-if whence -f zplugin; then zplugin_end; else zplug_end; fi
+#if whence -f zplugin; then zplugin_end; else zplug_end; fi
+zplugin_end
+zplug_end
