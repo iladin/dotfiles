@@ -164,4 +164,6 @@ function zplugin_end(){}
     zcompile ~/.zplugin/bin/zplugin.zsh
 }
 
-if whence -f zplugin; then zplugin_end; else zplug_end; fi
+#if whence -f zplugin; then zplugin_end; else zplug_end; fi
+zplugin_end
+zplug_end
