@@ -150,7 +150,7 @@ function zplug_end() {
     zplug load --verbose
     }
 
-function zplugin_end(){}
+function zplugin_end(){
     zplugin cdreplay -q # -q is for quiet
     autoload -Uz _zplugin
     #(( ${+_comps} )) && _comps[zplugin]=_zplugin
