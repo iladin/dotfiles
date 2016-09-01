@@ -24,6 +24,8 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
 
+[ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar
+
 export TERM="xterm-256color"
 typeset -U path
 
@@ -31,7 +33,7 @@ declare -f pathadd || source $HOME/.functions.sh
 pathadd . $HOME/bin /usr/local/bin
 test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
 # fzf is a general-purpose command-line fuzzy finder.
-[ -f ~/.fzf.zsh ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
+[ -d ~/.fzf ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--extended --ansi --multi"
 
@@ -62,7 +64,7 @@ fi
 #{{{
 setopt auto_resume
 # Ignore <C-d> logout
-setopt ignore_eof
+#setopt ignore_eof
 # Disable beeps
 setopt no_beep
 # {a-c} -> a b c
