@@ -20,6 +20,8 @@ function easySnapshot(){
     sudo apt-get update
     sudo apt-get install emacs-snapshot
 }
+#TODO take in arguements.
+
 #easySnapshot
 xwidgets
 
