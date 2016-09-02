@@ -20,8 +20,8 @@ function easySnapshot(){
     sudo apt-get update
     sudo apt-get install emacs-snapshot
 }
-easySnapshot
-
+#easySnapshot
+xwidgets
 
 # Build latest version of Emacs, version management with stow
 # OS: Ubuntu 14.04 LTS and newer
