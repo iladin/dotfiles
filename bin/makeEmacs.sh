@@ -5,7 +5,7 @@ set -eu
 
 function xwidgets(){
 sudo apt-get -qq update
-sudo apt-get -qq install -y stow build-essential libx11-dev xaw3dg-dev \
+sudo apt-get -qq install -y stow build-essential libx11-dev texinfo xaw3dg-dev \
      libjpeg-dev libpng12-dev libgif-dev libtiff5-dev libncurses5-dev \
      libxft-dev librsvg2-dev libmagickcore-dev libmagick++-dev \
      libxml2-dev libgpm-dev libotf-dev libm17n-dev \
