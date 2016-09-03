@@ -9,8 +9,8 @@ sudo apt-get install -y stow build-essential libx11-dev texinfo xaw3dg-dev \
      libjpeg-dev libpng12-dev libgif-dev libtiff5-dev libncurses5-dev \
      libxft-dev librsvg2-dev libmagickcore-dev libmagick++-dev \
      libxml2-dev libgpm-dev libotf-dev libm17n-dev \
-     libgnutls-dev wget make gcc-core gcc-g++ autoconf automake \
-     perl libpoppler-devel libpoppler-glib-devel libgtk-3-dev libwebkitgtk-3.0-dev
+     libgnutls-dev wget make  autoconf automake \
+     perl libgtk-3-dev libwebkitgtk-3.0-dev
      #TODO figure out way for it to work always
     git clone -b emacs-25 git://git.sv.gnu.org/emacs.git
     cd emacs && ./autogen.sh && ./configure --with-x-toolkit=gtk3 --with-xwidgets  && make
