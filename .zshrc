@@ -1,5 +1,5 @@
 
-
+export SHELL=$(which zsh)
 export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 ## Profiling code
 #exec 3>&2 2>/tmp/zshstart.$$.log
