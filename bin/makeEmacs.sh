@@ -11,7 +11,8 @@ sudo apt-get -qq install -y stow build-essential libx11-dev texinfo xaw3dg-dev \
      libxml2-dev libgpm-dev libotf-dev libm17n-dev \
      libgnutls-dev wget make gcc-core gcc-g++ autoconf automake \
      perl libpoppler-devel libpoppler-glib-devel libgtk-3-dev libwebkitgtk-3.0-dev
-    git clone -b emacs-25 https://git.sv.gnu.org/emacs.git && cd emacs && ./autogen.sh && ./configure --with-xwidgets && make
+     #TODO figure out way for it to work always
+    git clone -b emacs-25 git://git.sv.gnu.org/emacs.git && cd emacs && ./autogen.sh && ./configure --with-xwidgets && make
 }
 
 function easySnapshot(){
