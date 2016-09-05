@@ -141,6 +141,7 @@ values."
                                       encourage-mode
                                       key-chord
                                       lice
+                                      gitlab
                                       editorconfig
                                       nvm
                                       focus
