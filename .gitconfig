@@ -773,7 +773,7 @@
     git commit --verbose'"
   #'
   # Thanks to jtolds on stackoverflow
-  remote-ref = !"sh -c ' \ #"
+  remote-ref = !"sh -c ' \
     local_ref=$(git symbolic-ref HEAD); \
     local_name=${local_ref##refs/heads/}; \
     remote=$(git config branch.\"#local_name\".remote || echo origin); \
