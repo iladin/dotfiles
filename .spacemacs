@@ -67,11 +67,6 @@ values."
      chrome
      (erc :variables
           erc-enable-sasl-auth t)
-     (rcirc :variables
-            rcirc-default-nick "cestdiego"
-            rcirc-default-user-name "cestdiego"
-            rcirc-default-full-name "Diego Berrocal"
-            rcirc-enable-znc-support t)
      restclient
      ;; Org
      (org :variables
