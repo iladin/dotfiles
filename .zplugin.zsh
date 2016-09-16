@@ -80,7 +80,7 @@ zp_cmd "psprint/zzcomplete"
 #Record output of commands, reuse it via curses interface
 zp_cmd "psprint/ztrace"
 #Zconvey integrates multiple Zsh sessions. They are given an ID, optionally a NAME (both unique), and can send commands to each other.
-zp_cmd load "psprint/zconvey"
+zp_cmd "psprint/zconvey"
 
 
 
