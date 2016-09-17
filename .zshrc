@@ -42,9 +42,7 @@ hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
-test -e ~/.git-competion.bash && source $_
-# Autocomplete for 'g' as well. Only works with alias g='git'
-complete -o default -o nospace -F _git g
+
 
 #TODO put this into last-command.zsh and source it, give credit to skpw
 # Use Ctrl-x,Ctrl-l to get the output of the last command
