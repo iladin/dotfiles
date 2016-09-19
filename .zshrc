@@ -1,4 +1,3 @@
-
 export SHELL=$(which zsh)
 export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 ## Profiling code
@@ -53,11 +52,7 @@ LBUFFER+="$(eval $history[$((HISTCMD-1))])"
 zle -N insert-last-command-output
 bindkey "^X^L" insert-last-command-output
 
-# Hash section
-if hash nvim 2>/dev/null; then
-  alias 'vim'='nvim'
-  alias 'vi'='nvim'
-fi
+
 
 #####################################################################
 # options
