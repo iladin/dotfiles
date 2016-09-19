@@ -6,7 +6,7 @@ My dotfiles
 
 ## Status
 
-[![Build Status](https://travis-ci.org/iladin/dotfiles.png)](https://travis-ci.org/iladin/dotfiles)
+[![Build Status](https://gitlab.com/iladin/dotfiles/badges/master/build.svg)](https://gitlab.com/iladin/dotfiles/pipelines)
 
 ## Code Climate
 
