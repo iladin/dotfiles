@@ -8,10 +8,7 @@ bind main G move-last-line
 
 set split-view-height = 80%
 set diff-context = 5
-set main-view = \
-	author:abbreviated \
-	id:yes,color \
-	commit-title:graph=yes,refs=yes
+set main-view = line-number:yes,interval=5 id:yes date:default author:abbreviated commit-title:yes,graph,refs,overflow=no
 
 bind diff ; view-next
 bind diff l scroll-right
