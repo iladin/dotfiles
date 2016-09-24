@@ -71,7 +71,7 @@ values."
      ;; Org
      (org :variables
           org-mapping-style 'worf)
-     pandoc
+     ;; pandoc
      ;; Miscellaneous
      emoji
      ;; (wakatime :variables
@@ -123,7 +123,7 @@ values."
      search-engine
      xkcd
      games
-     spotify
+     ;; spotify
      themes-megapack
      Monfoku
      vagrant)
