@@ -23,8 +23,8 @@ Dotfiles
 
 My dotfiles
 
-> Quote here
-> Second line here
+> Quote here  
+> Second line here  
 > – [Example URL](http://www.google.com/)
 
 #HSLIDE
