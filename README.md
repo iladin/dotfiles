@@ -2,7 +2,7 @@
 
 [![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotfiles)
 
-My dotfiles
+My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
 
 ## Status
 
