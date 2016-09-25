@@ -4,6 +4,8 @@
 
 My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
 
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/iladin/dotfiles/12-added-git-pitch?grs=gitlab&t=white)
+
 ## Status
 
 [![Build Status](https://gitlab.com/iladin/dotfiles/badges/master/build.svg)](https://gitlab.com/iladin/dotfiles/pipelines)
