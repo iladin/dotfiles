@@ -108,3 +108,12 @@ md() {
 function d2u(){
     tr -d '\r' < $1 > $1.tmp && mv $1.tmp $1
 }
+function flagCheckout(){
+    test -d $HOME/.flags || mkdir $HOME/.flags
+    if [[ -e $HOME/.flags/noCheckOut ]]
+        then rm $HOME/.flags/noCheckOut
+        echo "noCheckout flag removed"
+    else
+        touch $HOME/.flags/noCheckOut
+        echo "noCheckout flag created"
+}
