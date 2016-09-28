@@ -5,7 +5,7 @@ USER root
 
 RUN apt-get update -y \
     && apt-get install -yyq emacs vim zsh ssh git curl python-pip automake make binutils bison gcc build-essential \
-    && git clone --bare . /etc/skel/.cfg \
+    && git clone --bare http://gitlab.com/iladin/dotfiles /etc/skel/.cfg \
     && git --git-dir=/etc/skel/.cfg --work-tree=/etc/skel checkout --force \
     && useradd -m Developer --shell /bin/zsh \
     && echo "Developer ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
