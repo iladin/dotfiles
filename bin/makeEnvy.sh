@@ -2,7 +2,7 @@
 function whereMyDockerfileAt(){
     if [[ -e codenvy.dockerfile ]]; then
         dockerfile=.codenvy.dockerfile
-    if [[ -e .codenvy.dockerfile ]]; then
+    elif [[ -e .codenvy.dockerfile ]]; then
         dockerfile=.codenvy.dockerfile
     elif [[ -e ~/.codenvy.dockerfile ]]; then
         dockerfile=~/.codenvy.dockerfile
