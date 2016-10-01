@@ -55,7 +55,7 @@ export CLICOLOR=1
 ls --color=auto &> /dev/null && alias ll='ls -lF --color=auto' \
 && alias la='ls -alF --color=auto' && alias ls='ls -F --color=auto'
 
-# Enable aliases to be sudoed
+# Enable aliases to be sudoed
 alias sudo='sudo '
 alias vi=vim
 # Homebrew
@@ -66,4 +66,5 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 # (f)ind by (n)ame
 # usage: fn foo
 # to find all files containing 'foo' in the name
-function fn() { ls **/*$1* }
+function fn() { ls **/*$1* ; }
+
