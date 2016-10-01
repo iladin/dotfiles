@@ -22,7 +22,7 @@ export LOCALE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-
+test -e $HOME/bin/swim || curl -o $HOME/bin/swim -s https://raw.githubusercontent.com/dawsonbotsford/swim/master/swim && chmod a+x $HOME/bin/swim
 [ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar
 
 export TERM="xterm-256color"
