@@ -32,8 +32,7 @@ function zzplug(){
 
 zzplugin
 zzplug
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit -i
 
 zp_cmd "iladin/zstyle"
 
@@ -62,7 +61,6 @@ zplug "plugins/git",   from:oh-my-zsh
 zplug "lib/git", from:oh-my-zsh
 zplug "lib/spectrum", from:oh-my-zsh
 zplug "mchav/with", as:command
-# A fully-functional bash client for tldr.
 zplug "mrowa44/emojify",  as:command
 
 
@@ -81,7 +79,8 @@ zp_cmd "psprint/zsh-navigation-tools"
 zp_cmd "psprint/zzcomplete"
 #Record output of commands, reuse it via curses interface
 zp_cmd "psprint/ztrace"
-
+#Zconvey integrates multiple Zsh sessions. They are given an ID, optionally a NAME (both unique), and can send commands to each other.
+#zp_cmd "psprint/zconvey"
 
 
 

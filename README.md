@@ -2,11 +2,13 @@
 
 [![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotfiles)
 
-My dotfiles
+My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
+
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/iladin/dotfiles/master?grs=gitlab&t=white)
 
 ## Status
 
-[![Build Status](https://travis-ci.org/iladin/dotfiles.png)](https://travis-ci.org/iladin/dotfiles)
+[![Build Status](https://gitlab.com/iladin/dotfiles/badges/master/build.svg)](https://gitlab.com/iladin/dotfiles/pipelines)
 
 ## Code Climate
 

@@ -1,4 +1,3 @@
-
 export SHELL=$(which zsh)
 export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 ## Profiling code
@@ -10,7 +9,7 @@ test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 fpath=(~/.zsh $fpath)
 cfg () {   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@ }
 test -d $HOME/.cfg || (git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
-cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
+test -e $HOME/.flags/noCheckOut || cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
     while read -r file; do mv "$HOME/$file" "$HOME/.cfg-backup/$file" 2> /dev/null || unlink "$HOME/$file" 2> /dev/null ;done
 cfg checkout --force
 cfg config status.showUntrackedFiles no
@@ -23,7 +22,7 @@ export LOCALE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-
+test -e $HOME/bin/swim || curl -o $HOME/bin/swim -s https://raw.githubusercontent.com/dawsonbotsford/swim/master/swim && chmod a+x $HOME/bin/swim
 [ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar
 
 export TERM="xterm-256color"
@@ -43,6 +42,7 @@ hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 #source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
+
 #TODO put this into last-command.zsh and source it, give credit to skpw
 # Use Ctrl-x,Ctrl-l to get the output of the last command
 zmodload -i zsh/parameter
@@ -52,11 +52,7 @@ LBUFFER+="$(eval $history[$((HISTCMD-1))])"
 zle -N insert-last-command-output
 bindkey "^X^L" insert-last-command-output
 
-# Hash section
-if hash nvim 2>/dev/null; then
-  alias 'vim'='nvim'
-  alias 'vi'='nvim'
-fi
+
 
 #####################################################################
 # options
