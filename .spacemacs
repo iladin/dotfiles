@@ -67,23 +67,18 @@ values."
      chrome
      (erc :variables
           erc-enable-sasl-auth t)
-     (rcirc :variables
-            rcirc-default-nick "cestdiego"
-            rcirc-default-user-name "cestdiego"
-            rcirc-default-full-name "Diego Berrocal"
-            rcirc-enable-znc-support t)
      restclient
      ;; Org
      (org :variables
           org-mapping-style 'worf)
-     pandoc
+     ;; pandoc
      ;; Miscellaneous
      emoji
      ;; (wakatime :variables
      ;;           wakatime-api-key    "813b0d78-1f17-43eb-bede-a5c008651d4a"
      ;;           wakatime-cli-path   "/run/current-system/sw/bin/wakatime"
      ;;           wakatime-python-bin "/run/current-system/sw/bin/python")
-     ,(when (eq system-type 'darwin) 'osx)
+     ;; ,(when (eq system-type 'darwin) 'osx)
      ;; Completings Stuff
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
@@ -128,7 +123,8 @@ values."
      search-engine
      xkcd
      games
-     spotify
+     ;; spotify
+     themes-megapack
      Monfoku
      vagrant)
    ;; List of additional packages that will be installed wihout being
@@ -314,7 +310,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers relative
+   dotspacemacs-line-numbers 'relative
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil

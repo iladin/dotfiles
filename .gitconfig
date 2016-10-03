@@ -4,6 +4,7 @@
     ignoreWhitespace = change
     whitespace = nowarn
 [branch]
+    autosetupmerge = true
     autosetuprebase = always
 [color]
     branch = auto
@@ -68,11 +69,14 @@
   summary = true
   verbosity = 1
   renormalize = true
+  stat = true
 [push]
-    default = current
+    default = tracking
 [rebase]
     autostash = true
     stat = true # Whether to show a diffstat of what changed upstream since the last rebase
+    [remote]
+	pushdefault = origin
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -767,7 +771,7 @@
   cherry-pick-merge = !"sh -c 'git cherry-pick --no-commit --mainline 1 $0 && \
     git log -1 --pretty=%P $0 | cut -b 42- > .git/MERGE_HEAD && \
     git commit --verbose'"
-
+  #'
   # Thanks to jtolds on stackoverflow
   remote-ref = !"sh -c ' \
     local_ref=$(git symbolic-ref HEAD); \
@@ -776,7 +780,7 @@
     remote_ref=$(git config branch.\"$local_name\".merge); \
     remote_name=${remote_ref##refs/heads/}; \
     echo remotes/$remote/$remote_name'"
-
+  #'
   # Thanks to jtolds on stackoverflow
   rebase-recent = !git rebase --interactive $(git remote-ref)
 

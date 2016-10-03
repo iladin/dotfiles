@@ -66,5 +66,11 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 # (f)ind by (n)ame
 # usage: fn foo
 # to find all files containing 'foo' in the name
+<<<<<<< HEAD
 function fn() { ls **/*$1* ; }
 
+=======
+function fn() { ls **/*$1* }
+# Split diff
+alias sd="sdiff -w "$(tput cols)" -WEBsbiZ"
+>>>>>>> 4c960a63c8bc30caabd8c5358136db66a9626570
