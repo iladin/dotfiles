@@ -8,7 +8,7 @@ RUN apt-get update -y \
     && printenv \
     && apt-get install -yyq emacs  zsh ssh git curl rsync automake make binutils bison gcc build-essential \
     && set -xv \
-    && rsync -avz . $HOME/
+    && rsync -avz . $HOME/ \
     && rm -rf /var/lib/apt/lists/*
 
 
