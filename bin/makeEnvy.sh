@@ -1,4 +1,4 @@
-
+set -xv
 function whereMyDockerfileAt(){
     if [[ -e codenvy.dockerfile ]]; then
         dockerfile=.codenvy.dockerfile
