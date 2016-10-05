@@ -14,7 +14,7 @@ sudo make install
 sudo ldconfig
 cd ~/tmp
 test -d gnucobol && rm -rf gnucobol
-git clone https://gitlab.com/iladin/gnucobol.git
+git clone https://gitlab.com/gnu/cobol.git
 cd gnucobol/branches/gnu-cobol-2.0-debugger
 ./configure --with-vbisam
 make || exit 1
