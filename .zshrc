@@ -39,7 +39,7 @@ export FZF_DEFAULT_OPTS="--extended --ansi --multi"
 #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
 hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 
-#source ~/.zplug.zsh
+source ~/.zplug.zsh
 source $HOME/.zplugin.zsh
 
 
