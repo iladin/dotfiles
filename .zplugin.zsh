@@ -21,17 +21,8 @@ function zzplugin(){
          zplugin load "$@"
     }
 }
-function zzplug(){
-    export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
-    test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
-    source ~/.zplug/init.zsh
-  #  function zp_cmd(){
-  #       zplug "$@"
-  #  }
-}
 
 zzplugin
-zzplug
 autoload -Uz compinit && compinit -i
 
 zp_cmd "iladin/zstyle"
@@ -56,12 +47,6 @@ zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
 
-
-zplug "plugins/git",   from:oh-my-zsh
-zplug "lib/git", from:oh-my-zsh
-zplug "lib/spectrum", from:oh-my-zsh
-zplug "mchav/with", as:command
-zplug "mrowa44/emojify",  as:command
 
 
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
@@ -141,12 +126,6 @@ fi
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 
-function zplug_end() {
-    if ! zplug check --verbose; then
-           zplug install
-    fi
-    zplug load --verbose
-    }
 
 function zplugin_end(){
     zplugin cdreplay -q # -q is for quiet
@@ -157,4 +136,3 @@ function zplugin_end(){
 
 #if whence -f zplugin; then zplugin_end; else zplug_end; fi
 zplugin_end
-zplug_end
