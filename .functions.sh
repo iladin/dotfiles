@@ -116,4 +116,5 @@ function flagCheckout(){
     else
         touch $HOME/.flags/noCheckOut
         echo "noCheckout flag created"
+    fi
 }
