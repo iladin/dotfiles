@@ -9,6 +9,7 @@ RUN apt-get update -y \
     && apt-get install -yyq emacs  zsh ssh git curl rsync automake make binutils bison gcc build-essential \
     && set -xv \
     && rsync -avz . $HOME/ \
+    && chsh -s zsh \
     && rm -rf /var/lib/apt/lists/*
 
 
