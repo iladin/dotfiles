@@ -38,11 +38,18 @@ values."
      ;; ----------------------------------------------------------------
      asm
      ansible
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-complete-with-key-sequence "jk")
      better-defaults
      chrome
      cscope
-     colors
+     (colors :variables
+        colors-enable-nyan-cat-progress-bar t
+        colors-enable-rainbow-identifiers nil)
      command-log
      docker
      emacs-lisp
@@ -51,7 +58,8 @@ values."
      fasd
      finance
      games
-     git
+     (git :variables
+          git-magit-status-fullscreen t)
      (geolocation :variables
              geolocation-enable-automatic-theme-changer t
              geolocation-enable-location-service t
@@ -96,7 +104,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(gitlab)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -136,14 +144,14 @@ values."
    ;; If non-nil, a form that evaluates to a package directory. For example, to
    ;; use different package directories for different Emacs versions, set this
    ;; to `emacs-version'.
-   dotspacemacs-elpa-subdirectory t
+   dotspacemacs-elpa-subdirectory `emacs-version
    ;; One of `vim', `emacs' or `hybrid'.
    ;; `hybrid' is like `vim' except that `insert state' is replaced by the
    ;; `hybrid state' with `emacs' key bindings. The value can also be a list
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
