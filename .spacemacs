@@ -20,7 +20,7 @@ values."
    ;; installation feature and you have to explicitly list a layer in the
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
-   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-enable-lazy-installation 'all
    ;; If non-nil then Spacemacs will ask for confirmation before installing
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation nil
@@ -41,6 +41,7 @@ values."
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
                       auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t
                       auto-completion-complete-with-key-sequence "jk")
@@ -48,6 +49,7 @@ values."
      chrome
      cscope
      (colors :variables
+        colors-colorize-identifiers 'all
         colors-enable-nyan-cat-progress-bar t
         colors-enable-rainbow-identifiers nil)
      command-log
@@ -69,6 +71,7 @@ values."
      gtags
      helm
      html
+     (ibuffer :variables ibuffer-group-buffers-by 'projects)
      imenu-list
      java
      javascript
@@ -76,11 +79,15 @@ values."
      org
      pandoc
      pdf-tools
+     prodigy
      python
-     ranger
+     (ranger :variables ranger-show-preview t
+            ranger-max-preview-size 10
+            ranger-show-dotfiles t)
      restclient
      ruby
      search-engine
+     selectric
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
@@ -316,7 +323,7 @@ values."
    dotspacemacs-highlight-delimiters 'all
    ;; If non nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
@@ -340,7 +347,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+  (setq magit-repository-directories '("~/repos/")))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -349,10 +356,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-(setq calendar-location-name "Barcelona, Spain"
-      calendar-latitude 41.23
-      calendar-longitude 1.80)
-  )
+(setq calendar-location-name "Seattle, WA"
+      calendar-latitude 47.6062
+      calendar-longitude 122.3321
+      sunshine-appid "e2910dcebf70bb4273fe475eb3dedfa4"
+      sunshine-show-icons t))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
