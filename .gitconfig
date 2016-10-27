@@ -34,7 +34,6 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	editor = vim
-	eol = lf
 	trustctime = false
     ignorecase = true
 [diff]
