@@ -12,6 +12,7 @@
   if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
     zcompile "$zcompdump"
   fi
+  source ~/.zplug.zsh
 } &!
 
 # Print a random, hopefully interesting, adage.
