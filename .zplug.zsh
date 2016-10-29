@@ -4,6 +4,7 @@ function zzplug(){
     source ~/.zplug/init.zsh
 }
 zzplug
+zplug "k4rthik/git-cal", as:command
 zplug "mchav/with", as:command
 zplug "mrowa44/emojify",  as:command
 function zplug_end() {
