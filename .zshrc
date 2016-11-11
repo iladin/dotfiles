@@ -29,7 +29,7 @@ export TERM="xterm-256color"
 typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
-pathadd . $HOME/bin /usr/local/bin
+pathadd . $HOME/bin /usr/local/bin ~/.linuxbrew/{,s}bin ~/junest/bin ~/.local/bin
 test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
 # fzf is a general-purpose command-line fuzzy finder.
 [ -d ~/.fzf ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
