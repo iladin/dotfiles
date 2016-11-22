@@ -22,6 +22,9 @@ function zzplugin(){
 }
 
 zzplugin
+
+#Generating zsh completion function from getopt-style help text.
+zp_cmd "RobSis/zsh-completion-generator"
 autoload -Uz compinit && compinit -i
 
 zp_cmd "iladin/zstyle"
