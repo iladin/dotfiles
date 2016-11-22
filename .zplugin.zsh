@@ -90,8 +90,7 @@ source $HOME/.powerlevel9k
 
 # zsh anything.el-like widget.
 zp_cmd "zsh-users/zaw"
-# ZSH port of Fish shell's history search feature
-zp_cmd "zsh-users/zsh-history-substring-search" #, nice:10
+
 # Additional completion definitions for Zsh
 zp_cmd "zsh-users/zsh-completions"
 # Fish-like fast/unobtrusive autosuggestions for zsh.
@@ -99,6 +98,8 @@ zp_cmd "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
 zp_cmd "zsh-users/zsh-syntax-highlighting" #, nice:9
+# ZSH port of Fish shell's history search feature
+zp_cmd "zsh-users/zsh-history-substring-search" #, nice:10
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
