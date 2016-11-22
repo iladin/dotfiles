@@ -29,6 +29,10 @@ autoload -Uz compinit && compinit -i
 
 zp_cmd "iladin/zstyle"
 
+# shamelessly taken from add-zsh-hook, and modified to be able to run on user defined hook
+
+zp_cmd "willghatch/zsh-hooks"
+
 
 zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
 
