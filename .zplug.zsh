@@ -7,6 +7,8 @@ zzplug
 zplug "k4rthik/git-cal", as:command
 zplug "mchav/with", as:command
 zplug "mrowa44/emojify",  as:command
+zplug "awsonbotsford/swim",  as:command
+
 function zplug_end() {
     if ! zplug check --verbose; then
         zplug install
