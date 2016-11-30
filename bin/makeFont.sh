@@ -37,10 +37,16 @@ fi
 
 # Copy all fonts to user fonts directory
 eval "$find_command" | xargs -0 -I % cp "%" "$font_dir/"
-
+mkdir /tmp/adodefont
+cd /tmp/adodefont
+wget https://github.com/adobe-fonts/source-code-pro/archive/1.017R.zip
+unzip 1.017R.zip 
+mkdir -p ~/.fonts
+cp source-code-pro-1.017R/OTF/*.otf ~/.fonts/
+rm -rf /tmp/adobefont
 # Reset font cache on Linux
 if [[ -n $(which fc-cache) ]]; then
-  fc-cache -f "$font_dir"
+  fc-cache -f -v "$font_dir"
 fi
 
 if [ ! -z "$1" ];
