@@ -345,6 +345,15 @@
   # submodule update with initialize and recursive; this is useful to bring a submodule fully up to date.
   smuir = submodule update --init --recursive
 
+  ### subtree ###
+
+  # the acronym stands for "subtree add"
+
+  sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
+
+  # the acronym stands for "subtree update"
+
+  sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
   ### status ###
 
   # status with short format instead of full details
