@@ -39,7 +39,7 @@ zp_cmd "willghatch/zsh-hooks"
 zp_cmd "robertzk/send.zsh"
 
 zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh'
-zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/lib/git.zsh'
+zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh'
 
 # k is a zsh script / plugin to make directory listings more readable
 #adding a bit of color and some git status information on files and directories.
