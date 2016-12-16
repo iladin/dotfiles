@@ -24,7 +24,6 @@ export LC_CTYPE=en_US.UTF-8
 
 [ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar
 
-export TERM="xterm-256color"
 typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
