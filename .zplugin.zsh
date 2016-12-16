@@ -81,20 +81,13 @@ zp_cmd "psprint/ztrace"
 #Zconvey integrates multiple Zsh sessions. They are given an ID, optionally a NAME (both unique), and can send commands to each other.
 #zp_cmd "psprint/zconvey"
 
-
-
 #zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 
 
-
-source $HOME/.powerlevel9k
-#$zp_cmd "iladin/oh-my-git"
-#zplugin snippet 'https://github.com/arialdomartini/oh-my-git-themes/blob/master/oppa-lana-style.zsh-theme'
-#test -d $HOME/.git-radar || git clone https://github.com/michaeldfallen/git-radar $HOME/.git-radar;
-#test -d $HOME/.git-radar && pathadd $HOME/.git-radar && export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
-
-
+#THEME
+zp_cmd "sindresorhus/pure"
+#source $HOME/.powerlevel9k
 
 
 # zsh anything.el-like widget.
