@@ -7,7 +7,7 @@
 
 # Execute code that does not affect the current session in the background.
 {
-  source ~/.zplug.zsh &> /dev/null
+  source ~/.zplug.zsh &> ~/.zplug.log
   # Compile the completion dump to increase startup speed.
   zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
   if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
