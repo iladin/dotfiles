@@ -71,3 +71,13 @@ function fn() { ls **/*$1* }
 # Split diff
 alias sd="sdiff -w "$(tput cols)" -WEBsbiZ"
 
+alias t='type -a'
+alias pscpu='ps -auxf | sort -nr -k 3'
+alias pscpu10='ps -auxf | sort -nr -k 3 | head -10'
+alias psmem='ps -auxf | sort -nr -k 4'
+alias psmem10='ps -auxf | sort -nr -k 4 | head -10'
+alias ports='netstat -tulanp'
+alias path='echo -e ${PATH//:/\n}'
+alias now='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+alias mostRecentFileInDir='ls -rt | tail -1
