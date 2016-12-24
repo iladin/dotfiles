@@ -80,4 +80,4 @@ alias ports='netstat -tulanp'
 alias path='echo -e ${PATH//:/\n}'
 alias now='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
-alias mostRecentFileInDir='ls -rt | tail -1
+alias mostRecentFileInDir='ls -rt | tail -1'
