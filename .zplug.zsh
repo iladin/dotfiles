@@ -1,6 +1,6 @@
 function zzplug(){
     export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
-    test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    test -e $ZPLUG_HOME || git clone https://github.com/iladin/zplug $ZPLUG_HOME
     source ~/.zplug/init.zsh
 }
 zzplug
@@ -8,6 +8,10 @@ zplug "k4rthik/git-cal", as:command
 zplug "mchav/with", as:command
 zplug "mrowa44/emojify",  as:command
 zplug "dawsonbotsford/swim",  as:command
+
+zplug "willemmali-sh/chegit", \
+    as:command, \
+    from:gitlab
 
 zplug "monochromegane/the_platinum_searcher", \
     as:command, \
