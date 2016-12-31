@@ -86,6 +86,14 @@
   # A value of 0 will give some reasonable default.
   fetchJobs = 0
 
+[merge "ours"]
+    name = always prefer our version to the one being merged
+    driver = true
+
+[merge "theirs"]
+    name = simulate `-s theirs`
+    driver = cat %B > %A
+
 [alias]
 
   ##
@@ -941,3 +949,6 @@
 
 # Show untracked files
   fake-Clean = clean -ndX
+
+  merge-theirs = !GIT_CONFIG_PARAMETERS=\"'merge.default=theirs'\" git merge
+  merge-ours = !GIT_CONFIG_PARAMETERS=\"'merge.default=ours'\" git merge
