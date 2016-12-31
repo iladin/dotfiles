@@ -53,7 +53,9 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 #Color for ls
 export CLICOLOR=1
 ls --color=auto &> /dev/null && alias ll='ls -lF --color=auto' \
-&& alias la='ls -alF --color=auto' && alias ls='ls -F --color=auto'
+&& alias la='ls -alF --color=auto' \
+&& alias ls='ls -F --color=auto'
+
 
 # Enable aliases to be sudoed
 alias sudo='sudo '
