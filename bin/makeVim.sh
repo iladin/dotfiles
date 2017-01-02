@@ -1,8 +1,11 @@
 sudo apt update && sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
     libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
     libcairo2-dev tcl-dev libx11-dev libxpm-dev libxt-dev python-dev \
-    python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git
-(cd /usr/lib/x86_64-linux-gnu; sudo ln -s libluajit-5.1.so.2 libluajit-5.1.so)
+    python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git libluajit-5.1-dev
+
+git clone --depth 1 https://github.com/vim/vim.git
+
+cd vim
 
 ./configure \
 --with-features=huge \
