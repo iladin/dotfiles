@@ -22,13 +22,13 @@ export LOCALE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-[ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar
+[ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar NULB
 
 typeset -U path
 
 declare -f pathadd || source $HOME/.functions.sh
 pathadd . $HOME/bin /usr/local/bin ~/.linuxbrew/{,s}bin ~/junest/bin ~/.local/bin
-test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard
+test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard NULB
 # fzf is a general-purpose command-line fuzzy finder.
 [ -d ~/.fzf ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -39,6 +39,7 @@ hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 
 source $HOME/.zplugin.zsh
 
+source $HOME/.zplug.zsh NULB
 
 #TODO put this into last-command.zsh and source it, give credit to skpw
 # Use Ctrl-x,Ctrl-l to get the output of the last command
