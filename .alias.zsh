@@ -28,6 +28,7 @@ alias -g M='| more'
 alias -g NE="2> /dev/null"
 alias -g NS='| sort -n'
 alias -g NUL="> /dev/null 2>&1"
+alias -g NULB="> /dev/null 2>&1 &"
 alias -g PIPE='|'
 alias -g RNS='| sort -nr'
 alias -g S='| sort'
