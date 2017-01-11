@@ -950,5 +950,8 @@
 # Show untracked files
   fake-Clean = clean -ndX
 
+  future-commit = !GIT_AUTHOR_DATE=\"$(date -d +7hours)\" GIT_COMMITER_DATE=\"$(date -d +7hours)\" git commit
+    past-commit = !GIT_AUTHOR_DATE=\"$(date -d -7hours)\" GIT_COMMITER_DATE=\"$(date -d -7hours)\" git commit
+
   merge-theirs = !GIT_CONFIG_PARAMETERS=\"'merge.default=theirs'\" git merge
   merge-ours = !GIT_CONFIG_PARAMETERS=\"'merge.default=ours'\" git merge
