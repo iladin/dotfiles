@@ -4,6 +4,9 @@ export PS4=$'Time:%* File:%x Lineno:%I In:%N '
 #exec 3>&2 2>/tmp/zshstart.$$.log
 #setopt xtrace prompt_subst
 
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000
+
 test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 
 fpath=(~/.zsh $fpath)
