@@ -62,10 +62,6 @@ values."
      games
      (git :variables
           git-magit-status-fullscreen t)
-     (geolocation :variables
-             geolocation-enable-automatic-theme-changer t
-             geolocation-enable-location-service t
-             geolocation-enable-weather-forecast t)
      github
      graphviz
      gtags
@@ -358,11 +354,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-(setq calendar-location-name "Seattle, WA"
-      calendar-latitude 47.6062
-      calendar-longitude 122.3321
-      sunshine-appid "e2910dcebf70bb4273fe475eb3dedfa4"
-      sunshine-show-icons t))
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
