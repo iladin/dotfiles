@@ -36,6 +36,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     asciidoc
      asm
      ansible
      (auto-completion :variables
@@ -75,6 +76,7 @@ values."
      org
      pandoc
      pdf-tools
+     plantuml
      prodigy
      python
      (ranger :variables ranger-show-preview t
@@ -87,6 +89,7 @@ values."
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
+     shell-scripts
      smex
      spell-checking
      speed-reading
