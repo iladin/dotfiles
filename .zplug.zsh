@@ -1,6 +1,6 @@
 function zzplug(){
     export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
-    test -e $ZPLUG_HOME || git clone https://github.com/iladin/zplug $ZPLUG_HOME
+    test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
     source ~/.zplug/init.zsh
 }
 zzplug
