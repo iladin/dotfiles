@@ -75,6 +75,10 @@ function fn() { ls **/*$1* }
 # Split diff
 alias sd="sdiff -w "$(tput cols)" -WEBsbiZ"
 
+# fixes compinit insecure directory bug.
+alias fixAudit='compaudit NE | xargs chmod go-x'
+
+
 alias t='type -a'
 alias pscpu='ps -auxf | sort -nr -k 3'
 alias pscpu10='ps -auxf | sort -nr -k 3 | head -10'
