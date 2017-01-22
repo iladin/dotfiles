@@ -7,7 +7,7 @@ zzplug
 zplug "k4rthik/git-cal", as:command
 zplug "mchav/with", as:command
 zplug "mrowa44/emojify",  as:command
-zplug "dawsonbotsford/swim",  as:command
+zplug "iladin/swim",  as:command
 
 zplug "willemmali-sh/chegit", \
     as:command, \
