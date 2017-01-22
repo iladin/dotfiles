@@ -89,3 +89,6 @@ alias path='echo -e ${PATH//:/\n}'
 alias now='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
 alias mostRecentFileInDir='ls -rt | tail -1'
+
+# Docker
+alias chenvy='docker run --net=host --name che -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/che/lib:/home/user/che/lib-copy -v /home/user/che/workspaces:/home/user/che/workspaces -v /home/user/che/storage:/home/user/che/storage codenvy/che'
