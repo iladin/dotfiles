@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #TODO: ERROR CHECKING JEEZ
 sudo apt-get update
-sudo apt-get -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev
+sudo apt-get -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev bison
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 #rm -rf opensource-cobol
