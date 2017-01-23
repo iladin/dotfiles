@@ -76,12 +76,8 @@ zp_cmd "psprint/zsh-select"
 zp_cmd "psprint/zsh-navigation-tools"
 #Complete options from manual pages – press Ctrl-F to start the completer
 zp_cmd "psprint/zzcomplete"
-#Record output of commands, reuse it via curses interface
-zp_cmd "psprint/ztrace"
-#Zconvey integrates multiple Zsh sessions. They are given an ID, optionally a NAME (both unique), and can send commands to each other.
-#zp_cmd "psprint/zconvey"
 
-#zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
+
 zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 
 
