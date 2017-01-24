@@ -1,7 +1,7 @@
 function zzplug(){
     export ZPLUG_HOME="${ZDOTDIR:-$HOME}/.zplug"
     test -e $ZPLUG_HOME || git clone https://github.com/zplug/zplug $ZPLUG_HOME
-    source ~/.zplug/init.zsh
+    source ${ZDOTDIR:-$HOME}/.zplug/init.zsh
 }
 zzplug
 zplug "k4rthik/git-cal", as:command

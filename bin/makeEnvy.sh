@@ -4,8 +4,8 @@ function whereMyDockerfileAt(){
         dockerfile=.codenvy.dockerfile
     elif [[ -e .codenvy.dockerfile ]]; then
         dockerfile=.codenvy.dockerfile
-    elif [[ -e ~/.codenvy.dockerfile ]]; then
-        dockerfile=~/.codenvy.dockerfile
+    elif [[ -e ${ZDOTDIR:-$HOME}/.codenvy.dockerfile ]]; then
+        dockerfile=${ZDOTDIR:-$HOME}/.codenvy.dockerfile
     else
         echo "Cannot find dockerfile, exiting"
         exit 1
