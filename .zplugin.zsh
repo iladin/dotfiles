@@ -1,5 +1,5 @@
 function zzplugin(){
-    [[ -d ~/.zplugin ]] || {
+    [[ -d ${ZDOTDIR:-$HOME}/.zplugin ]] || {
        ZPLG_HOME="${ZDOTDIR:-$HOME}/.zplugin"
 
     if ! test -d "$ZPLG_HOME"; then
@@ -15,7 +15,7 @@ function zzplugin(){
        git clone https://github.com/psprint/zplugin.git bin
     fi
     }
-    source ~/.zplugin/bin/zplugin.zsh
+    source ${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh
     function zp_cmd(){
          zplugin load "$@"
     }
@@ -135,7 +135,7 @@ function zplugin_end(){
     zplugin cdreplay -q # -q is for quiet
     autoload -Uz _zplugin
     #(( ${+_comps} )) && _comps[zplugin]=_zplugin
-    zcompile ~/.zplugin/bin/zplugin.zsh
+    zcompile ${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh
 }
 
 #if whence -f zplugin; then zplugin_end; else zplug_end; fi

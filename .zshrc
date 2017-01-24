@@ -15,15 +15,19 @@ setopt SHARE_HISTORY
 
 test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 
-fpath=(~/.zsh $fpath)
-cfg () {   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@ }
+fpath=(${ZDOTDIR:-$HOME}/.zsh $fpath)
+cfg () {   git --git-dir=${ZDOTDIR:-$HOME}/.cfg/ --work-tree=$HOME $@ }
 test -d $HOME/.cfg || (git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
 test -e $HOME/.flags/noCheckOut || cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
     while read -r file; do mv "$HOME/$file" "$HOME/.cfg-backup/$file" 2> /dev/null || unlink "$HOME/$file" 2> /dev/null ;done
 test -e $HOME/.flags/noCheckOut || cfg checkout --force
 cfg config status.showUntrackedFiles no
 
-source $HOME/.alias.zsh
+source ${ZDOTDIR:-$HOME}/.alias.zsh
+declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
+pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.linuxbrew/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
+
+
 
 # language configuration
 export LANG=en_US.UTF-8
@@ -35,9 +39,8 @@ export LC_CTYPE=en_US.UTF-8
 
 typeset -U path
 
-declare -f pathadd || source $HOME/.functions.sh
-pathadd . $HOME/bin /usr/local/bin ~/.linuxbrew/{,s}bin ~/junest/bin ~/.local/bin
-test -e $HOME/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard NULB
+
+test -e ${ZDOTDIR:-$HOME}/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard NULB
 # fzf is a general-purpose command-line fuzzy finder.
 [ -d ~/.fzf ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -46,9 +49,9 @@ export FZF_DEFAULT_OPTS="--extended --ansi --multi"
 #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
 hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 
-source $HOME/.zplugin.zsh
+source ${ZDOTDIR:-$HOME}/.zplugin.zsh
 
-source $HOME/.zplug.zsh NULB
+source ${ZDOTDIR:-$HOME}/.zplug.zsh NULB
 
 #TODO put this into last-command.zsh and source it, give credit to skpw
 # Use Ctrl-x,Ctrl-l to get the output of the last command
