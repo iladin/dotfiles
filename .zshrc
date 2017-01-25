@@ -25,7 +25,7 @@ cfg config status.showUntrackedFiles no
 
 source ${ZDOTDIR:-$HOME}/.alias.zsh
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
-pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.linuxbrew/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
+pathadd . ${ZDOTDIR:-$HOME}/bin ${ZDOTDIR:-$HOME}/*/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.linuxbrew/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
 
 
@@ -51,7 +51,7 @@ hash fasd 2> /dev/null && eval "$(fasd --init auto)"
 
 source ${ZDOTDIR:-$HOME}/.zplugin.zsh
 
-source ${ZDOTDIR:-$HOME}/.zplug.zsh NULB
+test -d ${ZDOTDIR:-$HOME}/.zplug || source ${ZDOTDIR:-$HOME}/.zplug.zsh NULB
 
 #TODO put this into last-command.zsh and source it, give credit to skpw
 # Use Ctrl-x,Ctrl-l to get the output of the last command
