@@ -32,7 +32,7 @@
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+#	attributesfile = ~/.gitattributes
 	editor = vim
 	trustctime = false
     ignorecase = true
