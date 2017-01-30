@@ -53,8 +53,10 @@ hash python && zp_cmd "djui/alias-tips"
 
 
 # A next-generation cd command with an interactive filter
+export ENHANCD_FILTER=fzy:peco:fzf
 zp_cmd "b4b4r07/enhancd" #, of:enhancd.sh
 #Emoji completion on the command line
+
 zp_cmd "b4b4r07/emoji-cli"
 
 zp_cmd "joshuarubin/zsh-homebrew"
