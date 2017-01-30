@@ -34,7 +34,9 @@ zplug "philovivero/distribution", \
     use:distribution, \
     if:'(( $+commands[perl] ))'
 
-
+zplug "jhawthorn/fzy", \
+    as:command, \
+    hook-build:"PREFIX=${ZDOTDIR:-$HOME} && make && make install"
 
 function zplug_end() {
     if ! zplug check --verbose; then
