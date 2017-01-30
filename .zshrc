@@ -41,10 +41,7 @@ typeset -U path
 
 
 test -e ${ZDOTDIR:-$HOME}/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard NULB
-# fzf is a general-purpose command-line fuzzy finder.
-[ -d ~/.fzf ] || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install --no-update-rc --completion --key-bindings)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--extended --ansi --multi"
+
 
 #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
 hash fasd 2> /dev/null && eval "$(fasd --init auto)"
