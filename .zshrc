@@ -17,7 +17,7 @@ test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 
 fpath=(${ZDOTDIR:-$HOME}/.zsh $fpath)
 cfg () {   git --git-dir=${ZDOTDIR:-$HOME}/.cfg/ --work-tree=$HOME $@ }
-test -d ${ZDOTDIR:-$HOME}.cfg || (git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
+test -d ${ZDOTDIR:-$HOME}/.cfg || (git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg; mkdir -p "$HOME/.cfg-backup")
 test -e $HOME/.flags/noCheckOut || cfg checkout 2> /dev/null || cfg checkout 2>&1 | sed 's/^M//g' | egrep "^[[:space:]]" | awk '$1=$1' |\
     while read -r file; do mv "$HOME/$file" "$HOME/.cfg-backup/$file" 2> /dev/null || unlink "$HOME/$file" 2> /dev/null ;done
 test -e $HOME/.flags/noCheckOut || cfg checkout --force
