@@ -23,12 +23,6 @@ test -e $HOME/.flags/noCheckOut || cfg checkout 2> /dev/null || cfg checkout 2>&
 test -e $HOME/.flags/noCheckOut || cfg checkout --force
 cfg config status.showUntrackedFiles no
 
-source ${ZDOTDIR:-$HOME}/.alias.zsh
-declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
-pathadd . ${ZDOTDIR:-$HOME}/bin ${ZDOTDIR:-$HOME}/*/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.*/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
-
-
-
 # language configuration
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
@@ -150,7 +144,9 @@ setopt pushd_ignore_dups
 setopt complete_aliases
 unsetopt hist_verify
 # }}}
-
+source ${ZDOTDIR:-$HOME}/.alias.zsh
+declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
+pathadd . ${ZDOTDIR:-$HOME}/bin ${ZDOTDIR:-$HOME}/*/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.*/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
 test -e $HOME/.zsh.local.after && source $HOME/.zsh.local.after
 ## Profiling code
