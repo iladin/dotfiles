@@ -25,7 +25,7 @@ cfg config status.showUntrackedFiles no
 
 source ${ZDOTDIR:-$HOME}/.alias.zsh
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
-pathadd . ${ZDOTDIR:-$HOME}/bin ${ZDOTDIR:-$HOME}/*/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.linuxbrew/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
+pathadd . ${ZDOTDIR:-$HOME}/bin ${ZDOTDIR:-$HOME}/*/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.*/{,s}bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
 
 
