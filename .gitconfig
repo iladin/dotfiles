@@ -952,3 +952,6 @@
 
   merge-theirs = !GIT_CONFIG_PARAMETERS=\"'merge.default=theirs'\" git merge
   merge-ours = !GIT_CONFIG_PARAMETERS=\"'merge.default=ours'\" git merge
+
+  # Run git operation with GIT_CURL_VERBOSE
+  curl-verbose = !GIT_CURL_VERBOSE=1 git
