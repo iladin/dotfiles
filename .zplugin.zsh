@@ -51,6 +51,7 @@ zp_cmd "mollifier/anyframe"
 # Only use if you have python
 hash python && zp_cmd "djui/alias-tips"
 
+zp_cmd "jimhester/per-directory-history"
 
 # A next-generation cd command with an interactive filter
 export ENHANCD_FILTER=fzy:peco:fzf
@@ -85,6 +86,7 @@ zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whiteli
 
 #THEME
 zp_cmd "sindresorhus/pure"
+
 #source $HOME/.powerlevel9k
 
 

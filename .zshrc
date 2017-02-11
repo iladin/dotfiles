@@ -10,7 +10,7 @@ HISTSIZE=1200
 setopt APPEND_HISTORY
 
 setopt HIST_EXPIRE_DUPS_FIRST
-setopt SHARE_HISTORY
+
 
 
 test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
