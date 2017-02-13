@@ -4,6 +4,9 @@ function zzplug(){
     source ${ZDOTDIR:-$HOME}/.zplug/init.zsh
 }
 zzplug
+# Git command template
+# zplug "", as command
+zplug "Fakerr/git-recall", as command
 zplug "k4rthik/git-cal", as:command
 zplug "mchav/with", as:command
 zplug "mrowa44/emojify",  as:command
