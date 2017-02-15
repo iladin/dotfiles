@@ -86,6 +86,9 @@
   # A value of 0 will give some reasonable default.
   fetchJobs = 0
 
+[http]
+    followRedirects = true
+
 [merge "ours"]
     name = always prefer our version to the one being merged
     driver = true
