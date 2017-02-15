@@ -70,11 +70,11 @@
   renormalize = true
   stat = true
 [push]
-    default = tracking
+    default = current
 [rebase]
     autostash = true
     stat = true # Whether to show a diffstat of what changed upstream since the last rebase
-    [remote]
+[remote]
 	pushdefault = origin
 [rerere]
   # Remember my merges
