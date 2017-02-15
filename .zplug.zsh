@@ -6,9 +6,9 @@ function zzplug(){
 zzplug
 # Git command template
 # zplug "", as command
-zplug "jayphelps/git-blame-someone-else", as command
-zplug "felixSchl/git-fiddle", as command
-zplug "Fakerr/git-recall", as command
+zplug "jayphelps/git-blame-someone-else", as:command
+zplug "felixSchl/git-fiddle", as:command
+zplug "Fakerr/git-recall", as:command
 zplug "k4rthik/git-cal", as:command
 zplug "mchav/with", as:command
 zplug "mrowa44/emojify",  as:command
