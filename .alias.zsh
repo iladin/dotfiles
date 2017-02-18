@@ -92,3 +92,4 @@ alias mostRecentFileInDir='ls -rt | tail -1'
 
 # Docker
 alias chenvy='docker run --net=host --name che -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/che/lib:/home/user/che/lib-copy -v /home/user/che/workspaces:/home/user/che/workspaces -v /home/user/che/storage:/home/user/che/storage codenvy/che'
+alias porter='docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer && echo "open me http://localhost:9000/"'
