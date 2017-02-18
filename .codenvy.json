@@ -1,0 +1,59 @@
+{
+  "defaultEnv": "ubuntu_jdk8_x11",
+  "commands": [
+    {
+      "commandLine": "mvn -f ${current.project.path} clean install",
+      "name": "build",
+      "type": "mvn",
+      "attributes": {
+        "previewUrl": "http://${server.port.6080}"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "mixins": [
+        "pullrequest"
+      ],
+      "links": [],
+      "problems": [],
+      "source": {
+        "location": "https://github.com/codenvy-templates/desktop-swing-java-basic",
+        "type": "git",
+        "parameters": {}
+      },
+      "name": "desktop-swing-java-basic",
+      "type": "maven",
+      "path": "/desktop-swing-java-basic",
+      "attributes": {
+        "contribute_to_branch": [
+          "master"
+        ]
+      }
+    }
+  ],
+  "name": "ubuntu_jdk8_x11",
+  "environments": {
+    "ubuntu_jdk8_x11": {
+      "machines": {
+        "ws-machine": {
+          "agents": [
+            "org.eclipse.che.terminal",
+            "org.eclipse.che.ws-agent",
+            "org.eclipse.che.ssh"
+          ],
+          "servers": {},
+          "attributes": {
+            "memoryLimitBytes": "1048576000"
+          }
+        }
+      },
+      "recipe": {
+        "contentType": "text/x-dockerfile",
+        "type": "dockerfile",
+        "content": "FROM codenvy/ubuntu_jdk8_x11"
+      }
+    }
+  },
+  "links": []
+}
