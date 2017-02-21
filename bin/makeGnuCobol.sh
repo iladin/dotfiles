@@ -29,7 +29,7 @@ test -d gnucobol && rm -rf gnucobol
 git clone https://gitlab.com/gnu/cobol.git
 cd cobol
 #./configure --with-vbisam
-COB_CFLAGS=-m32 ./configure --with-db --build=i686-linux-gnu --host=i686-linux-gnu "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
+COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include" --with-db --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
 make check
 sudo make install || exit 1
