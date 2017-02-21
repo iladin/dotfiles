@@ -25,7 +25,7 @@ cd ~/tmp
 #sudo ldconfig
 cd ~/tmp
 installgmp32
-test -d gnucobol && rm -rf gnucobol
+test -d cobol && rm -rf cobol
 git clone https://gitlab.com/gnu/cobol.git
 cd cobol
 #./configure --with-vbisam
