@@ -2,7 +2,7 @@
 #TODO: ERROR CHECKING JEEZ
 export COB_CFLAGS=-m32
 sudo apt-get update
-sudo apt-get -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev bison gcc-multilib
+sudo apt-get -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev bison gcc-multilib g++-multilib
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 #rm -rf opensource-cobol
