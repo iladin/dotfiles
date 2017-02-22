@@ -6,13 +6,14 @@ function installgmp32(){
 
     wget https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.bz2
     tar -xvf gmp-6.1.2.tar.bz2
+    cd gmp-6.1.2
     ABI=32 ./configure --prefix=/usr --enable-cxx --libdir=/usr/lib32 CC="gcc -m32" CXX="g++ -m32" && \
     make &&\
     sudo make install
 }
 export COB_CFLAGS=-m32
-sudo apt-get update
-sudo apt-get -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev bison gcc-multilib g++-multilib
+sudo apt update
+sudo apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 #rm -rf opensource-cobol
