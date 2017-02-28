@@ -959,3 +959,5 @@
 
   # Run git operation with GIT_CURL_VERBOSE
   curl-verbose = !GIT_CURL_VERBOSE=1 git
+
+  unalias = config --global --remove-section alias
