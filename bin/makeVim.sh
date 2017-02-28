@@ -18,6 +18,7 @@ cd vim
 --enable-python3interp \
 --enable-luainterp \
 --with-luajit \
+--with-lua-prefix=/usr \
 --enable-gpm \
 --enable-cscope \
 --enable-fontset \
