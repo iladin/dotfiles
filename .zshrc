@@ -29,6 +29,8 @@ export LOCALE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
+source ${ZDOTDIR:-$HOME}/.alias.zsh
+
 [ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar NULB
 
 typeset -U path
@@ -144,7 +146,6 @@ setopt pushd_ignore_dups
 setopt complete_aliases
 unsetopt hist_verify
 # }}}
-source ${ZDOTDIR:-$HOME}/.alias.zsh
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
 pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.*/bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
