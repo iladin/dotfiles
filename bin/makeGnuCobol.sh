@@ -12,17 +12,17 @@ function installgmp32(){
     sudo make install
 }
 function installCobolmac() {
-	sudo ldconfig
+	 ldconfig
 		cd ~/tmp
 		test -d open-cobol-contrib && rm -rf open-cobol-contrib
 		git clone https://gitlab.com/iladin/open-cobol-contrib.git
 		cd open-cobol-contrib/tools/cobolmac
 		source comp-cobolmac.sh
-		sudo cp cobolmac /usr/bin
+		 cp cobolmac /usr/bin
  }
 export COB_CFLAGS=-m32
-sudo apt update
-sudo apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
+ apt update
+ apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 #rm -rf opensource-cobol
@@ -31,8 +31,8 @@ cd ~/tmp
 #chmod a+x configure
 #./configure
 #make cycle
-#sudo make install
-#sudo ldconfig
+# make install
+# ldconfig
 cd ~/tmp
 installgmp32
 test -d cobol && rm -rf cobol
@@ -42,5 +42,5 @@ cd cobol
 COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --with-db --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
 make check
-sudo make install || exit 1
+make install || exit 1
 installCobolmac
