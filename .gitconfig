@@ -941,3 +941,7 @@
 
 # Show untracked files
   fake-Clean = clean -ndX
+
+# Hide untracked files for this repository
+  hide-Untracked = config status.showUntrackedFiles no
+  
