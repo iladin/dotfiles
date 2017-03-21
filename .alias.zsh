@@ -71,3 +71,6 @@ function fn() { ls **/*$1* }
 # Split diff
 alias sd="wid=\$(tput cols); sdiff -bisBEWZ -w \$wid"
 
+#Fix compaudit errors
+alias fixCompAudit=compaudit NE | xargs chmod go-xw
+
