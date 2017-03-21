@@ -22,7 +22,9 @@ function installCobolmac() {
  }
 export COB_CFLAGS=-m32
  apt update
- apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
+ #apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
+  apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev bison gcc-multilib g++-multilib
+
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 #rm -rf opensource-cobol
