@@ -5,12 +5,10 @@ zsh_cfg:
 makeEmacs:
     script:
         - bin/makeEmacs.sh
-        - cd -
-        - bin/makeSpaces.sh
+        - bin/makeSpacemacs.sh
 makeVim:
     script:
         - bin/makeVim.sh
-        - cd -
         - bin/makeSPF13vim.sh
 makeFasd:
     script:
