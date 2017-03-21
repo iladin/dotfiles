@@ -73,7 +73,10 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 
 function fn() { ls **/*$1* }
 # Split diff
-alias sd="sdiff -w "$(tput cols)" -WEBsbiZ"
+alias sd="wid=\$(tput cols); sdiff -bisBEWZ -w \$wid"
+
+#Fix compaudit errors
+alias fixCompAudit=compaudit NE | xargs chmod go-xw
 
 # fixes compinit insecure directory bug.
 alias fixAudit='compaudit NE | xargs chmod go-x'
