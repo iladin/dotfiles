@@ -954,6 +954,7 @@
 # Show untracked files
   fake-Clean = clean -ndX
 
+
   merge-theirs = !GIT_CONFIG_PARAMETERS=\"'merge.default=theirs'\" git merge
   merge-ours = !GIT_CONFIG_PARAMETERS=\"'merge.default=ours'\" git merge
 
@@ -961,3 +962,8 @@
   curl-verbose = !GIT_CURL_VERBOSE=1 git
 
   unalias = config --global --remove-section alias
+
+# Hide untracked files for this repository
+  hide-Untracked = config status.showUntrackedFiles no
+  
+
