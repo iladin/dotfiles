@@ -69,5 +69,5 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 
 function fn() { ls **/*$1* }
 # Split diff
-alias sd="sdiff -w "$(tput cols)" -WEBsbiZ"
+alias sd="wid=\$(tput cols); sdiff -bisBEWZ -w \$wid"
 
