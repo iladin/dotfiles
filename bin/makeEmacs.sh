@@ -9,10 +9,10 @@ function xwidgets(){
      libjpeg-dev libpng12-dev libgif-dev libtiff5-dev libncurses5-dev \
      libxft-dev librsvg2-dev libmagickcore-dev libmagick++-dev \
      libxml2-dev libgpm-dev libotf-dev libm17n-dev \
-     libgnutls-dev wget make  autoconf automake \
+     libgnutls-dev wget make makeinfo autoconf automake \
      perl libgtk-3-dev libwebkitgtk-3.0-dev
      #TODO figure out way for it to work always
-    git clone -b emacs-25 git://git.sv.gnu.org/emacs.git
+    git clone git://git.sv.gnu.org/emacs.git
     cd emacs && ./autogen.sh && ./configure --with-x-toolkit=gtk3 --with-xwidgets  && make
 }
 
