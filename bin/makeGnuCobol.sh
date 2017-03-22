@@ -9,7 +9,7 @@ function installgmp32(){
     cd gmp-6.1.2
     ABI=32 ./configure --prefix=/usr --enable-cxx --libdir=/usr/lib32 CC="gcc -m32" CXX="g++ -m32" && \
     make &&\
-    sudo make install
+    make install
 }
 function installCobolmac() {
 	 ldconfig
@@ -39,7 +39,7 @@ cd ~/tmp
 installgmp32
 test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
-cd cobol
+cd cobol/gnu-cobol
 #./configure --with-vbisam
 COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --with-db --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
