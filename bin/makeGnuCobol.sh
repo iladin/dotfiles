@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #TODO: ERROR CHECKING JEEZ
 
-
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 function installgmp32(){
 
     wget https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.bz2
@@ -20,28 +20,33 @@ function installCobolmac() {
 		source comp-cobolmac.sh
 		 cp cobolmac /usr/bin
  }
+function installVBIsam(){
+	rm -rf opensource-cobol
+	git clone https://github.com/opensourcecobol/opensource-cobol.git
+    cd opensource-cobol/vbisam
+    chmod a+x configure
+    ./configure
+    make cycle
+	make install
+	ldconfig
+	cd ~/tmp
+}
 export COB_CFLAGS=-m32
  apt update
  #apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
-  apt -y install help2man texinfo libdb5.3-dev flex libgmp3-dev libncurses5-dev bison gcc-multilib g++-multilib
+  apt -y install help2man texinfo flex libgmp3-dev libncurses5-dev bison gcc-multilib g++-multilib
 
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
-#rm -rf opensource-cobol
-#git clone https://github.com/opensourcecobol/opensource-cobol.git
-#cd opensource-cobol/vbisam
-#chmod a+x configure
-#./configure
-#make cycle
-# make install
-# ldconfig
-cd ~/tmp
+
+
+installVBIsam
 installgmp32
 test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
 cd cobol/gnu-cobol
 #./configure --with-vbisam
-COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --with-db --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
+COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
 make check
 make install || exit 1
