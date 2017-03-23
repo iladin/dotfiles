@@ -9,7 +9,7 @@ function xwidgets(){
      libjpeg-dev libpng12-dev libgif-dev libtiff5-dev libncurses5-dev \
      libxft-dev librsvg2-dev libmagickcore-dev libmagick++-dev \
      libxml2-dev libgpm-dev libotf-dev libm17n-dev \
-     libgnutls-dev wget make makeinfo autoconf automake \
+     libgnutls-dev wget make texinfo autoconf automake \
      perl libgtk-3-dev libwebkitgtk-3.0-dev
      #TODO figure out way for it to work always
     git clone git://git.sv.gnu.org/emacs.git
