@@ -12,3 +12,5 @@ set relativenumber
 set expandtab
 set tabstop=4
 set shiftwidth=4
+" Remove trailing whitespace
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
