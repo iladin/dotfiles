@@ -99,7 +99,7 @@ zp_cmd "zsh-users/zsh-completions"
 zp_cmd "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
-zp_cmd "zsh-users/zsh-syntax-highlighting" #, nice:9
+zp_cmd "zdharma/fast-syntax-highlighting" #, nice:9
 # ZSH port of Fish shell's history search feature
 zp_cmd "zsh-users/zsh-history-substring-search" #, nice:10
 
