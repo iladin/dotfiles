@@ -9,3 +9,6 @@ nmap <Space> i
 " Turn on line numbers and relative line numbers
 set number
 set relativenumber
+set expandtab
+set tabstop=4
+set shiftwidth=4
