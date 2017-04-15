@@ -3,7 +3,7 @@
 
 
 function installgmp32(){
-
+    rm -f gmp-6.1.2.tar.bz2
     wget https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.bz2
     tar -xvf gmp-6.1.2.tar.bz2
     cd gmp-6.1.2
@@ -21,8 +21,12 @@ function installCobolmac() {
 		sudo cp cobolmac /usr/bin
  }
 export COB_CFLAGS=-m32
+export CFLAGS='-m32'
+export CXXFLAGS='-m32'
+export LDFLAGS='-m32'
 sudo apt update
-sudo apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
+sudo apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libgmp3-dev:i386 libncurses5-dev:i386 libncurses5-dev \
+bison gcc-multilib gcc-multilib:i386 g++-multilib g++-multilib:i386
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
 #rm -rf opensource-cobol
@@ -33,11 +37,11 @@ cd ~/tmp
 #make cycle
 #sudo make install
 #sudo ldconfig
-cd ~/tmp
 installgmp32
+cd ~/tmp
 test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
-cd cobol
+cd cobol/gnu-cobol
 #./configure --with-vbisam
 COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --with-db --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
