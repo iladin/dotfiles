@@ -73,10 +73,11 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 
 function fn() { ls **/*$1* }
 # Split diff
-alias sd="sdiff -w "$(tput cols)" -WEBsbiZ"
+alias sd="wid=\$(tput cols); sdiff -bisBEWZ -w \$wid"
+
 
 # fixes compinit insecure directory bug.
-alias fixAudit='compaudit NE | xargs chmod go-x'
+alias fixAudit='compaudit NE | xargs chmod go-wx'
 
 
 alias t='type -a'
@@ -91,5 +92,7 @@ alias nowdate='date +"%d-%m-%Y"'
 alias mostRecentFileInDir='ls -rt | tail -1'
 
 # Docker
-alias chenvy='docker run --net=host --name che -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/che/lib:/home/user/che/lib-copy -v /home/user/che/workspaces:/home/user/che/workspaces -v /home/user/che/storage:/home/user/che/storage codenvy/che'
+alias che='docker run --net=host --name che -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/che/lib:/home/user/che/lib-copy -v /home/user/che/workspaces:/home/user/che/workspaces -v /home/user/che/storage:/home/user/che/storage codenvy/che'
+alias codenvy='docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock codenvy/cli start'
 alias porter='docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer && echo "open me http://localhost:9000/"'
+
