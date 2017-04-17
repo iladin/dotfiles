@@ -3,7 +3,7 @@
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 function installgmp32(){
-
+    rm -f gmp-6.1.2.tar.bz2
     wget https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.bz2
     tar -xvf gmp-6.1.2.tar.bz2
     cd gmp-6.1.2
@@ -42,6 +42,7 @@ cd ~/tmp
 
 installVBIsam
 installgmp32
+cd ~/tmp
 test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
 cd cobol/gnu-cobol

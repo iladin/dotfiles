@@ -31,12 +31,14 @@ export LC_CTYPE=en_US.UTF-8
 
 source ${ZDOTDIR:-$HOME}/.alias.zsh
 
-[ -d ~/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar NULB
+# install TPM if not already installed
+[ -d ${ZDOTDIR:-$HOME}/.config/tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ${ZDOTDIR:-$HOME}/.config/tmux/plugins/tpm
+[ -d ${ZDOTDIR:-$HOME}/.tmux-gitbar ] || git clone https://github.com/aurelien-rainone/tmux-gitbar.git ~/.tmux-gitbar NULB
 
 typeset -U path
 
 
-test -e ${ZDOTDIR:-$HOME}/.gdbinit || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard NULB
+[ -e ${ZDOTDIR:-$HOME}/.gdbinit ] || wget -P ~ git.io/.gdbinit # https://github.com/cyrus-and/gdb-dashboard NULB
 
 
 #Command-line productivity booster, offers quick access to files and directories, inspired by autojump, z and v
