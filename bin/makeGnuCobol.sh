@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #TODO: ERROR CHECKING JEEZ
 
-
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 function installgmp32(){
     rm -f gmp-6.1.2.tar.bz2
     wget https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.bz2
@@ -9,42 +9,46 @@ function installgmp32(){
     cd gmp-6.1.2
     ABI=32 ./configure --prefix=/usr --enable-cxx --libdir=/usr/lib32 CC="gcc -m32" CXX="g++ -m32" && \
     make &&\
-    sudo make install
+    make install
 }
 function installCobolmac() {
-	sudo ldconfig
+	 ldconfig
 		cd ~/tmp
 		test -d open-cobol-contrib && rm -rf open-cobol-contrib
 		git clone https://gitlab.com/iladin/open-cobol-contrib.git
 		cd open-cobol-contrib/tools/cobolmac
 		source comp-cobolmac.sh
-		sudo cp cobolmac /usr/bin
+		 cp cobolmac /usr/bin
  }
+function installVBIsam(){
+	rm -rf opensource-cobol
+	git clone https://github.com/opensourcecobol/opensource-cobol.git
+    cd opensource-cobol/vbisam
+    chmod a+x configure
+    ./configure
+    make cycle
+	make install
+	ldconfig
+	cd ~/tmp
+}
 export COB_CFLAGS=-m32
-export CFLAGS='-m32'
-export CXXFLAGS='-m32'
-export LDFLAGS='-m32'
-sudo apt update
-sudo apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev libgmp3-dev:i386 libncurses5-dev:i386 libncurses5-dev \
-bison gcc-multilib gcc-multilib:i386 g++-multilib g++-multilib:i386
+ apt update
+ #apt -yqq install help2man texinfo libdb5.3-dev flex libgmp3-dev:i386 libncurses5-dev:i386 bison gcc-multilib:i386 g++-multilib:i386
+  apt -y install help2man texinfo flex libgmp3-dev libncurses5-dev bison gcc-multilib g++-multilib
+
 mkdir ~/tmp 2> /dev/null
 cd ~/tmp
-#rm -rf opensource-cobol
-#git clone https://github.com/opensourcecobol/opensource-cobol.git
-#cd opensource-cobol/vbisam
-#chmod a+x configure
-#./configure
-#make cycle
-#sudo make install
-#sudo ldconfig
+
+
+installVBIsam
 installgmp32
 cd ~/tmp
 test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
 cd cobol/gnu-cobol
 #./configure --with-vbisam
-COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --with-db --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
+COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
 make check
-sudo make install || exit 1
+make install || exit 1
 installCobolmac
