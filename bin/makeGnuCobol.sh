@@ -49,7 +49,7 @@ installgmp32
 cd ~/tmp
 test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
-cd cobol/gnu-cobol
+cd cobol
 #./configure --with-vbisam
 COB_CFLAGS=-m32 ./configure --with-vbisam CPPFLAGS="-I/usr/include -L/usr/lib32" --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
