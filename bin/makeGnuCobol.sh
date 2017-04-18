@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #TODO: ERROR CHECKING JEEZ
 
+if [[ $EUID > 0  ]]; then
+    echo "Please run as root/sudo"
+    exit 1
+fi
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 function installgmp32(){
     rm -f gmp-6.1.2.tar.bz2
@@ -25,7 +29,7 @@ function installVBIsam(){
 	git clone https://github.com/opensourcecobol/opensource-cobol.git
     cd opensource-cobol/vbisam
     chmod a+x configure
-    ./configure
+    ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
     make cycle
 	make install
 	ldconfig
@@ -47,7 +51,7 @@ test -d cobol && rm -rf cobol
 git clone https://gitlab.com/iladin/cobol.git
 cd cobol/gnu-cobol
 #./configure --with-vbisam
-COB_CFLAGS=-m32 ./configure CPPFLAGS="-I/usr/include -L/usr/lib32" --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
+COB_CFLAGS=-m32 ./configure --with-vbisam CPPFLAGS="-I/usr/include -L/usr/lib32" --build=i686-linux-gnu --host=i686-linux-gnu  "CFLAGS=-m32" "LDFLAGS=-m32" "CXXFLAGS=-m32" || exit 1
 make || exit 1
 make check
 make install || exit 1
