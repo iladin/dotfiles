@@ -1,5 +1,6 @@
 cd $TMPDIR
+sudo apt install libsdl1.2-dev
+rm -rf curseofwar
 git clone https://github.com/a-nikolaev/curseofwar.git
 cd curseofwar
-make SDL=yes DESTDIR=$HOME/.local install
-
+sudo make SDL=yes install
