@@ -17,9 +17,8 @@ cd vim
 --enable-tclinterp \
 --enable-pythoninterp \
 --enable-python3interp \
---enable-luainterp \
+--enable-luainterp=dynamic \
 --with-luajit \
---with-lua-prefix=/usr/local \
 --enable-gpm \
 --enable-cscope \
 --enable-fontset \
