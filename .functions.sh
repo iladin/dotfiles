@@ -83,7 +83,7 @@ function getPath() {
   type -p "$1" | cut -d ' ' -f 3
 }
 #TODO: Have this work for everyone
-function beiladin(){ test -e ~/.gitconfig.user || echo "[user]\nname=iladin\nemail=iladin@gmail.com" > ~/.gitconfig.user && cat ~/.gitconfig.user }
+function beiladin(){ test -e ~/.gitconfig.user || echo "[user]\nname=iladin\nemail=iladin@gmail.com" > ~/.gitconfig.user && cat ~/.gitconfig.user ;}
 
 # =: front for the `bc` utility  {{{
 
