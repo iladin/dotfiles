@@ -30,11 +30,11 @@
   changed = green
   untracked = cyan
 [core]
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
-#	attributesfile = ~/.gitattributes
-	editor = vim
-	trustctime = false
+    # Use custom `.gitignore` and `.gitattributes`
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+    editor = vim
+    trustctime = false
     ignorecase = true
 [diff]
     # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
@@ -51,7 +51,7 @@
 [format]
     pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [credential]
-	helper = cache --timeout=2592000
+    helper = cache --timeout=2592000
 [include]
     path = ~/.gitconfig.local
     path = ~/.gitconfig.user
@@ -76,7 +76,7 @@
     autoSquash = true
     stat = true # Whether to show a diffstat of what changed upstream since the last rebase
 [remote]
-	pushdefault = origin
+    pushdefault = origin
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -965,5 +965,7 @@
 
 # Hide untracked files for this repository
   hide-Untracked = config status.showUntrackedFiles no
-  
+
+# Change mod time to last commit
+  gitmtim = !"for f in $(git ls-tree -r -t --full-name --name-only HEAD); do touch -d $(git log --pretty=format:%cI -1 HEAD -- "$f") "$f"; done"
 
