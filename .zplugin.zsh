@@ -64,7 +64,7 @@ zp_cmd "joshuarubin/zsh-homebrew"
 
 hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
 
-
+zp_cmd "zpm-zsh/linuxbrew"
 
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
 zp_cmd "psprint/zsh-editing-workbench"
