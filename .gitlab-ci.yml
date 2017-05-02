@@ -18,7 +18,7 @@ makeFont.sh:
         - bin/makeFont.sh
 makeJunest:
     script:
-        - bin/makeJunest.sh
+        - bash -x bin/makeJunest.sh
 makeGnuCobol:
     script:
         - bin/makeGnuCobol.sh
