@@ -50,8 +50,6 @@
     autoCorrect = -1
 [format]
     pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
-[credential]
-    helper = cache --timeout=2592000
 [include]
     path = ~/.gitconfig.local
     path = ~/.gitconfig.user
