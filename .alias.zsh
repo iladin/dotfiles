@@ -49,7 +49,7 @@ alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
 
 #Get your external IP address
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias gip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 #Color for ls
 export CLICOLOR=1
