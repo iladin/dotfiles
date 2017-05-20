@@ -58,6 +58,7 @@ ls --color=auto &> /dev/null && alias ll='ls -lF --color=auto' \
 && alias ls='ls -F --color=auto' \
 && alias lr='ls -alrtF --color=auto'
 
+alias rty='export $(tmux showenv | grep DISPLAY)'
 
 # Enable aliases to be sudoed
 alias sudo='sudo '
