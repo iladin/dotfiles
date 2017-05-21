@@ -16,10 +16,10 @@ makeFasd:
 makeFont.sh:
     script:
         - bin/makeFont.sh
-makeJunest:
+.makeJunest:
     script:
         - bash -x bin/makeJunest.sh
-makeGnuCobol:
+.makeGnuCobol:
     script:
         - bin/makeGnuCobol.sh
 
