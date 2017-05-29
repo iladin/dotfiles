@@ -72,7 +72,7 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 # usage: fn foo
 # to find all files containing 'foo' in the name
 
-function fn() { ls **/*$1* }
+function fn() { ls **/*$1* ;}
 # Split diff
 alias sd="wid=\$(tput cols); sdiff -bisBEWZ -w \$wid"
 
