@@ -1,4 +1,5 @@
---regex-cobol='/%[A-Z]+/\1/m,macro/'
+--langmap=Cobol:+.cpy.CPY
+--regex-cobol=/(^[ \t ]+\$DEFINE[ \t ])(%[A-Z]+)\=/\2/m,macro/
 
 --langdef=markdown
 --langmap=markdown:.md.markdown.mdown.mkd.mkdn
