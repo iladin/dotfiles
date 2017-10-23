@@ -160,7 +160,9 @@
 
   # commit - amend the tip of the current branch rather than creating a new commit.
   amend = commit --amend
-  ca = commit --amend
+
+  # Same as above but reuse previous message
+  ca = commit --amend -C HEAD
 
   # commit interactive
   ci = commit --interactive
