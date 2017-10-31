@@ -1,3 +1,6 @@
+[advice]
+    detachedhead = false # Do not show advice when HEAD becomes detached
+
 [user]
     useConfigOnly = false # Instruct Git to avoid trying to guess defaults for user.email and user.name
 [apply]
@@ -658,6 +661,14 @@
   assume   = update-index --assume-unchanged
   unassume = update-index --no-assume-unchanged
   assumed  = !"git ls-files -v | grep ^h | cut -c 3-"
+  unassume-all = !git assumed | xargs git unassume
+  assume-all = !git status -s | awk {'print $2'} | xargs git assume
+
+  presume   = !"f() { git assume $@; rm $*; }; f"
+  unpresume = !"f() { git checkout -- $@; git unassume $@; }; f"
+  presume-all = !"git ls-files | xargs presume"
+  unpresume-all = !git assumed | xargs git unpresume
+
 
   # Delete all branches that have already been merged into the master branch.
   master-cleanse = !git master-cleanse-local; git master-cleanse-remote
@@ -970,4 +981,10 @@
 
 # Change mod time to last commit
   gitmtim = !"for f in $(git ls-tree -r -t --full-name --name-only HEAD); do touch -d $(git log --pretty=format:%cI -1 HEAD -- "$f") "$f"; done"
+
+# Show branch name, SHA, msg, author, last commit
+  show-pretty-branches = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+
+# Show last commit, author, branch name including remotes
+  show-branch-info = for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n
 
