@@ -27,7 +27,9 @@ zzplugin
 zp_cmd "RobSis/zsh-completion-generator"
 autoload -Uz compinit && compinit -i
 
-zp_cmd "iladin/zstyle"
+
+# Moved into .zshrc
+#zp_cmd "iladin/zstyle"
 
 
 #Snippet expansion for zsh
