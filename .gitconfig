@@ -7,7 +7,7 @@
     ignoreWhitespace = change
     whitespace = nowarn
 [branch]
-    autosetupmerge = true
+    autosetupmerge = always #git branch/checkout will cause new branches to pull from the starting point branch.
     autosetuprebase = always
 [color]
     branch = auto
@@ -32,6 +32,12 @@
   added = yellow
   changed = green
   untracked = cyan
+[column]
+  ui = auto
+  branch = auto
+  clean = auto
+  status = auto
+  tag = auto
 [core]
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
