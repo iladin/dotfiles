@@ -7,7 +7,7 @@
     ignoreWhitespace = change
     whitespace = nowarn
 [branch]
-    autosetupmerge = always #git branch/checkout will cause new branches to pull from the starting point branch.
+    autosetupmerge = true
     autosetuprebase = always
 [color]
     branch = auto
