@@ -295,7 +295,7 @@ setopt complete_aliases
 unsetopt hist_verify
 # }}}
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
-pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin ${ZDOTDIR:-$HOME}/.*/bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
+pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin /usr/local/sbin ${ZDOTDIR:-$HOME}/.*/bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
 test -e $HOME/.zsh.local.after && source $HOME/.zsh.local.after
 ## Profiling code
