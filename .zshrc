@@ -297,6 +297,9 @@ unsetopt hist_verify
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
 pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin /usr/local/sbin ${ZDOTDIR:-$HOME}/.*/bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
+# Remove trailing slashes at end of path and at the end of each entry. Makes brew happy
+export PATH=$(echo ${${PATH//\/:/:}%/})
+
 test -e $HOME/.zsh.local.after && source $HOME/.zsh.local.after
 ## Profiling code
 #unsetopt xtrace
