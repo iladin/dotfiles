@@ -45,6 +45,7 @@
     editor = vim
     trustctime = false
     ignorecase = true
+    sharedRepository = all # the repository will be readable by all users, additionally to being group-shareable. 
 [diff]
     # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
     # instead of a/b/c/d as prefixes for patches
