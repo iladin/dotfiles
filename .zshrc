@@ -293,6 +293,9 @@ setopt pushd_ignore_dups
 # Check original command in alias completion
 setopt complete_aliases
 unsetopt hist_verify
+
+unsetopt nomatch
+
 # }}}
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
 pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin /usr/local/sbin ${ZDOTDIR:-$HOME}/.*/bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
