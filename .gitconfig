@@ -45,7 +45,7 @@
     editor = vim
     trustctime = false
     ignorecase = true
-    sharedRepository = all # the repository will be readable by all users, additionally to being group-shareable. 
+    sharedRepository = all # the repository will be readable by all users, additionally to being group-shareable.
 [diff]
     # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
     # instead of a/b/c/d as prefixes for patches
@@ -540,6 +540,11 @@
   # Show who contributed, in descending order by number of commits
   whorank = shortlog --summary --numbered --no-merges
 
+
+  # Show list of changes since last tag
+  release-notes-since-tag = git log $(git describe --tags --abbrev=0)..HEAD --oneline | cut -d' ' -f 2-
+
+
   # List all issues mentioned in commit messages between range of commits
   #
   # Replace `\\\"ISSUE-[0-9]\\+\\\"` regular expression with one matching your issue tracking system.
@@ -998,6 +1003,3 @@
 
 # List clean (unmodified) files
   list-clean = !bash -c \"comm -13 <(git ls-files -m) <(git ls-files)\"
-
-
-
