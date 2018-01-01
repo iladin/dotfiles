@@ -140,6 +140,8 @@ man() {
     command man "$@"
 }
 
+function longestLine(){ grep -En "^.{$(wc -L < $1)}$" $1; }
+
 
 function dockerClean(){
     # Delete all containers
@@ -147,5 +149,3 @@ function dockerClean(){
     # Delete all images
     docker rmi $(docker images -q)
 }
-
-
