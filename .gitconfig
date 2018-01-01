@@ -79,6 +79,8 @@
   stat = true
 [push]
     default = current
+[pull]
+    rebase = preserve
 [rebase]
     autostash = true
     autoSquash = true
@@ -105,6 +107,13 @@
 [merge "theirs"]
     name = simulate `-s theirs`
     driver = cat %B > %A
+
+[mergetool "ediff"]
+    cmd = emacsclient -c -a \"\"  --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
+
+[mergetool "meld"]
+    cmd = meld --diff "$LOCAL" "$MERGED" "$REMOTE" --diff "$BASE" "$LOCAL" --diff "$BASE" "$REMOTE" --output "$MERGED"
+
 
 [alias]
 
@@ -395,12 +404,17 @@
 
   # Show our tags
   tags = tag -n1 --list
+  releases = log --decorate --oneline --simplify-by-decoration --all
+  lasttag = describe --tags --abbrev=0
 
   # Diffs
   diff-all = !"for name in $(git diff --name-only $1); do git difftool $1 $name & done"
   diff-changes = diff --name-status -r
   diff-stat = diff --stat --ignore-space-change -r
   diff-staged = diff --cached
+
+  # Find across all commits
+  find = "log --all -i --grep"
 
   # From https://gist.github.com/492227
   head = log -n1
@@ -423,6 +437,10 @@
 
   # Show the changes that were introduced by a merge, in your difftool
   merge-span-difftool = !"git difftool `git merge-span ... $1`"
+
+  #Show conflicts after merge
+  conflicts = diff --name-only --diff-filter=U
+  unmerged = diff --name-only --diff-filter=U
 
   # Interactively rebase all the commits on the current branch
   rebase-branch = !"git rebase --interactive `git merge-base master HEAD`"
@@ -475,6 +493,12 @@
   log-timeline = log --format='%h %an %ar - %s'
   log-local = log --oneline origin..HEAD
   log-fetched = log --oneline HEAD..origin/master
+
+  # Show commits where you are not the author
+  nlog = !git log --author="$(git config --get user.name)" --invert-grep
+
+  #Do a pull and git push like vscode
+  sync = !git pull && git push
 
   # churn: show log of files that have many changes
   #
@@ -543,6 +567,10 @@
 
   # Show list of changes since last tag
   release-notes-since-tag = git log $(git describe --tags --abbrev=0)..HEAD --oneline | cut -d' ' -f 2-
+
+  # What changed
+  what = log --pretty=format:'%C(yellow)%h%C(auto)%d%Creset %s %Cgreen<%an>%Creset %C(bold blue)(%ad)%Creset' --date=short --stat
+  whatwhen = log --pretty=format:'%C(yellow)%h%C(auto)%d%Creset %s %Cgreen<%an>%Creset %C(bold blue)(%ad)%Creset' --date=iso -p -S
 
 
   # List all issues mentioned in commit messages between range of commits
@@ -794,6 +822,8 @@
   # If the program to debug is a builtin, we use this alias.
   debug = !GIT_PAGER= gdb --args git
 
+  # Run the git command with GIT_TRACE turned on.
+  trace = !GIT_TRACE=1 git
   # Getting the diff of only one function: when we want to see just the
   # differences of one function in one file in two different commits,
   # we create two temp files which contain only the function, then diff.
@@ -833,6 +863,10 @@
   #   $ git graphviz --first-parent master | dotty /dev/stdin
   graphviz = !"f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 
+  # Show graph of what is being worked on
+  graph = log --graph -10 --branches --remotes --tags --format=format:'%C(yellow)%h %Creset %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+  # Run before commiting
+  precommit = diff --cached --diff-algorithm=minimal -w
   ##########################################################################
 
   ##
@@ -1003,3 +1037,5 @@
 
 # List clean (unmodified) files
   list-clean = !bash -c \"comm -13 <(git ls-files -m) <(git ls-files)\"
+# Get timestamp of last pull
+  when = !stat -c %y .git/FETCH_HEAD
