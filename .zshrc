@@ -302,6 +302,9 @@ unsetopt nomatch
 
 # }}}
 
+#Fix for repeating exit =! 0
+# See https://github.com/zdharma/zplugin/issues/45 for details
+setopt no_printexitvalue
 
 test -e $HOME/.zsh.local.after && source $HOME/.zsh.local.after
 ## Profiling code
