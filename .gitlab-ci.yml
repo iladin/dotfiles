@@ -2,11 +2,11 @@ zsh_cfg:
       script:
         - source bin/makeEnvy.sh
 
-makeEmacs:
+.makeEmacs:
     script:
         - bin/makeEmacs.sh
         - bin/makeSpacemacs.sh
-makeVim:
+.makeVim:
     script:
         - bin/makeVim.sh
         - bin/makeSPF13vim.sh
@@ -22,5 +22,3 @@ makeFont.sh:
 .makeGnuCobol:
     script:
         - bin/makeGnuCobol.sh
-
-
