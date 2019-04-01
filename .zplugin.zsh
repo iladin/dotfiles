@@ -27,6 +27,9 @@ zzplugin
 zp_cmd "RobSis/zsh-completion-generator"
 autoload -Uz compinit && compinit -i
 
+# An oh-my-zsh plugin to help remembering those aliases you defined once
+# Only use if you have python
+hash python && zp_cmd "djui/alias-tips"
 
 # Moved into .zshrc
 #zp_cmd "iladin/zstyle"
@@ -45,7 +48,6 @@ zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.z
 
 # Zplugin commands
 
-zplugin snippet --command 'https://github.com/takaaki-kasai/git-foresta/blob/master/git-foresta'
 
 # k is a zsh script / plugin to make directory listings more readable
 #adding a bit of color and some git status information on files and directories.
@@ -53,9 +55,7 @@ zp_cmd "supercrabtree/k"
 
 # peco/percol/fzf wrapper plugin for zsh
 zp_cmd "mollifier/anyframe"
-# An oh-my-zsh plugin to help remembering those aliases you defined once
-# Only use if you have python
-hash python && zp_cmd "djui/alias-tips"
+
 
 zp_cmd "jimhester/per-directory-history"
 
