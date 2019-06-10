@@ -76,6 +76,8 @@
   verbosity = 1
   renormalize = true
   stat = true
+[pack]
+      useSparse = true
 [push]
     default = current
 [pull]
