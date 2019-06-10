@@ -1,6 +1,5 @@
 [advice]
     detachedhead = false # Do not show advice when HEAD becomes detached
-
 [user]
     useConfigOnly = false # Instruct Git to avoid trying to guess defaults for user.email and user.name
 [apply]
@@ -1039,3 +1038,5 @@
   list-clean = !bash -c \"comm -13 <(git ls-files -m) <(git ls-files)\"
 # Get timestamp of last pull
   when = !stat -c %y .git/FETCH_HEAD
+# Remove branches that don't exist on the remote
+  prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
