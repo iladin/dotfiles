@@ -31,7 +31,8 @@ export LC_CTYPE=en_US.UTF-8
 
 export GOPATH="$HOME/.gopath"
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
-pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin /usr/local/sbin ${ZDOTDIR:-$HOME}/.*/bin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
+pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin /usr/local/sbin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
+test -d ${ZDOTDIR:-$HOME}/.*/bin 2> /dev/null && pathadd ${ZDOTDIR:-$HOME}/.*/bin
 
 # Remove trailing slashes at end of path and at the end of each entry. Makes brew happy
 export PATH=${${PATH//\/:/:}%/}

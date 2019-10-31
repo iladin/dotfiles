@@ -29,7 +29,7 @@ autoload -Uz compinit && compinit -i
 
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 # Only use if you have python
-hash python && zp_cmd "djui/alias-tips"
+hash python > /dev/null && zp_cmd "djui/alias-tips"
 
 # Moved into .zshrc
 #zp_cmd "iladin/zstyle"
