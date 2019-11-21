@@ -41,3 +41,15 @@ clean:
 	@echo 'Remove dot files in your home directory...'
 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 	-rm -rf $(DOTPATH)
+
+## Get Username
+username := $(shell whoami)
+
+## Enable passwordless sudo
+sudo: /etc/sudoers.d/$(username) ; echo "Sudoing"
+/etc/sudoers.d/$(username):
+	echo "$(username) ALL=(ALL) NOPASSWD: ALL" | sudo tee $<
+# Setup user for git
+$(HOME)/.gitconfig.user:
+	git config --file $(HOME)/.gitconfig.user user.name "iladin"
+	git config --file $(HOME)/.gitconfig.user user.email "iladin@gmail.com"
