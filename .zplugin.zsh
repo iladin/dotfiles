@@ -13,6 +13,7 @@ function zzplugin(){
     else
        cd "$ZPLG_HOME"
        git clone https://github.com/psprint/zplugin.git bin
+       cd -
     fi
     }
     source ${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh
@@ -23,17 +24,14 @@ function zzplugin(){
 
 zzplugin
 
-#Generating zsh completion function from getopt-style help text.
-zp_cmd "RobSis/zsh-completion-generator"
-autoload -Uz compinit && compinit -i
-
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 # Only use if you have python
-hash python > /dev/null && zp_cmd "djui/alias-tips"
-
-# Moved into .zshrc
-#zp_cmd "iladin/zstyle"
-
+if hash python 2> /dev/null; then
+    zp_cmd "RobSis/zsh-completion-generator"
+    zp_cmd "djui/alias-tips"
+fi
+#Generating zsh completion function from getopt-style help text.
+autoload -Uz compinit && compinit -i
 
 #Snippet expansion for zsh
 zp_cmd "willghatch/zsh-snippets"
