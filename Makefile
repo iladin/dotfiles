@@ -46,10 +46,10 @@ clean:
 username := $(shell whoami)
 
 ## Enable passwordless sudo
-sudo: /etc/sudoers.d/$(username) ; echo "Sudoing"
+sudo: /etc/sudoers.d/$(username) ; @echo "Enable sudo"
 /etc/sudoers.d/$(username):
-	echo "$(username) ALL=(ALL) NOPASSWD: ALL" | sudo tee $<
+	@echo "$(username) ALL=(ALL) NOPASSWD: ALL" | sudo tee $@ > /dev/null
 # Setup user for git
 $(HOME)/.gitconfig.user:
-	git config --file $(HOME)/.gitconfig.user user.name "iladin"
-	git config --file $(HOME)/.gitconfig.user user.email "iladin@gmail.com"
+	@git config --file $(HOME)/.gitconfig.user user.name "iladin"
+	@git config --file $(HOME)/.gitconfig.user user.email "iladin@gmail.com"
