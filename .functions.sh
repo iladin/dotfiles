@@ -142,6 +142,7 @@ man() {
 
 function longestLine(){ grep -En "^.{$(wc -L < $1)}$" $1; }
 
+function im(){ DEBIAN_FRONTEND=noninteractive eval $(!! 2>&1 | grep apt) -y; }
 
 function dockerClean(){
     # Delete all containers
