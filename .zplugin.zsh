@@ -93,6 +93,8 @@ zp_cmd "sindresorhus/pure"
 
 #source $HOME/.powerlevel9k
 
+#Install zsh-tig-plugin if tig is installed
+hash tig &> /dev/null && zplugin wait lucid for zdharma/zsh-tig-plugin
 
 # zsh anything.el-like widget.
 zp_cmd "zsh-users/zaw"
