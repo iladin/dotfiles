@@ -50,6 +50,7 @@ alias cutc="cut -d \",\""
 
 #Get your external IP address
 alias gip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias weather='curl wttr.in'
 
 #Color for ls
 export CLICOLOR=1
