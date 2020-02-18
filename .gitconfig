@@ -1042,3 +1042,5 @@
   when = !stat -c %y .git/FETCH_HEAD
 # Remove branches that don't exist on the remote
   prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+# Commit at-later date
+  commit-later = !git commit --date \"$(date -d \"+8 hours\")\"

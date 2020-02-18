@@ -150,3 +150,7 @@ function dockerClean(){
     # Delete all images
     docker rmi $(docker images -q)
 }
+# Linux replacement for pargs on LINUX
+if test `uname` = Linux; then
+    function pargs { ps eww -p $1 | tail -n 1 | awk '{for(i=5;i<=NF;i++) printf( "argv[%s]: %s\n", i-5, $i  ); }'; }
+fi
