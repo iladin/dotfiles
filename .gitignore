@@ -55,3 +55,4 @@ test/version_tmp
 .yardoc
 _yardoc
 /.project
+.vscode/settings.json

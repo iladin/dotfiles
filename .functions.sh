@@ -1,11 +1,22 @@
+#!/usr/bin/bash
+function path_remove {
+  # Delete path by parts so we can never accidentally remove sub paths
+  PATH=${PATH//":$1:"/":"} # delete any instances in the middle
+  PATH=${PATH/#"$1:"/} # delete any instance at the beginning
+  PATH=${PATH/%":$1"/} # delete any instance in the at the end
+}
+
 function pathadd() {
   for ARG in "$@"
   do
     if [[ ! -d $ARG ]] ; then
         continue
         fi
-    if [ -d "$ARG" ] && [[ ":$PATH:" != *":$ARG:"* ]]; then
-        export PATH="${PATH:+"$PATH:"}$ARG"
+    if [ -d "$ARG" ]; then
+     if [[ ! ":$PATH:" != *":$ARG:"* ]]; then
+        path_remove "$ARG"
+     fi
+     export PATH="${PATH:+"$PATH:"}$ARG"
     fi
   done
 }
