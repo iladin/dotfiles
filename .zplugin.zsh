@@ -1,24 +1,22 @@
-function zzplugin(){
-    [[ -d ${ZDOTDIR:-$HOME}/.zplugin ]] || {
-       ZPLG_HOME="${ZDOTDIR:-$HOME}/.zplugin"
-
-    if ! test -d "$ZPLG_HOME"; then
-      mkdir "$ZPLG_HOME"
-      chmod g-rwX "$ZPLG_HOME"
-    fi
-
-    if test -d "$ZPLG_HOME/bin/.git"; then
-       cd "$ZPLG_HOME/bin"
-       git pull origin master
-    else
-       cd "$ZPLG_HOME"
-       git clone https://github.com/psprint/zplugin.git bin
-       cd -
-    fi
+function zzplugin() {
+    ZPLG_HOME="${ZDOTDIR:-$HOME}/.zinit"
+    [[ -d $ZPLG_HOME ]] || {
+        if ! test -d "$ZPLG_HOME"; then
+            mkdir "$ZPLG_HOME"
+            chmod g-rwX "$ZPLG_HOME"
+        fi
+        if test -d "$ZPLG_HOME/bin/.git"; then
+            cd "$ZPLG_HOME/bin"
+            git pull origin master
+        else
+            cd "$ZPLG_HOME"
+            git clone https://github.com/zdharma/zinit.git bin
+            cd -
+        fi
     }
-    source ${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh
-    function zp_cmd(){
-         zplugin load "$@"
+    source ${ZPLG_HOME}/bin/zinit.zsh
+    function zp_cmd() {
+        zinit load "$@"
     }
 }
 
@@ -26,7 +24,7 @@ zzplugin
 
 # An oh-my-zsh plugin to help remembering those aliases you defined once
 # Only use if you have python
-if hash python 2> /dev/null; then
+if hash python 2>/dev/null; then
     zp_cmd "RobSis/zsh-completion-generator"
     zp_cmd "djui/alias-tips"
 fi
@@ -46,7 +44,6 @@ zplugin snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.z
 
 # Zplugin commands
 
-
 # k is a zsh script / plugin to make directory listings more readable
 #adding a bit of color and some git status information on files and directories.
 zp_cmd "supercrabtree/k"
@@ -54,19 +51,19 @@ zp_cmd "supercrabtree/k"
 # peco/percol/fzf wrapper plugin for zsh
 zp_cmd "mollifier/anyframe"
 
-
 zp_cmd "jimhester/per-directory-history"
 
 # A next-generation cd command with an interactive filter
 export ENHANCD_FILTER=fzy:peco:fzf
-zp_cmd "b4b4r07/enhancd" #, of:enhancd.sh
+#zp_cmd "b4b4r07/enhancd" #, of:enhancd.sh
+zinit light b4b4r07/enhancd
 #Emoji completion on the command line
 
 zp_cmd "b4b4r07/emoji-cli"
 
 zp_cmd "joshuarubin/zsh-homebrew"
 
-hash docker &> /dev/null && zp_cmd  "felixr/docker-zsh-completion"
+hash docker &>/dev/null && zp_cmd "felixr/docker-zsh-completion"
 
 #zp_cmd "zpm-zsh/linuxbrew"
 
@@ -82,11 +79,9 @@ zp_cmd "psprint/zsh-select"
 #Curses-based tools for Zsh, e.g. multi-word history searcher
 zp_cmd "psprint/zsh-navigation-tools"
 #Complete options from manual pages – press Ctrl-F to start the completer
-zp_cmd "psprint/zzcomplete"
-
+zp_cmd "zdharma/zzcomplete"
 
 zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
-
 
 #THEME
 zp_cmd "sindresorhus/pure"
@@ -94,7 +89,7 @@ zp_cmd "sindresorhus/pure"
 #source $HOME/.powerlevel9k
 
 #Install zsh-tig-plugin if tig is installed
-hash tig &> /dev/null && zplugin wait lucid for zdharma/zsh-tig-plugin
+hash tig &>/dev/null && zinit wait lucid for zdharma/zsh-tig-plugin
 
 # zsh anything.el-like widget.
 zp_cmd "zsh-users/zaw"
@@ -135,17 +130,12 @@ if [[ "$(tput colors)" == "256" ]]; then
     FAST_HIGHLIGHT_STYLES[assign]=fg=037
 fi
 
-
-
-
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 '
 
-
-function zplugin_end(){
-    zplugin cdreplay -q # -q is for quiet
-    autoload -Uz _zplugin
-    #(( ${+_comps} )) && _comps[zplugin]=_zplugin
-    zcompile ${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh
+function zplugin_end() {
+    zinit cdreplay -q # -q is for quiet
+    autoload -Uz _zinit
+    zcompile ${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh
 }
 
 #if whence -f zplugin; then zplugin_end; else zplug_end; fi
