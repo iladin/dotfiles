@@ -84,7 +84,8 @@ zp_cmd "zdharma/zzcomplete"
 zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 
 #THEME
-zp_cmd "sindresorhus/pure"
+#zp_cmd "sindresorhus/pure"
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 #source $HOME/.powerlevel9k
 
