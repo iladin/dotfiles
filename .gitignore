@@ -56,3 +56,5 @@ test/version_tmp
 _yardoc
 /.project
 .vscode/settings.json
+.vscode/dryrun.log
+.vscode/targets.log
