@@ -68,16 +68,16 @@ hash docker &>/dev/null && zp_cmd "felixr/docker-zsh-completion"
 #zp_cmd "zpm-zsh/linuxbrew"
 
 #Incremental history word completing (started with Alt-h/H or Option-h/H on Mac)
-zp_cmd "psprint/zsh-editing-workbench"
+zp_cmd "zdharma-continuum/zsh-editing-workbench"
 
 #Because your terminal should be able to perform tasks asynchronously without external tools!
 zp_cmd "mafredri/zsh-async"
 #Plugin that provides zsnapshot command which dumps current ZSH state into a file, for restoration by sourcing the file
-zp_cmd "psprint/zsnapshot"
+zp_cmd "zdharma-continuum/zsnapshot"
 #A shell command that will display selection list
-zp_cmd "psprint/zsh-select"
+zp_cmd "zdharma-continuum/zsh-select"
 #Curses-based tools for Zsh, e.g. multi-word history searcher
-zp_cmd "psprint/zsh-navigation-tools"
+zp_cmd "zdharma-continuum/zsh-navigation-tools"
 #Complete options from manual pages – press Ctrl-F to start the completer
 zp_cmd "zdharma-continuum/zzcomplete"
 
