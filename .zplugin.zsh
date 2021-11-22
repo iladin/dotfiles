@@ -10,7 +10,7 @@ function zzplugin() {
             git pull origin master
         else
             cd "$ZPLG_HOME"
-            git clone https://github.com/zdharma/zinit.git bin
+            git clone https://github.com/zdharma-continuum/zinit.git bin
             cd -
         fi
     }
@@ -79,7 +79,7 @@ zp_cmd "psprint/zsh-select"
 #Curses-based tools for Zsh, e.g. multi-word history searcher
 zp_cmd "psprint/zsh-navigation-tools"
 #Complete options from manual pages – press Ctrl-F to start the completer
-zp_cmd "zdharma/zzcomplete"
+zp_cmd "zdharma-continuum/zzcomplete"
 
 zp_cmd "Tarrasch/zsh-autoenv" # zsh-autoenv automatically sources (known/whitelisted) .autoenv.zsh files, typically used in project root directories.
 
@@ -90,7 +90,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 #source $HOME/.powerlevel9k
 
 #Install zsh-tig-plugin if tig is installed
-hash tig &>/dev/null && zinit wait lucid for zdharma/zsh-tig-plugin
+hash tig &>/dev/null && zinit wait lucid for zdharma-continuum/zsh-tig-plugin
 
 # zsh anything.el-like widget.
 zp_cmd "zsh-users/zaw"
@@ -101,7 +101,7 @@ zp_cmd "zsh-users/zsh-completions"
 zp_cmd "zsh-users/zsh-autosuggestions"
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
-zp_cmd "zdharma/fast-syntax-highlighting" #, nice:9
+zp_cmd "zdharma-continuum/fast-syntax-highlighting" #, nice:9
 # ZSH port of Fish shell's history search feature
 zp_cmd "zsh-users/zsh-history-substring-search" #, nice:10
 
