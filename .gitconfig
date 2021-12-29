@@ -81,7 +81,7 @@
 [push]
     default = current
 [pull]
-    rebase = preserve
+    rebase = true
 [rebase]
     autostash = true
     autoSquash = true
