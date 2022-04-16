@@ -1,5 +1,6 @@
 # dotfiles
 
+
 [![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotfiles)
 
 My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
@@ -47,3 +48,35 @@ vcat
 ## Links
 
 [http://dockerfile-linter.com/?lang=en](http://dockerfile-linter.com/?lang=en)
+
+## Install
+
+### Windows
+
+### WSL
+``` powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2
+```
+
+[Windows x64 patch](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+#### Chocolatey
+
+
+choco install everything
+#### Scoop
+
+``` powershell
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+```
+
+## Rust
+
+### Rustup
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -x
+```

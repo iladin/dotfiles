@@ -6,13 +6,10 @@ function path_remove {
   PATH=${PATH/%":$1"/} # delete any instance in the at the end
 }
 
+#Issue will not add directory that does not exist; How to install things without resourcing .zshrc
 function pathadd() {
   for ARG in "$@"
   do
-    if [[ ! -d $ARG ]] ; then
-        continue
-        fi
-    if [ -d "$ARG" ]; then
      if [[ ! ":$PATH:" != *":$ARG:"* ]]; then
         path_remove "$ARG"
      fi
@@ -22,11 +19,7 @@ function pathadd() {
 }
 function pathpre() {
   for ARG in "$@"
-  do
-    if [[ ! -d $ARG ]] ; then
-        continue
-        fi
-    if [ -d "$ARG" ] && [[ ":$PATH:" != *":$ARG:"* ]]; then
+  do if [[ ":$PATH:" != *":$ARG:"* ]]; then
         export PATH="$ARG:$PATH:"
     fi
   done
@@ -151,7 +144,7 @@ man() {
     command man "$@"
 }
 
-function longestLine(){ grep -En "^.{$(wc -L < $1)}$" $1; }
+function longestLine(){ grep -HEn "^.{$(wc -L < $1)}$" $1; }
 
 function im(){ DEBIAN_FRONTEND=noninteractive eval $(!! 2>&1 | grep apt) -y; }
 

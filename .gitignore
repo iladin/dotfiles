@@ -58,3 +58,5 @@ _yardoc
 .vscode/settings.json
 .vscode/dryrun.log
 .vscode/targets.log
+.vscode/configurationCache.log
+get-pip.py
