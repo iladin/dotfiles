@@ -2,4 +2,5 @@
 *.bat      text eol=crlf
 *.cmd      text eol=crlf
 # For everything else, use LF
-*          text eol=lf
+# Disabled because it corrupts zip files
+#*          text eol=lf
