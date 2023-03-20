@@ -1,6 +1,5 @@
 # dotfiles
 
-
 [![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotfiles)
 
 My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
@@ -54,7 +53,8 @@ vcat
 ### Windows
 
 ### WSL
-``` powershell
+
+```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 wsl --set-default-version 2
@@ -64,13 +64,23 @@ wsl --set-default-version 2
 
 #### Chocolatey
 
-
 choco install everything
+
 #### Scoop
 
-``` powershell
+```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+iwr -useb get.scoop.sh | iex
+```
+
+```bash
+scoop install cygwin
+~\scoop\apps\cygwin\current\cygwin-setup.exe -qnBP ansible
+```
+
+```bash
+~\scoop\apps\cygwin\current\cygwin-setup.exe -qnBP gcc-core,python38-pip,python38-devel,libffi-devel,libssl-devel,openssh
+python3.8.exe -m pip install ansible
 ```
 
 ## Rust
@@ -79,4 +89,5 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -x
+
 ```

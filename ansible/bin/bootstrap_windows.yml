@@ -1,0 +1,10 @@
+#!/usr/bin/env ansible-playbook
+- name: install Win32-OpenSSH service
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Hello world
+      debug: msg="Hello world"
+    - name: Install via scoop
+      win_scoop:
+        name: jq

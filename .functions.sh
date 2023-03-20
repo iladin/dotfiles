@@ -87,8 +87,10 @@ function getPath() {
   type -p "$1" | cut -d ' ' -f 3
 }
 #TODO: Have this work for everyone
-function beiladin(){ test -e ~/.gitconfig.user || echo "[user]\nname=iladin\nemail=iladin@gmail.com" > ~/.gitconfig.user && cat ~/.gitconfig.user ;}
-
+function setGitUser(){
+    git config --file ~/.gitconfig.user user.name "iladin"
+    git config --file ~/.gitconfig.user user.email "iladin@gmail.com"
+}
 # =: front for the `bc` utility  {{{
 
 # credits: original idea by github.com/arzzen/calc.plugin.zsh
