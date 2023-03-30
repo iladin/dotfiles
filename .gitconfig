@@ -115,6 +115,15 @@
 [mergetool "meld"]
     cmd = meld --diff "$LOCAL" "$MERGED" "$REMOTE" --diff "$BASE" "$LOCAL" --diff "$BASE" "$REMOTE" --output "$MERGED"
 
+[filter "nbstrip_full"]
+clean = "jq --indent 1 \
+        '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
+        | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
+        | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
+        | .cells[].metadata = {} \
+        '"
+smudge = cat
+required = true
 
 [alias]
 
@@ -1034,7 +1043,7 @@
   show-pretty-branches = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 
 # Show last commit, author, branch name including remotes
-  show-branch-info = for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n
+  show-branch-info = !git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | grep -Ev '^[[:space:]]+refs' | sort -k5n -k2M -k3n -k4n
 
 # List clean (unmodified) files
   list-clean = !bash -c \"comm -13 <(git ls-files -m) <(git ls-files)\"
@@ -1044,3 +1053,6 @@
   prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
 # Commit at-later date
   commit-later = !git commit --date \"$(date -d \"+8 hours\")\"
+# grep excluded files
+  grepx = grep --untracked --exclude-standard
+  mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
