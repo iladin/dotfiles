@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}${pathSeparator}git${pathSeparator}filter${pathSeparator}update_Identification.py",
+            "args": [
+                "smudge",
+                "-f",
+                "Makefile"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
