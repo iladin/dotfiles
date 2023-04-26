@@ -23,8 +23,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 
 fpath=(${ZDOTDIR:-$HOME}/.zsh $fpath)
-cfg () {   git --git-dir=${ZDOTDIR:-$HOME}/.cfg/ --work-tree=$HOME $@ }
-test -d ${ZDOTDIR:-$HOME}/.cfg || (git clone --bare https://gitlab.com/iladin/dotfiles.git  $HOME/.cfg; cfg config status.showUntrackedFiles no)
+cfg () {   git --git-dir=${ZDOTDIR:-$HOME}/dotfiles/ --work-tree=$HOME $@ }
+test -d ${ZDOTDIR:-$HOME}/dotfiles || (git clone --bare https://gitlhub.com/iladin/dotfiles.git  $HOME/dotfiles; cfg config status.showUntrackedFiles no)
 
 # language configuration
 export LANG=en_US.UTF-8
