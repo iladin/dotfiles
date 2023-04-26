@@ -14,7 +14,6 @@ function pathadd() {
         path_remove "$ARG"
      fi
      export PATH="${PATH:+"$PATH:"}$ARG"
-    fi
   done
 }
 function pathpre() {
@@ -121,9 +120,12 @@ function ct(){
     fi
 }
 # }}}
+
+# oh I already wrote a version of dos2unix as a function....
 function d2u(){
     tr -d '\r' < $1 > $1.tmp && mv $1.tmp $1
 }
+
 function flagCheckout(){
     test -d $HOME/.flags || mkdir $HOME/.flags
     if [[ -e $HOME/.flags/noCheckOut ]]
@@ -134,7 +136,7 @@ function flagCheckout(){
         echo "noCheckout flag created"
     fi
 }
-
+#More colorful version of man
 man() {
     LESS_TERMCAP_mb=$'\e[1;36m' \
     LESS_TERMCAP_md=$'\e[1;36m' \
@@ -146,9 +148,30 @@ man() {
     command man "$@"
 }
 
+# Return the longest line
 function longestLine(){ grep -HEn "^.{$(wc -L < $1)}$" $1; }
 
-function im(){ DEBIAN_FRONTEND=noninteractive eval $(!! 2>&1 | grep apt) -y; }
+
+# Stands for install missing, runs the previous command and installs missing
+function im(){
+    export DEBIAN_FRONTEND=noninteractive
+    if [[ -n "${1}" ]]; then
+        local command=$1
+    else 
+        local output=$(eval !! 2>&1)
+        if [[ "$output" =~ "not found" ]]; then
+            local command=$(echo "$output" | cut -d: -f2)
+        fi
+    fi
+    for pkg_mgr in apt dnf yum; do
+        if hash $pkg_mgr 2>/dev/null; then
+            local installer=$pkg_mgr
+            break
+        fi
+    done
+    $installer install $command -y
+}
+#    eval $(!! 2>&1 | grep apt) -y; # old version
 
 function dockerClean(){
     # Delete all containers
@@ -159,4 +182,10 @@ function dockerClean(){
 # Linux replacement for pargs on LINUX
 if test `uname` = Linux; then
     function pargs { ps eww -p $1 | tail -n 1 | awk '{for(i=5;i<=NF;i++) printf( "argv[%s]: %s\n", i-5, $i  ); }'; }
+fi
+# If dos2unix is missing, define a function that does the same thing
+if hash dos2unix 2> /dev/null; then
+    function dos2unix(){
+        sed -i 's/\r$//g' $1
+    }
 fi

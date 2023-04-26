@@ -1,1 +1,1 @@
-cfg(){ git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@;}
+cfg(){ git --git-dir=$HOME/dotfiles/ --work-tree=$HOME $@;}
