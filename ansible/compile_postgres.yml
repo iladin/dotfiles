@@ -1,0 +1,31 @@
+#!/usr/bin/env ansible-playbook
+- name: Compile Postgres
+  hosts: localhost
+  vars:
+    postgres_source: https://ftp.postgresql.org/pub/source/v15.2/postgresql-15.2.tar.gz
+  tasks:
+    - name: Install dependencies apt
+      become: true
+      ansible.builtin.package:
+        name:
+          - libreadline-dev
+    - name: Download postgres
+      unarchive:
+        src: "{{ postgres_source }}"
+        dest: /tmp
+        remote_src: true
+        creates: /tmp/postgresql-15.2/Makefile
+    - name: Run configure
+      ansible.builtin.command:
+        chdir: /tmp/postgresql-15.2
+        argv:
+          - ./configure
+  #        - --with-openssl
+  #        - --with-ldap
+  #        - --with-llvm
+    - name: Run make
+      community.general.make:
+        chdir: /tmp/postgresql-15.2
+        target: world
+        jobs: 32
+      

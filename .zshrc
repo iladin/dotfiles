@@ -24,7 +24,7 @@ test -e $HOME/.zsh.local.before && source $HOME/.zsh.local.before
 
 fpath=(${ZDOTDIR:-$HOME}/.zsh $fpath)
 cfg () {   git --git-dir=${ZDOTDIR:-$HOME}/dotfiles/ --work-tree=$HOME $@ }
-test -d ${ZDOTDIR:-$HOME}/dotfiles || (git clone --bare https://gitlhub.com/iladin/dotfiles.git  $HOME/dotfiles; cfg config status.showUntrackedFiles no)
+test -d ${ZDOTDIR:-$HOME}/dotfiles || (git clone --bare https://github.com/iladin/dotfiles.git  $HOME/dotfiles; cfg config status.showUntrackedFiles no)
 
 # language configuration
 export LANG=en_US.UTF-8
@@ -34,6 +34,7 @@ export LC_CTYPE=en_US.UTF-8
 
 export GOPATH="$HOME/.gopath"
 declare -f pathadd || source ${ZDOTDIR:-$HOME}/.functions.sh
+test -d ~/.local/bin || mkdir -p ~/.local/bin # Fix issue below where .local/bin isn't added to path since it does not exist yet
 stat -t ${ZDOTDIR:-$HOME}/.*/bin &> /dev/null && pathadd ${ZDOTDIR:-$HOME}/.*/bin
 pathadd . ${ZDOTDIR:-$HOME}/bin /usr/local/bin /usr/local/sbin ${ZDOTDIR:-$HOME}/junest/bin ${ZDOTDIR:-$HOME}/.local/bin
 
