@@ -2,13 +2,7 @@
 
 [![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?url=https://gitlab.com/iladin/dotfiles)
 
-My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
-
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/iladin/dotfiles/master?grs=gitlab&t=white)
-
-## Status
-
-[![Build Status](https://gitlab.com/iladin/dotfiles/badges/master/build.svg)](https://gitlab.com/iladin/dotfiles/pipelines)
+My dotfiles hosted on [github.com](http://github.com/iladin/dotfiles)
 
 ## Code Climate
 
@@ -16,31 +10,11 @@ My dotfiles hosted on [gitlab.com](http://gitlab.com/iladin/dotfiles)
 [![Test Coverage](https://codeclimate.com/github/iladin/dotfiles/badges/coverage.svg)](https://codeclimate.com/github/iladin/dotfiles/coverage)
 [![Code Climate](https://codeclimate.com/github/iladin/dotfiles/badges/gpa.svg)](https://codeclimate.com/github/iladin/dotfiles)
 
-## TODO
-
-### Files
-
-.codenvy.json  Inspired by <https://gitlab.com/gitlab-org/gitlab-ce/issues/12759>
-
-### Topics
-
-NixOS
-
 ## Tools
 
 rr
 
-silversearcher-ag
-
-catimg
-
 ptop
-
-nethogs
-
-bashtrace
-
-NcursesFM
 
 vcat
 
@@ -52,15 +26,32 @@ vcat
 
 ### Windows
 
-### WSL
 
-```powershell
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-wsl --set-default-version 2
+#### Long paths
+
+
+```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem and set LongPathsEnabled to 1
 ```
 
-[Windows x64 patch](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+#### Hyper V
+
+Needs to be enabled
+
+### WSL
+
+``` shell
+wsl.exe --list --online
+wsl.exe --install Ubuntu
+```
+
+reboot required
+
+### Fix git for windows
+
+```
+git config --global core.sshCommand "'C:\Windows\System32\OpenSSH\ssh.exe'"
+```
 
 #### Chocolatey
 

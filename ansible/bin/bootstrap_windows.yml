@@ -1,7 +1,11 @@
 #!/usr/bin/env ansible-playbook
-- name: install Win32-OpenSSH service
+- name: Setup dev server
   hosts: localhost
   gather_facts: false
+  pre_tasks:
+    - debug:
+      var: hostvars[inventory_hostname]
+  tags: debug_info
   tasks:
     - name: Hello world
       debug: msg="Hello world"
