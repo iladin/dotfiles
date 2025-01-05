@@ -1,0 +1,8 @@
+[tools]
+python = "3.13"
+usage = "latest"
+go = "latest"
+"go:gitlab.com/gitlab-org/cli/cmd/glab" = "latest"
+
+[settings]
+experimental = true
