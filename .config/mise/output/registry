@@ -1,0 +1,853 @@
+1password                     asdf:NeoHsu/asdf-1password-cli aqua:1password/cli
+1password-cli                 asdf:NeoHsu/asdf-1password-cli aqua:1password/cli
+aapt2                         asdf:ronnnnn/asdf-aapt2
+act                           aqua:nektos/act ubi:nektos/act asdf:gr1m0h/asdf-act
+action-validator              aqua:mpalmer/action-validator ubi:mpalmer/action-validator asdf:mpalmer/action-validator
+actionlint                    aqua:rhysd/actionlint ubi:rhysd/actionlint asdf:crazy-matt/asdf-actionlint
+adr-tools                     aqua:npryce/adr-tools asdf:https://gitlab.com/td7x/asdf/adr-tools
+ag                            asdf:koketani/asdf-ag
+age                           aqua:FiloSottile/age asdf:threkk/asdf-age
+age-plugin-yubikey            ubi:str4d/age-plugin-yubikey asdf:joke/asdf-age-plugin-yubikey
+agebox                        ubi:slok/agebox asdf:slok/asdf-agebox
+air                           aqua:air-verse/air asdf:pdemagny/asdf-air
+aks-engine                    aqua:Azure/aks-engine asdf:robsonpeixoto/asdf-aks-engine
+allure                        asdf:comdotlinux/asdf-allure
+alp                           aqua:tkuchiki/alp asdf:asdf-community/asdf-alp
+amass                         ubi:owasp-amass/amass asdf:dhoeric/asdf-amass
+amazon-ecr-credential-helper  aqua:awslabs/amazon-ecr-credential-helper asdf:dex4er/asdf-amazon-ecr-credential-helper
+amplify                       ubi:aws-amplify/amplify-cli[exe=amplify] asdf:LozanoMatheus/asdf-aws-amplify-cli
+ansible-base                  asdf:amrox/asdf-pyapp
+ant                           asdf:jackboespflug/asdf-ant
+apko                          aqua:chainguard-dev/apko ubi:chainguard-dev/apko asdf:omissis/asdf-apko
+apollo-ios                    asdf:MacPaw/asdf-apollo-ios-cli
+apollo-ios-cli                asdf:MacPaw/asdf-apollo-ios-cli
+apollo-router                 ubi:apollographql/router asdf:safx/asdf-apollo-router
+apollo-rover                  ubi:apollographql/rover
+arduino                       aqua:arduino/arduino-cli asdf:egnor/asdf-arduino-cli
+argc                          ubi:sigoden/argc
+argo                          aqua:argoproj/argo-workflows asdf:sudermanjr/asdf-argo
+argo-rollouts                 aqua:argoproj/argo-rollouts asdf:abatilo/asdf-argo-rollouts
+argocd                        aqua:argoproj/argo-cd ubi:argoproj/argo-cd[exe=argocd] asdf:beardix/asdf-argocd
+asciidoctorj                  asdf:gliwka/asdf-asciidoctorj
+assh                          asdf:zekker6/asdf-assh
+atlas                         aqua:ariga/atlas asdf:komi1230/asdf-atlas
+atmos                         aqua:cloudposse/atmos asdf:cloudposse/asdf-atmos
+auto-doc                      asdf:looztra/asdf-auto-doc
+aws                           aqua:aws/aws-cli asdf:MetricMike/asdf-awscli
+aws-amplify                   ubi:aws-amplify/amplify-cli[exe=amplify] asdf:LozanoMatheus/asdf-aws-amplify-cli
+aws-cli                       aqua:aws/aws-cli asdf:MetricMike/asdf-awscli
+aws-copilot                   aqua:aws/copilot-cli asdf:NeoHsu/asdf-copilot
+aws-iam-authenticator         aqua:kubernetes-sigs/aws-iam-authenticator asdf:zekker6/asdf-aws-iam-authenticator
+aws-nuke                      aqua:rebuy-de/aws-nuke asdf:bersalazar/asdf-aws-nuke
+aws-sam                       pipx:aws-sam-cli asdf:amrox/asdf-pyapp
+aws-sam-cli                   pipx:aws-sam-cli asdf:amrox/asdf-pyapp
+aws-sso                       aqua:synfinatic/aws-sso-cli asdf:adamcrews/asdf-aws-sso-cli
+aws-vault                     aqua:99designs/aws-vault asdf:karancode/asdf-aws-vault
+awscli                        aqua:aws/aws-cli asdf:MetricMike/asdf-awscli
+awscli-local                  asdf:paulo-ferraz-oliveira/asdf-awscli-local
+awsebcli                      pipx:awsebcli asdf:amrox/asdf-pyapp
+awsls                         ubi:jckuester/awsls asdf:chessmango/asdf-awsls
+awsrm                         ubi:jckuester/awsrm asdf:chessmango/asdf-awsrm
+awsweeper                     ubi:jckuester/awsweeper asdf:chessmango/asdf-awsweeper
+azure                         asdf:EcoMind/asdf-azure-cli
+azure-cli                     asdf:EcoMind/asdf-azure-cli
+azure-functions-core-tools    asdf:daveneeley/asdf-azure-functions-core-tools
+azure-kubelogin               aqua:Azure/kubelogin asdf:sechmann/asdf-kubelogin
+babashka                      ubi:babashka/babashka[exe=bb] asdf:pitch-io/asdf-babashka
+balena                        ubi:balena-io/balena-cli[exe=balena] asdf:boatkit-io/asdf-balena-cli
+balena-cli                    ubi:balena-io/balena-cli[exe=balena] asdf:boatkit-io/asdf-balena-cli
+bashbot                       aqua:mathew-fleisch/bashbot asdf:mathew-fleisch/asdf-bashbot
+bashly                        asdf:pcrockett/asdf-bashly
+bat                           ubi:sharkdp/bat cargo:bat asdf:https://gitlab.com/wt0f/asdf-bat
+bat-extras                    asdf:vhdirk/asdf-bat-extras
+bats                          aqua:bats-core/bats-core asdf:timgluz/asdf-bats
+bazel                         ubi:bazelbuild/bazel asdf:rajatvig/asdf-bazel
+bazelisk                      aqua:bazelbuild/bazelisk asdf:josephtate/asdf-bazelisk
+bbr                           ubi:cloudfoundry-incubator/bosh-backup-and-restore[matching=bbr-1] asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+bbr-s3-config-validator       asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+benthos                       aqua:benthosdev/benthos asdf:benthosdev/benthos-asdf
+bfs                           asdf:virtualroot/asdf-bfs
+binnacle                      aqua:Traackr/binnacle asdf:Traackr/asdf-binnacle
+bitwarden                     aqua:bitwarden/clients asdf:vixus0/asdf-bitwarden
+bitwarden-secrets-manager     ubi:bitwarden/sdk[tag_regex=^bws,exe=bws] asdf:asdf-community/asdf-bitwarden-secrets-manager
+black                         aqua:psf/black
+bombardier                    aqua:codesenberg/bombardier asdf:NeoHsu/asdf-bombardier
+borg                          aqua:borgbackup/borg asdf:lwiechec/asdf-borg
+bosh                          aqua:cloudfoundry/bosh-cli asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+bosh-backup-and-restore       ubi:cloudfoundry-incubator/bosh-backup-and-restore[matching=bbr-1] asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+bottom                        aqua:ClementTsang/bottom asdf:carbonteq/asdf-btm
+boundary                      aqua:hashicorp/boundary asdf:asdf-community/asdf-hashicorp
+bpkg                          asdf:bpkg/asdf-bpkg
+brig                          aqua:brigadecore/brigade asdf:Ibotta/asdf-brig
+btop                          ubi:aristocratos/btop
+btrace                        asdf:joschi/asdf-btrace
+buf                           aqua:bufbuild/buf ubi:bufbuild/buf asdf:truepay/asdf-buf
+buildpack                     aqua:buildpacks/pack asdf:johnlayton/asdf-buildpack
+buildpacks                    aqua:buildpacks/pack asdf:johnlayton/asdf-buildpack
+bun                           core:bun
+cabal                         aqua:haskell/cabal/cabal-install
+caddy                         aqua:caddyserver/caddy asdf:salasrod/asdf-caddy
+calendarsync                  ubi:inovex/CalendarSync asdf:FeryET/asdf-calendarsync
+calicoctl                     aqua:projectcalico/calico/calicoctl asdf:TheCubicleJockey/asdf-calicoctl
+cargo-binstall                aqua:cargo-bins/cargo-binstall ubi:cargo-bins/cargo-binstall[tag_regex=^\\d\\.] cargo:cargo-binstall
+cargo-insta                   aqua:mitsuhiko/insta ubi:mitsuhiko/insta
+cargo-make                    ubi:sagiegurari/cargo-make asdf:mise-plugins/asdf-cargo-make
+carp                          ubi:carp-lang/Carp[exe=carp] asdf:susurri/asdf-carp
+carthage                      asdf:younke/asdf-carthage
+ccache                        ubi:ccache/ccache asdf:asdf-community/asdf-ccache
+certstrap                     ubi:square/certstrap asdf:carnei-ro/asdf-certstrap
+cf                            asdf:mattysweeps/asdf-cf
+cfssl                         aqua:cloudflare/cfssl/cfssl asdf:mathew-fleisch/asdf-cfssl
+chamber                       ubi:segmentio/chamber asdf:mintel/asdf-chamber
+changie                       ubi:miniscruff/changie asdf:pdemagny/asdf-changie
+cheat                         aqua:cheat/cheat asdf:jmoratilla/asdf-cheat-plugin
+checkov                       ubi:bridgecrewio/checkov asdf:bosmak/asdf-checkov
+chezmoi                       ubi:twpayne/chezmoi asdf:joke/asdf-chezmoi
+chezscheme                    asdf:asdf-community/asdf-chezscheme
+chicken                       asdf:evhan/asdf-chicken
+chisel                        ubi:jpillora/chisel go:github.com/jpillora/chisel asdf:lwiechec/asdf-chisel
+choose                        ubi:theryangeary/choose cargo:choose asdf:carbonteq/asdf-choose
+chromedriver                  asdf:schinckel/asdf-chromedriver
+cidr-merger                   ubi:zhanhb/cidr-merger asdf:ORCID/asdf-cidr-merger
+cidrchk                       ubi:mhausenblas/cidrchk asdf:ORCID/asdf-cidrchk
+cilium-cli                    ubi:cilium/cilium-cli[exe=cilium] asdf:carnei-ro/asdf-cilium-cli
+cilium-hubble                 ubi:cilium/hubble asdf:NitriKx/asdf-cilium-hubble
+circleci                      ubi:CircleCI-Public/circleci-cli[exe=circleci] asdf:ucpr/asdf-circleci-cli
+circleci-cli                  ubi:CircleCI-Public/circleci-cli[exe=circleci] asdf:ucpr/asdf-circleci-cli
+clang                         asdf:higebu/asdf-llvm vfox:jdx/vfox-clang
+clang-format                  asdf:higebu/asdf-llvm
+clangd                        asdf:higebu/asdf-llvm
+clarinet                      ubi:hirosystems/clarinet asdf:alexgo-io/asdf-clarinet
+clickhouse                    asdf:tinybirdco/asdf-clickhouse
+clj-kondo                     ubi:clj-kondo/clj-kondo asdf:rynkowsg/asdf-clj-kondo
+cljstyle                      ubi:greglook/cljstyle asdf:abogoyavlensky/asdf-cljstyle
+clojure                       asdf:asdf-community/asdf-clojure
+cloud-sql-proxy               aqua:GoogleCloudPlatform/cloud-sql-proxy asdf:pbr0ck3r/asdf-cloud-sql-proxy
+cloudflared                   aqua:cloudflare/cloudflared asdf:threkk/asdf-cloudflared
+clusterawsadm                 ubi:kubernetes-sigs/cluster-api-provider-aws asdf:kahun/asdf-clusterawsadm
+clusterctl                    aqua:kubernetes-sigs/cluster-api asdf:pfnet-research/asdf-clusterctl
+cmake                         asdf:asdf-community/asdf-cmake vfox:version-fox/vfox-cmake
+cmctl                         aqua:cert-manager/cmctl asdf:asdf-community/asdf-cmctl
+cockroach                     aqua:cockroachdb/cockroach asdf:salasrod/asdf-cockroach
+cocoapods                     asdf:ronnnnn/asdf-cocoapods
+codefresh                     ubi:codefresh-io/cli[exe=codefresh] asdf:gurukulkarni/asdf-codefresh
+codeql                        asdf:bored-engineer/asdf-codeql
+coder                         aqua:coder/coder asdf:mise-plugins/asdf-coder
+colima                        ubi:abiosoft/colima asdf:CrouchingMuppet/asdf-colima
+committed                     aqua:crate-ci/committed
+conan                         pipx:conan asdf:amrox/asdf-pyapp
+concourse                     aqua:concourse/concourse/concourse asdf:mattysweeps/asdf-concourse
+conduit                       ubi:ConduitIO/conduit asdf:gmcabrita/asdf-conduit
+conform                       aqua:siderolabs/conform asdf:skyzyx/asdf-conform
+conftest                      aqua:open-policy-agent/conftest asdf:looztra/asdf-conftest
+consul                        aqua:hashicorp/consul asdf:asdf-community/asdf-hashicorp
+container-structure-test      aqua:GoogleContainerTools/container-structure-test asdf:FeryET/asdf-container-structure-test
+cookiecutter                  pipx:cookiecutter asdf:shawon-crosen/asdf-cookiecutter
+copper                        ubi:cloud66-oss/copper asdf:vladlosev/asdf-copper
+coq                           asdf:gingerhot/asdf-coq
+coredns                       ubi:coredns/coredns asdf:s3than/asdf-coredns
+cosign                        aqua:sigstore/cosign asdf:https://gitlab.com/wt0f/asdf-cosign
+coursier                      ubi:coursier/coursier[exe=cs] asdf:jiahuili430/asdf-coursier
+cowsay                        npm:cowsay
+crane                         aqua:google/go-containerregistry ubi:google/go-containerregistry[exe=crane] asdf:dmpe/asdf-crane
+crc                           asdf:sqtran/asdf-crc
+credhub                       aqua:cloudfoundry/credhub-cli asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+crictl                        aqua:kubernetes-sigs/cri-tools/crictl asdf:FairwindsOps/asdf-crictl
+crossplane                    aqua:crossplane/crossplane asdf:joke/asdf-crossplane-cli
+crossplane-cli                aqua:crossplane/crossplane asdf:joke/asdf-crossplane-cli
+crystal                       asdf:asdf-community/asdf-crystal vfox:yanecc/vfox-crystal
+ctlptl                        aqua:tilt-dev/ctlptl asdf:ezcater/asdf-ctlptl
+ctop                          ubi:bcicen/ctop asdf:NeoHsu/asdf-ctop
+cue                           aqua:cue-lang/cue asdf:asdf-community/asdf-cue
+cyclonedx                     aqua:CycloneDX/cyclonedx-cli asdf:xeedio/asdf-cyclonedx
+dagger                        aqua:dagger/dagger asdf:virtualstaticvoid/asdf-dagger
+danger-js                     asdf:MontakOleg/asdf-danger-js
+danger-swift                  spm:danger/swift
+dapr                          aqua:dapr/cli asdf:asdf-community/asdf-dapr-cli
+dart                          asdf:PatOConnor43/asdf-dart vfox:version-fox/vfox-dart
+dasel                         aqua:TomWright/dasel asdf:asdf-community/asdf-dasel
+datree                        aqua:datreeio/datree asdf:lukeab/asdf-datree
+daytona                       asdf:CrouchingMuppet/asdf-daytona
+dbmate                        aqua:amacneil/dbmate asdf:juusujanar/asdf-dbmate
+deck                          aqua:Kong/deck asdf:nutellinoit/asdf-deck
+delta                         ubi:dandavison/delta asdf:andweeb/asdf-delta
+deno                          core:deno
+depot                         ubi:depot/cli[exe=depot] asdf:depot/asdf-depot
+desk                          aqua:jamesob/desk asdf:endorama/asdf-desk
+devspace                      aqua:devspace-sh/devspace asdf:NeoHsu/asdf-devspace
+dhall                         asdf:aaaaninja/asdf-dhall
+difftastic                    ubi:wilfred/difftastic[exe=difft] asdf:volf52/asdf-difftastic
+digdag                        asdf:jtakakura/asdf-digdag
+direnv                        aqua:direnv/direnv asdf:asdf-community/asdf-direnv
+dive                          ubi:wagoodman/dive asdf:looztra/asdf-dive
+djinni                        ubi:cross-language-cpp/djinni-generator asdf:cross-language-cpp/asdf-djinni
+dmd                           asdf:sylph01/asdf-dmd
+docker-compose                aqua:docker/compose
+docker-slim                   ubi:slimtoolkit/slim asdf:xataz/asdf-docker-slim
+dockle                        aqua:goodwithtech/dockle asdf:mathew-fleisch/asdf-dockle
+doctl                         ubi:digitalocean/doctl asdf:maristgeek/asdf-doctl
+doctoolchain                  asdf:joschi/asdf-doctoolchain
+docuum                        ubi:stepchowfun/docuum cargo:docuum asdf:bradym/asdf-docuum
+dome                          asdf:jtakakura/asdf-dome
+doppler                       ubi:DopplerHQ/cli[exe=doppler] asdf:takutakahashi/asdf-doppler
+dotenv-linter                 ubi:dotenv-linter/dotenv-linter asdf:wesleimp/asdf-dotenv-linter
+dotnet                        asdf:hensou/asdf-dotnet vfox:version-fox/vfox-dotnet
+dotnet-core                   asdf:emersonsoares/asdf-dotnet-core
+dotty                         asdf:asdf-community/asdf-dotty
+dprint                        aqua:dprint/dprint asdf:asdf-community/asdf-dprint
+draft                         aqua:Azure/draft asdf:kristoflemmens/asdf-draft
+driftctl                      aqua:snyk/driftctl asdf:nlamirault/asdf-driftctl
+drone                         ubi:harness/drone-cli[exe=drone] asdf:virtualstaticvoid/asdf-drone
+dt                            aqua:so-dang-cool/dt asdf:so-dang-cool/asdf-dt
+dtm                           ubi:devstream-io/devstream[exe=dtm] asdf:zhenyuanlau/asdf-dtm
+duf                           aqua:muesli/duf asdf:NeoHsu/asdf-duf
+dust                          ubi:bootandy/dust asdf:looztra/asdf-dust
+dvc                           asdf:fwfurtado/asdf-dvc
+dyff                          aqua:homeport/dyff asdf:https://gitlab.com/wt0f/asdf-dyff
+dynatrace-monaco              ubi:Dynatrace/dynatrace-configuration-as-code[exe=monaco] asdf:nsaputro/asdf-monaco
+earthly                       aqua:earthly/earthly asdf:YR-ZR0/asdf-earthly
+ecspresso                     aqua:kayac/ecspresso asdf:kayac/asdf-ecspresso
+editorconfig-checker          aqua:editorconfig-checker/editorconfig-checker asdf:gabitchov/asdf-editorconfig-checker
+ejson                         aqua:Shopify/ejson asdf:cipherstash/asdf-ejson
+eksctl                        aqua:eksctl-io/eksctl asdf:elementalvoid/asdf-eksctl
+elasticsearch                 asdf:asdf-community/asdf-elasticsearch
+elixir                        core:elixir
+elixir-ls                     asdf:juantascon/asdf-elixir-ls
+elm                           ubi:elm/compiler[exe=elm] asdf:asdf-community/asdf-elm
+emsdk                         asdf:RobLoach/asdf-emsdk
+envcli                        ubi:EnvCLI/EnvCLI[exe=envcli] asdf:zekker6/asdf-envcli
+envsubst                      aqua:a8m/envsubst asdf:dex4er/asdf-envsubst
+ephemeral-postgres            asdf:smashedtoatoms/asdf-ephemeral-postgres
+erlang                        core:erlang
+esc                           ubi:pulumi/esc asdf:fxsalazar/asdf-esc
+esy                           asdf:asdf-community/asdf-esy
+etcd                          aqua:etcd-io/etcd asdf:particledecay/asdf-etcd vfox:version-fox/vfox-etcd
+evans                         aqua:ktr0731/evans asdf:goki90210/asdf-evans
+eza                           asdf:lwiechec/asdf-eza
+fd                            aqua:sharkdp/fd ubi:sharkdp/fd asdf:https://gitlab.com/wt0f/asdf-fd
+ffmpeg                        asdf:acj/asdf-ffmpeg
+figma-export                  ubi:RedMadRobot/figma-export asdf:younke/asdf-figma-export
+fillin                        aqua:itchyny/fillin asdf:ouest/asdf-fillin
+firebase                      aqua:firebase/firebase-tools asdf:jthegedus/asdf-firebase
+fission                       aqua:fission/fission asdf:virtualstaticvoid/asdf-fission
+flamingo                      ubi:flux-subsystem-argo/flamingo asdf:log2/asdf-flamingo
+flarectl                      ubi:cloudflare/cloudflare-go[exe=flarectl] asdf:mise-plugins/asdf-flarectl
+flatc                         ubi:google/flatbuffers[exe=flatc] asdf:TheOpenDictionary/asdf-flatc
+flutter                       asdf:oae/asdf-flutter vfox:version-fox/vfox-flutter
+fluttergen                    ubi:FlutterGen/flutter_gen[exe=fluttergen] asdf:FlutterGen/asdf-fluttergen
+flux2                         aqua:fluxcd/flux2 asdf:tablexi/asdf-flux2
+fly                           aqua:concourse/concourse/fly asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+flyctl                        aqua:superfly/flyctl ubi:superfly/flyctl asdf:chessmango/asdf-flyctl
+flyway                        asdf:junminahn/asdf-flyway
+func-e                        asdf:carnei-ro/asdf-func-e
+furyctl                       ubi:sighupio/furyctl asdf:sighupio/asdf-furyctl
+fx                            aqua:antonmedv/fx asdf:https://gitlab.com/wt0f/asdf-fx
+fzf                           aqua:junegunn/fzf ubi:junegunn/fzf asdf:kompiro/asdf-fzf
+gallery-dl                    asdf:iul1an/asdf-gallery-dl
+gam                           ubi:GAM-team/GAM[exe=gam] asdf:offbyone/asdf-gam
+gator                         ubi:open-policy-agent/gatekeeper[exe=gator] asdf:MxNxPx/asdf-gator
+gauche                        asdf:sakuro/asdf-gauche
+gcc-arm-none-eabi             asdf:dlech/asdf-gcc-arm-none-eabi
+gcloud                        asdf:jthegedus/asdf-gcloud
+getenvoy                      asdf:asdf-community/asdf-getenvoy
+gh                            aqua:cli/cli ubi:cli/cli[exe=gh] asdf:bartlomiejdanek/asdf-github-cli
+ghc                           asdf:sestrella/asdf-ghcup
+ghcup                         ubi:haskell/ghcup-hs[exe=ghcup] asdf:sestrella/asdf-ghcup
+ghidra                        asdf:Honeypot95/asdf-ghidra
+ghorg                         aqua:gabrie30/ghorg asdf:gbloquel/asdf-ghorg
+ghq                           aqua:x-motemen/ghq asdf:kajisha/asdf-ghq
+ginkgo                        asdf:jimmidyson/asdf-ginkgo
+git-chglog                    aqua:git-chglog/git-chglog asdf:GoodwayGroup/asdf-git-chglog
+git-cliff                     aqua:orhun/git-cliff asdf:jylenhof/asdf-git-cliff
+gitconfig                     ubi:0ghny/gitconfig asdf:0ghny/asdf-gitconfig
+github-cli                    aqua:cli/cli ubi:cli/cli[exe=gh] asdf:bartlomiejdanek/asdf-github-cli
+github-markdown-toc           aqua:ekalinin/github-markdown-toc asdf:skyzyx/asdf-github-markdown-toc
+gitleaks                      aqua:gitleaks/gitleaks asdf:jmcvetta/asdf-gitleaks
+gitsign                       aqua:sigstore/gitsign asdf:spencergilbert/asdf-gitsign
+gitu                          ubi:altsem/gitu cargo:gitu
+gitui                         aqua:extrawurst/gitui asdf:looztra/asdf-gitui
+glab                          asdf:particledecay/asdf-glab
+gleam                         aqua:gleam-lang/gleam asdf:asdf-community/asdf-gleam
+glen                          ubi:lingrino/glen asdf:bradym/asdf-glen
+glooctl                       ubi:solo-io/gloo asdf:halilkaya/asdf-glooctl
+glow                          aqua:charmbracelet/glow asdf:mise-plugins/asdf-glow
+go                            core:go
+go-containerregistry          aqua:google/go-containerregistry asdf:dex4er/asdf-go-containerregistry
+go-getter                     asdf:ryodocx/asdf-go-getter
+go-jira                       aqua:go-jira/jira asdf:dguihal/asdf-go-jira
+go-jsonnet                    aqua:google/go-jsonnet asdf:https://gitlab.com/craigfurman/asdf-go-jsonnet
+go-junit-report               ubi:jstemmer/go-junit-report asdf:jwillker/asdf-go-junit-report
+go-sdk                        asdf:yacchi/asdf-go-sdk
+go-swagger                    aqua:go-swagger/go-swagger asdf:jfreeland/asdf-go-swagger
+goconvey                      asdf:therounds-contrib/asdf-goconvey
+gocryptfs                     aqua:rfjakob/gocryptfs ubi:rfjakob/gocryptfs
+gofumpt                       ubi:mvdan/gofumpt asdf:looztra/asdf-gofumpt
+gojq                          aqua:itchyny/gojq asdf:jimmidyson/asdf-gojq
+golangci-lint                 aqua:golangci/golangci-lint ubi:golangci/golangci-lint asdf:hypnoglow/asdf-golangci-lint
+golangci-lint-langserver      ubi:nametake/golangci-lint-langserver go:github.com/nametake/golangci-lint-langserver
+golines                       ubi:segmentio/golines go:github.com/segmentio/golines
+gomigrate                     aqua:golang-migrate/migrate asdf:joschi/asdf-gomigrate
+gomplate                      aqua:hairyhenderson/gomplate asdf:sneakybeaky/asdf-gomplate
+gopass                        aqua:gopasspw/gopass asdf:trallnag/asdf-gopass
+goreleaser                    aqua:goreleaser/goreleaser ubi:goreleaser/goreleaser asdf:kforsthoevel/asdf-goreleaser
+goss                          aqua:goss-org/goss asdf:raimon49/asdf-goss
+gotestsum                     aqua:gotestyourself/gotestsum asdf:pmalek/mise-gotestsum
+graalvm                       asdf:asdf-community/asdf-graalvm
+gradle                        aqua:gradle/gradle vfox:version-fox/vfox-gradle
+gradle-profiler               asdf:joschi/asdf-gradle-profiler
+grails                        asdf:weibemoura/asdf-grails
+grain                         asdf:cometkim/asdf-grain
+granted                       aqua:common-fate/granted asdf:dex4er/asdf-granted
+grex                          aqua:pemistahl/grex asdf:ouest/asdf-grex
+groovy                        asdf:weibemoura/asdf-groovy vfox:version-fox/vfox-groovy
+grpc-health-probe             aqua:grpc-ecosystem/grpc-health-probe asdf:zufardhiyaulhaq/asdf-grpc-health-probe
+grpcurl                       aqua:fullstorydev/grpcurl asdf:asdf-community/asdf-grpcurl
+grype                         ubi:anchore/grype asdf:poikilotherm/asdf-grype
+guile                         asdf:indiebrain/asdf-guile
+gum                           aqua:charmbracelet/gum asdf:lwiechec/asdf-gum
+gwvault                       aqua:GoodwayGroup/gwvault asdf:GoodwayGroup/asdf-gwvault
+hadolint                      ubi:hadolint/hadolint asdf:devlincashman/asdf-hadolint
+hamler                        asdf:scudelletti/asdf-hamler
+has                           aqua:kdabir/has asdf:sylvainmetayer/asdf-has
+haskell                       asdf:asdf-community/asdf-haskell
+hasura-cli                    asdf:gurukulkarni/asdf-hasura
+haxe                          asdf:asdf-community/asdf-haxe
+hcl2json                      aqua:tmccombs/hcl2json asdf:dex4er/asdf-hcl2json
+hcloud                        asdf:chessmango/asdf-hcloud
+helm                          aqua:helm/helm asdf:Antiarchitect/asdf-helm
+helm-cr                       asdf:Antiarchitect/asdf-helm-cr
+helm-ct                       asdf:tablexi/asdf-helm-ct
+helm-diff                     asdf:dex4er/asdf-helm-diff
+helm-docs                     aqua:norwoodj/helm-docs asdf:sudermanjr/asdf-helm-docs
+helmfile                      ubi:helmfile/helmfile asdf:feniix/asdf-helmfile
+helmsman                      ubi:Praqma/helmsman asdf:luisdavim/asdf-helmsman
+heroku                        asdf:mise-plugins/mise-heroku-cli
+heroku-cli                    asdf:mise-plugins/mise-heroku-cli
+hey                           asdf:raimon49/asdf-hey
+hishtory                      asdf:asdf-community/asdf-hishtory
+hivemind                      ubi:DarthSim/hivemind go:github.com/DarthSim/hivemind
+hledger                       asdf:airtonix/asdf-hledger
+hledger-flow                  asdf:airtonix/asdf-hledger-flow
+hls                           asdf:sestrella/asdf-ghcup
+hostctl                       aqua:guumaster/hostctl asdf:svenluijten/asdf-hostctl
+httpie-go                     aqua:nojima/httpie-go asdf:abatilo/asdf-httpie-go
+hub                           aqua:mislav/hub asdf:mise-plugins/asdf-hub
+hugo                          aqua:gohugoio/hugo ubi:gohugoio/hugo asdf:NeoHsu/asdf-hugo asdf:nklmilojevic/asdf-hugo
+hugo-extended                 aqua:gohugoio/hugo/hugo-extended
+hurl                          aqua:Orange-OpenSource/hurl asdf:raimon49/asdf-hurl
+hwatch                        ubi:blacknon/hwatch asdf:chessmango/asdf-hwatch
+hygen                         asdf:brentjanderson/asdf-hygen
+hyperfine                     ubi:sharkdp/hyperfine asdf:volf52/asdf-hyperfine
+iam-policy-json-to-terraform  aqua:flosell/iam-policy-json-to-terraform asdf:carlduevel/asdf-iam-policy-json-to-terraform
+iamlive                       aqua:iann0036/iamlive asdf:chessmango/asdf-iamlive
+ibmcloud                      asdf:triangletodd/asdf-ibmcloud
+idris                         asdf:asdf-community/asdf-idris
+idris2                        asdf:asdf-community/asdf-idris2
+imagemagick                   asdf:mangalakader/asdf-imagemagick
+imgpkg                        aqua:carvel-dev/imgpkg asdf:vmware-tanzu/asdf-carvel
+infracost                     aqua:infracost/infracost asdf:dex4er/asdf-infracost
+inlets                        asdf:nlamirault/asdf-inlets
+io                            asdf:mracos/asdf-io
+istioctl                      aqua:istio/istio/istioctl asdf:virtualstaticvoid/asdf-istioctl
+janet                         asdf:Jakski/asdf-janet
+java                          core:java
+jb                            aqua:jsonnet-bundler/jsonnet-bundler asdf:beardix/asdf-jb
+jbang                         asdf:jbangdev/jbang-asdf
+jfrog-cli                     asdf:LozanoMatheus/asdf-jfrog-cli
+jib                           asdf:joschi/asdf-jib
+jiq                           aqua:fiatjaf/jiq asdf:chessmango/asdf-jiq
+jj                            aqua:jj-vcs/jj ubi:jj-vcs/jj
+jless                         aqua:PaulJuliusMartinez/jless asdf:jc00ke/asdf-jless
+jmespath                      aqua:jmespath/jp asdf:skyzyx/asdf-jmespath
+jmeter                        asdf:comdotlinux/asdf-jmeter
+jnv                           aqua:ynqa/jnv asdf:raimon49/asdf-jnv
+jq                            aqua:jqlang/jq asdf:mise-plugins/asdf-jq
+jqp                           aqua:noahgorstein/jqp asdf:https://gitlab.com/wt0f/asdf-jqp
+jreleaser                     aqua:jreleaser/jreleaser asdf:joschi/asdf-jreleaser
+jsonnet                       asdf:Banno/asdf-jsonnet
+jujutsu                       aqua:jj-vcs/jj ubi:jj-vcs/jj
+julia                         asdf:rkyleg/asdf-julia
+just                          ubi:casey/just asdf:olofvndrhr/asdf-just
+jwt                           ubi:mike-engel/jwt-cli[exe=jwt] cargo:jwt-cli
+jwtui                         ubi:jwt-rs/jwt-ui[exe=jwtui] cargo:jwt-ui
+jx                            ubi:jenkins-x/jx asdf:vbehar/asdf-jx
+k0sctl                        ubi:k0sproject/k0sctl asdf:Its-Alex/asdf-plugin-k0sctl
+k14s                          asdf:k14s/asdf-k14s
+k2tf                          ubi:sl1pm4t/k2tf asdf:carlduevel/asdf-k2tf
+k3d                           ubi:k3d-io/k3d asdf:spencergilbert/asdf-k3d
+k3kcli                        asdf:xanmanning/asdf-k3kcli
+k3s                           asdf:dmpe/asdf-k3s
+k3sup                         aqua:alexellis/k3sup asdf:cgroschupp/asdf-k3sup
+k6                            ubi:grafana/k6 asdf:gr1m0h/asdf-k6
+k9s                           ubi:derailed/k9s asdf:looztra/asdf-k9s
+kafka                         asdf:ueisele/asdf-kafka
+kafkactl                      aqua:deviceinsight/kafkactl asdf:anweber/asdf-kafkactl
+kapp                          aqua:carvel-dev/kapp asdf:vmware-tanzu/asdf-carvel
+kbld                          aqua:carvel-dev/kbld asdf:vmware-tanzu/asdf-carvel
+kcat                          asdf:douglasdgoulart/asdf-kcat
+kcctl                         asdf:joschi/asdf-kcctl
+kcl                           asdf:starkers/asdf-kcl
+kconf                         aqua:particledecay/kconf asdf:particledecay/asdf-kconf
+ki                            asdf:comdotlinux/asdf-ki
+killport                      ubi:jkfran/killport
+kind                          ubi:kubernetes-sigs/kind asdf:johnlayton/asdf-kind
+kiota                         aqua:microsoft/kiota asdf:asdf-community/asdf-kiota
+kn                            aqua:knative/client asdf:joke/asdf-kn
+ko                            aqua:ko-build/ko asdf:zasdaym/asdf-ko
+koka                          asdf:susurri/asdf-koka
+kompose                       ubi:kubernetes/kompose asdf:technikhil314/asdf-kompose
+kops                          aqua:kubernetes/kops asdf:Antiarchitect/asdf-kops
+kotlin                        asdf:asdf-community/asdf-kotlin vfox:version-fox/vfox-kotlin
+kp                            ubi:vmware-tanzu/kpack-cli[exe=kp] asdf:asdf-community/asdf-kpack-cli
+kpack                         ubi:vmware-tanzu/kpack-cli[exe=kp] asdf:asdf-community/asdf-kpack-cli
+kpt                           aqua:kptdev/kpt asdf:nlamirault/asdf-kpt
+krab                          asdf:ohkrab/asdf-krab
+krew                          aqua:kubernetes-sigs/krew asdf:bjw-s/asdf-krew
+kscript                       asdf:edgelevel/asdf-kscript
+ksonnet                       asdf:Banno/asdf-ksonnet
+ksops                         asdf:janpieper/asdf-ksops
+ktlint                        asdf:esensar/asdf-ktlint
+kube-capacity                 aqua:robscott/kube-capacity asdf:looztra/asdf-kube-capacity
+kube-code-generator           asdf:jimmidyson/asdf-kube-code-generator
+kube-controller-tools         asdf:jimmidyson/asdf-kube-controller-tools
+kube-credential-cache         aqua:ryodocx/kube-credential-cache asdf:ryodocx/kube-credential-cache
+kube-linter                   aqua:stackrox/kube-linter asdf:devlincashman/asdf-kube-linter
+kube-score                    aqua:zegl/kube-score asdf:bageljp/asdf-kube-score
+kubebuilder                   aqua:kubernetes-sigs/kubebuilder asdf:virtualstaticvoid/asdf-kubebuilder
+kubecm                        aqua:sunny0826/kubecm asdf:samhvw8/asdf-kubecm
+kubecolor                     aqua:hidetatz/kubecolor asdf:dex4er/asdf-kubecolor
+kubeconform                   aqua:yannh/kubeconform asdf:lirlia/asdf-kubeconform
+kubectl                       aqua:kubernetes/kubectl asdf:asdf-community/asdf-kubectl
+kubectl-bindrole              asdf:looztra/asdf-kubectl-bindrole
+kubectl-buildkit              asdf:ezcater/asdf-kubectl-buildkit
+kubectl-convert               aqua:kubernetes/kubectl-convert asdf:iul1an/asdf-kubectl-convert
+kubectl-kots                  aqua:replicatedhq/kots asdf:ganta/asdf-kubectl-kots
+kubectl-kuttl                 aqua:kudobuilder/kuttl asdf:jimmidyson/asdf-kuttl
+kubectx                       aqua:ahmetb/kubectx asdf:https://gitlab.com/wt0f/asdf-kubectx
+kubefedctl                    aqua:kubernetes-retired/kubefed asdf:kvokka/asdf-kubefedctl
+kubefirst                     asdf:Claywd/asdf-kubefirst
+kubelogin                     aqua:int128/kubelogin
+kubemqctl                     aqua:kubemq-io/kubemqctl asdf:johnlayton/asdf-kubemqctl
+kubent                        aqua:doitintl/kube-no-trouble asdf:virtualstaticvoid/asdf-kubent
+kubergrunt                    aqua:gruntwork-io/kubergrunt asdf:NeoHsu/asdf-kubergrunt
+kubeseal                      aqua:bitnami-labs/sealed-secrets asdf:stefansedich/asdf-kubeseal
+kubesec                       aqua:controlplaneio/kubesec asdf:vitalis/asdf-kubesec
+kubeshark                     aqua:kubeshark/kubeshark asdf:carnei-ro/asdf-kubeshark
+kubespy                       aqua:pulumi/kubespy asdf:jfreeland/asdf-kubespy
+kubeval                       aqua:instrumenta/kubeval asdf:stefansedich/asdf-kubeval
+kubevela                      aqua:kubevela/kubevela asdf:gustavclausen/asdf-kubevela
+kubie                         aqua:sbstp/kubie asdf:johnhamelink/asdf-kubie
+kustomize                     aqua:kubernetes-sigs/kustomize asdf:Banno/asdf-kustomize
+kuttl                         aqua:kudobuilder/kuttl asdf:jimmidyson/asdf-kuttl
+kwt                           aqua:carvel-dev/kwt asdf:vmware-tanzu/asdf-carvel
+kyverno                       aqua:kyverno/kyverno asdf:https://github.com/hobaen/asdf-kyverno-cli.git
+lab                           aqua:zaquestion/lab asdf:particledecay/asdf-lab
+lane                          asdf:CodeReaper/asdf-lane
+lazydocker                    aqua:jesseduffield/lazydocker ubi:jesseduffield/lazydocker
+lazygit                       aqua:jesseduffield/lazygit asdf:nklmilojevic/asdf-lazygit
+lean                          asdf:asdf-community/asdf-lean
+lefthook                      aqua:evilmartians/lefthook ubi:evilmartians/lefthook asdf:jtzero/asdf-lefthook
+leiningen                     asdf:miorimmax/asdf-lein
+levant                        aqua:hashicorp/levant asdf:asdf-community/asdf-hashicorp
+lfe                           asdf:asdf-community/asdf-lfe
+libsql-server                 asdf:jonasb/asdf-libsql-server
+license-plist                 asdf:MacPaw/asdf-license-plist
+lima                          aqua:lima-vm/lima asdf:CrouchingMuppet/asdf-lima
+link                          asdf:asdf-community/asdf-link
+linkerd                       asdf:kforsthoevel/asdf-linkerd
+liqoctl                       asdf:pdemagny/asdf-liqoctl
+liquibase                     asdf:saliougaye/asdf-liquibase
+litestream                    aqua:benbjohnson/litestream asdf:threkk/asdf-litestream
+llvm-objcopy                  asdf:higebu/asdf-llvm
+llvm-objdump                  asdf:higebu/asdf-llvm
+logtalk                       asdf:LogtalkDotOrg/asdf-logtalk
+loki-logcli                   asdf:comdotlinux/asdf-loki-logcli
+ls-lint                       aqua:loeffel-io/ls-lint asdf:Ameausoone/asdf-ls-lint
+lsd                           aqua:lsd-rs/lsd asdf:mise-plugins/asdf-lsd
+lua                           asdf:Stratus3D/asdf-lua
+lua-language-server           aqua:LuaLS/lua-language-server asdf:bellini666/asdf-lua-language-server
+luajit                        asdf:smashedtoatoms/asdf-luaJIT
+lucy                          asdf:cometkim/asdf-lucy
+maestro                       asdf:dotanuki-labs/asdf-maestro
+mage                          aqua:magefile/mage asdf:mathew-fleisch/asdf-mage
+make                          asdf:yacchi/asdf-make
+mani                          asdf:anweber/asdf-mani
+mark                          asdf:jfreeland/asdf-mark
+markdownlint-cli2             npm:markdownlint-cli2 asdf:paulo-ferraz-oliveira/asdf-markdownlint-cli2
+marp-cli                      aqua:marp-team/marp-cli asdf:xataz/asdf-marp-cli
+mask                          aqua:jacobdeichert/mask asdf:aaaaninja/asdf-mask
+maven                         asdf:mise-plugins/asdf-maven vfox:version-fox/vfox-maven
+mc                            asdf:penpyt/asdf-mc
+mdbook                        aqua:rust-lang/mdBook asdf:cipherstash/asdf-mdbook
+mdbook-linkcheck              asdf:cipherstash/asdf-mdbook-linkcheck
+melange                       aqua:chainguard-dev/melange asdf:omissis/asdf-melange
+melt                          asdf:chessmango/asdf-melt
+memcached                     asdf:furkanural/asdf-memcached
+mercury                       asdf:susurri/asdf-mercury
+meson                         asdf:asdf-community/asdf-meson
+micronaut                     asdf:weibemoura/asdf-micronaut
+mill                          asdf:asdf-community/asdf-mill
+mimirtool                     aqua:grafana/mimir/mimirtool asdf:asdf-community/asdf-mimirtool
+minify                        aqua:tdewolff/minify asdf:axilleas/asdf-minify
+minikube                      aqua:kubernetes/minikube asdf:alvarobp/asdf-minikube
+minio                         asdf:aeons/asdf-minio
+minishift                     aqua:minishift/minishift asdf:sqtran/asdf-minishift
+minisign                      aqua:jedisct1/minisign
+mint                          asdf:mint-lang/asdf-mint
+mirrord                       asdf:metalbear-co/asdf-mirrord
+mitmproxy                     asdf:NeoHsu/asdf-mitmproxy
+mkcert                        ubi:FiloSottile/mkcert asdf:salasrod/asdf-mkcert
+mlton                         asdf:asdf-community/asdf-mlton
+mockery                       aqua:vektra/mockery asdf:cabify/asdf-mockery
+mockolo                       asdf:MontakOleg/asdf-mockolo
+mold                          ubi:rui314/mold
+monarch                       asdf:nyuyuyu/asdf-monarch
+mongo-tools                   asdf:itspngu/asdf-mongo-tools
+mongodb                       asdf:sylph01/asdf-mongodb
+mongosh                       asdf:itspngu/asdf-mongosh
+mprocs                        ubi:pvolok/mprocs
+mutanus                       asdf:SoriUR/asdf-mutanus
+mvnd                          asdf:joschi/asdf-mvnd
+mysql                         asdf:iroddis/asdf-mysql
+nancy                         aqua:sonatype-nexus-community/nancy asdf:iilyak/asdf-nancy
+nano                          asdf:mfakane/asdf-nano
+nasm                          asdf:Dpbm/asdf-nasm
+neko                          asdf:asdf-community/asdf-neko
+neovim                        aqua:neovim/neovim asdf:richin13/asdf-neovim
+nerdctl                       aqua:containerd/nerdctl asdf:dmpe/asdf-nerdctl
+newrelic                      ubi:newrelic/newrelic-cli[exe=newrelic] asdf:NeoHsu/asdf-newrelic-cli
+newrelic-cli                  ubi:newrelic/newrelic-cli[exe=newrelic] asdf:NeoHsu/asdf-newrelic-cli
+nfpm                          aqua:goreleaser/nfpm ubi:goreleaser/nfpm asdf:ORCID/asdf-nfpm
+nim                           asdf:mise-plugins/mise-nim
+ninja                         aqua:ninja-build/ninja asdf:asdf-community/asdf-ninja
+node                          core:node
+nomad                         aqua:hashicorp/nomad asdf:asdf-community/asdf-hashicorp
+nomad-pack                    asdf:asdf-community/asdf-hashicorp
+notation                      aqua:notaryproject/notation asdf:bodgit/asdf-notation
+nova                          aqua:FairwindsOps/nova asdf:elementalvoid/asdf-nova
+nsc                           asdf:dex4er/asdf-nsc
+oapi-codegen                  asdf:dylanrayboss/asdf-oapi-codegen
+oc                            asdf:sqtran/asdf-oc
+ocaml                         asdf:asdf-community/asdf-ocaml
+oci                           asdf:yasn77/asdf-oci
+odin                          asdf:jtakakura/asdf-odin
+odo                           aqua:redhat-developer/odo asdf:rm3l/asdf-odo
+okta-aws                      aqua:okta/okta-aws-cli asdf:bennythejudge/asdf-plugin-okta-aws-cli
+okta-aws-cli                  aqua:okta/okta-aws-cli asdf:bennythejudge/asdf-plugin-okta-aws-cli
+okteto                        aqua:okteto/okteto asdf:BradenM/asdf-okteto
+ollama                        aqua:ollama/ollama asdf:virtualstaticvoid/asdf-ollama
+om                            aqua:pivotal-cf/om asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+onyx                          asdf:jtakakura/asdf-onyx
+op                            asdf:NeoHsu/asdf-1password-cli aqua:1password/cli
+opa                           aqua:open-policy-agent/opa asdf:tochukwuvictor/asdf-opa
+opam                          asdf:asdf-community/asdf-opam
+openbao                       ubi:openbao/openbao[exe=bao]
+openfaas-cli                  asdf:zekker6/asdf-faas-cli
+openfaas-faas                 asdf:zekker6/asdf-faas-cli
+openresty                     asdf:smashedtoatoms/asdf-openresty
+opensearch                    asdf:randikabanura/asdf-opensearch
+opensearch-cli                asdf:iul1an/asdf-opensearch-cli
+openshift-install             asdf:hhemied/asdf-openshift-install
+opentofu                      ubi:opentofu/opentofu[exe=tofu] asdf:virtualroot/asdf-opentofu
+operator-sdk                  aqua:operator-framework/operator-sdk asdf:Medium/asdf-operator-sdk
+opsgenie-lamp                 asdf:ORCID/asdf-opsgenie-lamp
+oras                          aqua:oras-project/oras asdf:bodgit/asdf-oras
+osm                           asdf:nlamirault/asdf-osm
+osqueryi                      asdf:davidecavestro/asdf-osqueryi
+overmind                      ubi:DarthSim/overmind go:github.com/DarthSim/overmind/v2
+pachctl                       aqua:pachyderm/pachyderm asdf:abatilo/asdf-pachctl
+pack                          aqua:buildpacks/pack asdf:johnlayton/asdf-buildpack
+packer                        aqua:hashicorp/packer asdf:asdf-community/asdf-hashicorp
+pandoc                        asdf:Fbrisset/asdf-pandoc
+patat                         asdf:airtonix/asdf-patat
+pdm                           pipx:pdm asdf:1oglop1/asdf-pdm
+peco                          aqua:peco/peco asdf:asdf-community/asdf-peco
+periphery                     asdf:MontakOleg/asdf-periphery
+perl                          aqua:skaji/relocatable-perl asdf:ouest/asdf-perl
+php                           asdf:asdf-community/asdf-php vfox:version-fox/vfox-php
+pint                          aqua:cloudflare/pint asdf:sam-burrell/asdf-pint
+pipectl                       aqua:pipe-cd/pipecd/pipectl asdf:pipe-cd/asdf-pipectl
+pipelight                     asdf:kogeletey/asdf-pipelight
+pipenv                        asdf:mise-plugins/mise-pipenv
+pipx                          asdf:yozachar/asdf-pipx
+pitchfork                     ubi:jdx/pitchfork
+pivnet                        aqua:pivotal-cf/pivnet-cli asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+pkl                           aqua:apple/pkl asdf:mise-plugins/asdf-pkl
+please                        aqua:thought-machine/please asdf:asdf-community/asdf-please
+pluto                         ubi:FairwindsOps/pluto asdf:FairwindsOps/asdf-pluto
+pnpm                          aqua:pnpm/pnpm asdf:jonathanmorley/asdf-pnpm
+podman                        asdf:tvon/asdf-podman
+poetry                        asdf:mise-plugins/mise-poetry
+polaris                       aqua:FairwindsOps/polaris asdf:particledecay/asdf-polaris
+popeye                        aqua:derailed/popeye asdf:nlamirault/asdf-popeye
+postgis                       asdf:knu/asdf-postgis
+postgres                      asdf:smashedtoatoms/asdf-postgres
+powerline-go                  asdf:dex4er/asdf-powerline-go
+powerpipe                     aqua:turbot/powerpipe asdf:jc00ke/asdf-powerpipe
+powershell-core               asdf:daveneeley/asdf-powershell-core
+pre-commit                    aqua:pre-commit/pre-commit asdf:jonathanmorley/asdf-pre-commit
+promtool                      aqua:prometheus/prometheus asdf:asdf-community/asdf-promtool
+protobuf                      vfox:ahai-code/vfox-protobuf
+protoc                        aqua:protocolbuffers/protobuf/protoc asdf:paxosglobal/asdf-protoc
+protoc-gen-connect-go         asdf:dylanrayboss/asdf-protoc-gen-connect-go
+protoc-gen-go                 aqua:protocolbuffers/protobuf-go/protoc-gen-go asdf:pbr0ck3r/asdf-protoc-gen-go
+protoc-gen-go-grpc            aqua:grpc/grpc-go/protoc-gen-go-grpc asdf:pbr0ck3r/asdf-protoc-gen-go-grpc
+protoc-gen-grpc-web           asdf:pbr0ck3r/asdf-protoc-gen-grpc-web
+protoc-gen-js                 asdf:pbr0ck3r/asdf-protoc-gen-js
+protolint                     aqua:yoheimuta/protolint asdf:spencergilbert/asdf-protolint
+protonge                      asdf:augustobmoura/asdf-protonge
+psc-package                   asdf:nsaunders/asdf-psc-package
+pulumi                        aqua:pulumi/pulumi asdf:canha/asdf-pulumi
+purerl                        asdf:GoNZooo/asdf-purerl
+purescript                    asdf:jrrom/asdf-purescript
+purty                         asdf:nsaunders/asdf-purty
+python                        core:python
+qdns                          asdf:moritz-makandra/asdf-plugin-qdns
+quarkus                       asdf:asdf-community/asdf-quarkus
+r                             asdf:asdf-community/asdf-r
+rabbitmq                      asdf:mise-plugins/asdf-rabbitmq
+racket                        asdf:asdf-community/asdf-racket
+raku                          asdf:m-dango/asdf-raku
+rancher                       aqua:rancher/cli asdf:abinet/asdf-rancher
+rbac-lookup                   aqua:FairwindsOps/rbac-lookup asdf:looztra/asdf-rbac-lookup
+rclone                        ubi:rclone/rclone asdf:johnlayton/asdf-rclone
+rebar                         asdf:Stratus3D/asdf-rebar
+reckoner                      asdf:FairwindsOps/asdf-reckoner
+redis                         asdf:smashedtoatoms/asdf-redis
+redis-cli                     asdf:NeoHsu/asdf-redis-cli
+redo                          asdf:chessmango/asdf-redo
+redskyctl                     asdf:sudermanjr/asdf-redskyctl
+reg                           aqua:genuinetools/reg asdf:looztra/asdf-reg
+regal                         aqua:StyraInc/regal asdf:asdf-community/asdf-regal
+regctl                        aqua:regclient/regclient/regctl asdf:ORCID/asdf-regctl
+regsync                       aqua:regclient/regclient/regsync asdf:rsrchboy/asdf-regsync
+restic                        aqua:restic/restic asdf:xataz/asdf-restic
+restish                       ubi:danielgtaylor/restish go:github.com/danielgtaylor/restish
+revive                        aqua:mgechev/revive asdf:bjw-s/asdf-revive
+rg                            aqua:BurntSushi/ripgrep ubi:BurntSushi/ripgrep[exe=rg] asdf:https://gitlab.com/wt0f/asdf-ripgrep
+richgo                        aqua:kyoh86/richgo asdf:paxosglobal/asdf-richgo
+riff                          asdf:abinet/asdf-riff
+ripgrep                       aqua:BurntSushi/ripgrep ubi:BurntSushi/ripgrep[exe=rg] asdf:https://gitlab.com/wt0f/asdf-ripgrep
+ripgrep-all                   aqua:phiresky/ripgrep-all
+ripsecret                     aqua:sirwart/ripsecrets asdf:https://github.com/boris-smidt-klarrio/asdf-ripsecrets
+ripsecrets                    aqua:sirwart/ripsecrets asdf:https://github.com/boris-smidt-klarrio/asdf-ripsecrets
+rke                           aqua:rancher/rke asdf:particledecay/asdf-rke
+rlwrap                        asdf:asdf-community/asdf-rlwrap
+rome                          asdf:kichiemon/asdf-rome
+rstash                        asdf:carlduevel/asdf-rstash
+ruby                          core:ruby
+ruff                          aqua:astral-sh/ruff ubi:astral-sh/ruff asdf:simhem/asdf-ruff
+rust                          core:rust asdf:code-lever/asdf-rust
+rust-analyzer                 aqua:rust-lang/rust-analyzer asdf:Xyven1/asdf-rust-analyzer
+rustic                        ubi:rustic-rs/rustic
+rye                           aqua:astral-sh/rye asdf:Azuki-bar/asdf-rye
+saml2aws                      aqua:Versent/saml2aws asdf:elementalvoid/asdf-saml2aws
+sbcl                          asdf:smashedtoatoms/asdf-sbcl
+sbt                           asdf:bram2000/asdf-sbt
+scala                         asdf:asdf-community/asdf-scala vfox:version-fox/vfox-scala
+scala-cli                     asdf:asdf-community/asdf-scala-cli
+scaleway                      aqua:scaleway/scaleway-cli asdf:albarralnunez/asdf-plugin-scaleway-cli
+scaleway-cli                  aqua:scaleway/scaleway-cli asdf:albarralnunez/asdf-plugin-scaleway-cli
+scalingo-cli                  asdf:brandon-welsch/asdf-scalingo-cli
+scarb                         asdf:software-mansion/asdf-scarb
+sccache                       ubi:mozilla/sccache asdf:emersonmx/asdf-sccache
+scenery                       asdf:skyzyx/asdf-scenery
+schemacrawler                 asdf:davidecavestro/asdf-schemacrawler
+scie-pants                    asdf:robzr/asdf-scie-pants
+seed7                         asdf:susurri/asdf-seed7
+semgrep                       asdf:brentjanderson/asdf-semgrep
+semtag                        asdf:junminahn/asdf-semtag
+semver                        asdf:mathew-fleisch/asdf-semver
+sentinel                      asdf:asdf-community/asdf-hashicorp
+sentry                        ubi:getsentry/sentry-cli
+sentry-cli                    ubi:getsentry/sentry-cli
+serf                          asdf:asdf-community/asdf-hashicorp
+serverless                    asdf:pdemagny/asdf-serverless
+setup-envtest                 asdf:pmalek/mise-setup-envtest
+shell2http                    aqua:msoap/shell2http asdf:ORCID/asdf-shell2http
+shellcheck                    aqua:koalaman/shellcheck ubi:koalaman/shellcheck asdf:luizm/asdf-shellcheck
+shellspec                     aqua:shellspec/shellspec asdf:poikilotherm/asdf-shellspec
+shfmt                         aqua:mvdan/sh asdf:luizm/asdf-shfmt
+shorebird                     asdf:valian-ca/asdf-shorebird
+sinker                        aqua:plexsystems/sinker asdf:elementalvoid/asdf-sinker
+skaffold                      aqua:GoogleContainerTools/skaffold asdf:nklmilojevic/asdf-skaffold
+skate                         aqua:charmbracelet/skate asdf:chessmango/asdf-skate
+sloth                         aqua:slok/sloth asdf:slok/asdf-sloth
+slsa-verifier                 ubi:slsa-framework/slsa-verifier
+smithy                        asdf:aws/asdf-smithy
+smlnj                         asdf:samontea/asdf-smlnj
+snyk                          aqua:snyk/cli asdf:nirfuchs/asdf-snyk
+soft-serve                    asdf:chessmango/asdf-soft-serve
+solidity                      asdf:diegodorado/asdf-solidity
+sonobuoy                      asdf:Nick-Triller/asdf-sonobuoy
+sops                          ubi:getsops/sops asdf:mise-plugins/mise-sops
+sopstool                      aqua:ibotta/sopstool asdf:elementalvoid/asdf-sopstool
+soracom                       asdf:gr1m0h/asdf-soracom
+sourcery                      asdf:younke/asdf-sourcery
+spacectl                      aqua:spacelift-io/spacectl asdf:bodgit/asdf-spacectl
+spago                         asdf:jrrom/asdf-spago
+spark                         asdf:joshuaballoch/asdf-spark
+spectral                      aqua:stoplightio/spectral asdf:vbyrd/asdf-spectral
+spin                          aqua:spinnaker/spin asdf:pavloos/asdf-spin
+spring-boot                   asdf:joschi/asdf-spring-boot
+spruce                        aqua:geofffranks/spruce asdf:woneill/asdf-spruce
+sqldef                        asdf:cometkim/asdf-sqldef
+sqlite                        asdf:cLupus/asdf-sqlite
+sshuttle                      asdf:xanmanning/asdf-sshuttle
+stack                         aqua:commercialhaskell/stack asdf:sestrella/asdf-ghcup
+starboard                     aqua:aquasecurity/starboard asdf:zufardhiyaulhaq/asdf-starboard
+starknet-foundry              asdf:foundry-rs/asdf-starknet-foundry
+starport                      asdf:nikever/asdf-starport
+starship                      ubi:starship/starship asdf:gr1m0h/asdf-starship
+staticcheck                   aqua:dominikh/go-tools/staticcheck asdf:pbr0ck3r/asdf-staticcheck
+steampipe                     aqua:turbot/steampipe asdf:carnei-ro/asdf-steampipe
+step                          asdf:log2/asdf-step
+stern                         aqua:stern/stern asdf:looztra/asdf-stern
+stripe                        aqua:stripe/stripe-cli asdf:offbyone/asdf-stripe
+stripe-cli                    aqua:stripe/stripe-cli asdf:offbyone/asdf-stripe
+stylua                        aqua:JohnnyMorganz/StyLua asdf:jc00ke/asdf-stylua
+sui                           asdf:placeholder-soft/asdf-sui
+superfile                     aqua:yorukot/superfile
+sver                          aqua:mitoma/sver asdf:robzr/asdf-sver
+svu                           aqua:caarlos0/svu asdf:asdf-community/asdf-svu
+swag                          aqua:swaggo/swag asdf:behoof4mind/asdf-swag
+swift                         core:swift
+swift-package-list            asdf:MacPaw/asdf-swift-package-list
+swiftformat                   asdf:younke/asdf-swiftformat
+swiftgen                      asdf:younke/asdf-swiftgen
+swiftlint                     asdf:klundberg/asdf-swiftlint
+swiprolog                     asdf:mracos/asdf-swiprolog
+syft                          aqua:anchore/syft asdf:davidgp1701/asdf-syft
+syncher                       asdf:nwillc/syncher
+talhelper                     aqua:budimanjojo/talhelper asdf:bjw-s/asdf-talhelper
+talos                         ubi:siderolabs/talos[exe=talosctl] asdf:particledecay/asdf-talos
+talosctl                      ubi:siderolabs/talos[exe=talosctl] asdf:bjw-s/asdf-talosctl
+tanka                         aqua:grafana/tanka asdf:trotttrotttrott/asdf-tanka
+tanzu                         asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+taplo                         ubi:tamasfe/taplo[matching=full] cargo:taplo-cli
+task                          ubi:go-task/task asdf:particledecay/asdf-task
+tctl                          aqua:temporalio/tctl asdf:eko/asdf-tctl
+tekton                        asdf:johnhamelink/asdf-tekton-cli
+tekton-cli                    asdf:johnhamelink/asdf-tekton-cli
+teleport-community            asdf:MaloPolese/asdf-teleport-community
+teleport-ent                  asdf:highb/asdf-teleport-ent
+telepresence                  aqua:telepresenceio/telepresence asdf:pirackr/asdf-telepresence
+teller                        aqua:tellerops/teller asdf:pdemagny/asdf-teller
+temporal                      aqua:temporalio/temporal asdf:asdf-community/asdf-temporal
+temporalite                   asdf:eko/asdf-temporalite
+terradozer                    aqua:jckuester/terradozer asdf:chessmango/asdf-terradozer
+terraform                     aqua:hashicorp/terraform asdf:asdf-community/asdf-hashicorp vfox:enochchau/vfox-terraform
+terraform-docs                aqua:terraform-docs/terraform-docs asdf:looztra/asdf-terraform-docs
+terraform-ls                  aqua:hashicorp/terraform-ls asdf:asdf-community/asdf-hashicorp
+terraform-lsp                 aqua:juliosueiras/terraform-lsp asdf:bartlomiejdanek/asdf-terraform-lsp
+terraform-validator           aqua:thazelart/terraform-validator asdf:looztra/asdf-terraform-validator
+terraformer                   aqua:GoogleCloudPlatform/terraformer asdf:gr1m0h/asdf-terraformer
+terragrunt                    aqua:gruntwork-io/terragrunt asdf:gruntwork-io/asdf-terragrunt
+terramate                     aqua:terramate-io/terramate asdf:martinlindner/asdf-terramate
+terrascan                     aqua:tenable/terrascan asdf:hpdobrica/asdf-terrascan
+tf-summarize                  aqua:dineshba/tf-summarize asdf:adamcrews/asdf-tf-summarize
+tfc-agent                     asdf:asdf-community/asdf-hashicorp
+tfctl                         aqua:flux-iac/tofu-controller/tfctl asdf:deas/asdf-tfctl
+tfenv                         aqua:tfutils/tfenv asdf:carlduevel/asdf-tfenv
+tflint                        aqua:terraform-linters/tflint ubi:terraform-linters/tflint asdf:skyzyx/asdf-tflint
+tfmigrate                     aqua:minamijoyo/tfmigrate asdf:dex4er/asdf-tfmigrate
+tfnotify                      aqua:mercari/tfnotify asdf:jnavarrof/asdf-tfnotify
+tfsec                         aqua:aquasecurity/tfsec asdf:woneill/asdf-tfsec
+tfstate-lookup                aqua:fujiwara/tfstate-lookup asdf:carnei-ro/asdf-tfstate-lookup
+tfswitch                      asdf:iul1an/asdf-tfswitch
+tfupdate                      aqua:minamijoyo/tfupdate asdf:yuokada/asdf-tfupdate
+thrift                        asdf:alisaifee/asdf-thrift
+tilt                          aqua:tilt-dev/tilt asdf:eaceaser/asdf-tilt
+timoni                        aqua:stefanprodan/timoni asdf:Smana/asdf-timoni
+tiny                          asdf:mise-plugins/mise-tiny
+tinytex                       asdf:Fbrisset/asdf-tinytex
+titan                         asdf:gabitchov/asdf-titan
+tmux                          asdf:Dabolus/asdf-tmux
+tokei                         ubi:XAMPPRocky/tokei asdf:gasuketsu/asdf-tokei
+tomcat                        asdf:mbutov/asdf-tomcat
+tonnage                       asdf:elementalvoid/asdf-tonnage
+traefik                       asdf:Dabolus/asdf-traefik
+trdsql                        aqua:noborus/trdsql asdf:johnlayton/asdf-trdsql
+tree-sitter                   aqua:tree-sitter/tree-sitter asdf:ivanvc/asdf-tree-sitter
+tridentctl                    aqua:NetApp/trident/tridentctl asdf:asdf-community/asdf-tridentctl
+trivy                         aqua:aquasecurity/trivy asdf:zufardhiyaulhaq/asdf-trivy
+tsuru                         asdf:virtualstaticvoid/asdf-tsuru
+ttyd                          aqua:tsl0922/ttyd asdf:ivanvc/asdf-ttyd
+tuist                         asdf:asdf-community/asdf-tuist
+tx                            asdf:ORCID/asdf-transifex
+typos                         aqua:crate-ci/typos asdf:aschiavon91/asdf-typos
+typst                         aqua:typst/typst asdf:stephane-klein/asdf-typst
+uaa                           ubi:cloudfoundry/uaa-cli[exe=uaa] asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+uaa-cli                       ubi:cloudfoundry/uaa-cli[exe=uaa] asdf:vmware-tanzu/tanzu-plug-in-for-asdf
+ubi                           ubi:houseabsolute/ubi
+unison                        asdf:susurri/asdf-unison
+upctl                         aqua:UpCloudLtd/upcloud-cli
+updatecli                     aqua:updatecli/updatecli asdf:updatecli/asdf-updatecli
+upt                           asdf:ORCID/asdf-upt
+upx                           aqua:upx/upx asdf:jimmidyson/asdf-upx
+usage                         ubi:jdx/usage asdf:jdx/mise-usage
+usql                          aqua:xo/usql asdf:itspngu/asdf-usql
+uv                            aqua:astral-sh/uv asdf:asdf-community/asdf-uv
+v                             asdf:jthegedus/asdf-v
+vacuum                        aqua:daveshanley/vacuum
+vale                          aqua:errata-ai/vale asdf:pdemagny/asdf-vale
+vals                          aqua:helmfile/vals asdf:dex4er/asdf-vals
+vault                         aqua:hashicorp/vault asdf:asdf-community/asdf-hashicorp
+vcluster                      aqua:loft-sh/vcluster asdf:https://gitlab.com/wt0f/asdf-vcluster
+vela                          asdf:pdemagny/asdf-vela
+velad                         asdf:pdemagny/asdf-velad
+velero                        aqua:vmware-tanzu/velero asdf:looztra/asdf-velero
+vendir                        aqua:carvel-dev/vendir asdf:vmware-tanzu/asdf-carvel
+venom                         aqua:ovh/venom asdf:aabouzaid/asdf-venom
+vhs                           aqua:charmbracelet/vhs asdf:chessmango/asdf-vhs
+viddy                         aqua:sachaos/viddy asdf:ryodocx/asdf-viddy
+vim                           asdf:tsuyoshicho/asdf-vim
+virtualos                     asdf:tuist/asdf-virtualos
+vivid                         ubi:sharkdp/vivid
+vlang                         vfox:ahai-code/vfox-vlang
+vlt                           asdf:asdf-community/asdf-hashicorp
+vultr                         ubi:vultr/vultr-cli asdf:ikuradon/asdf-vultr-cli
+vultr-cli                     ubi:vultr/vultr-cli asdf:ikuradon/asdf-vultr-cli
+wait-for-gh-rate-limit        ubi:jdx/wait-for-gh-rate-limit
+wasi-sdk                      asdf:coolreader18/asdf-wasi-sdk
+wasm3                         asdf:tachyonicbytes/asdf-wasm3
+wasm4                         ubi:aduros/wasm4[exe=w4] asdf:jtakakura/asdf-wasm4
+wasmer                        aqua:wasmerio/wasmer asdf:tachyonicbytes/asdf-wasmer
+wasmtime                      aqua:bytecodealliance/wasmtime asdf:tachyonicbytes/asdf-wasmtime
+watchexec                     ubi:watchexec/watchexec asdf:nyrst/asdf-watchexec
+waypoint                      aqua:hashicorp/waypoint asdf:asdf-community/asdf-hashicorp
+weave-gitops                  asdf:deas/asdf-weave-gitops
+websocat                      aqua:vi/websocat asdf:bdellegrazie/asdf-websocat
+wren                          ubi:wren-lang/wren-cli[exe=wren_cli] asdf:jtakakura/asdf-wren-cli
+wren-cli                      ubi:wren-lang/wren-cli[exe=wren_cli] asdf:jtakakura/asdf-wren-cli
+wrk                           asdf:ivanvc/asdf-wrk
+wtfutil                       aqua:wtfutil/wtf asdf:NeoHsu/asdf-wtfutil
+xc                            aqua:joerdav/xc asdf:airtonix/asdf-xc
+xcbeautify                    asdf:mise-plugins/asdf-xcbeautify
+xchtmlreport                  asdf:younke/asdf-xchtmlreport
+xcodegen                      asdf:younke/asdf-xcodegen
+xcodes                        asdf:younke/asdf-xcodes
+xcresultparser                asdf:MacPaw/asdf-xcresultparser
+xh                            aqua:ducaale/xh ubi:ducaale/xh asdf:NeoHsu/asdf-xh
+yadm                          asdf:particledecay/asdf-yadm
+yamlfmt                       aqua:google/yamlfmt asdf:mise-plugins/asdf-yamlfmt
+yamllint                      pipx:yamllint asdf:ericcornelissen/asdf-yamllint
+yamlscript                    asdf:FeryET/asdf-yamlscript
+yarn                          asdf:mise-plugins/asdf-yarn
+yay                           asdf:aaaaninja/asdf-yay
+yazi                          aqua:sxyazi/yazi
+yj                            ubi:sclevine/yj asdf:ryodocx/asdf-yj
+yor                           aqua:bridgecrewio/yor asdf:ordinaryexperts/asdf-yor
+youtube-dl                    asdf:iul1an/asdf-youtube-dl
+yq                            ubi:mikefarah/yq asdf:sudermanjr/asdf-yq
+yt-dlp                        asdf:duhow/asdf-yt-dlp
+ytt                           aqua:carvel-dev/ytt asdf:vmware-tanzu/asdf-carvel
+zbctl                         asdf:camunda-community-hub/asdf-zbctl
+zellij                        ubi:zellij-org/zellij asdf:chessmango/asdf-zellij
+zephyr                        asdf:nsaunders/asdf-zephyr
+zig                           core:zig
+zigmod                        ubi:nektro/zigmod asdf:mise-plugins/asdf-zigmod
+zls                           aqua:zigtools/zls ubi:zigtools/zls
+zola                          ubi:getzola/zola asdf:salasrod/asdf-zola
+zoxide                        ubi:ajeetdsouza/zoxide asdf:nyrst/asdf-zoxide
+zprint                        asdf:carlduevel/asdf-zprint
