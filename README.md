@@ -24,6 +24,10 @@ vcat
 
 ## Install
 
+```
+# Install mise which install python
+bin/makeMise.sh
+```
 ### Windows
 
 

@@ -3,6 +3,10 @@ python = "3.13"
 usage = "latest"
 go = "latest"
 "go:gitlab.com/gitlab-org/cli/cmd/glab" = "latest"
+uv = "latest"
 
 [settings]
 experimental = true
+
+[env]
+_.python.venv = { path = ".venv", create = true, uv_create_args = ["--system-site-packages"] } # pass args to uv venv

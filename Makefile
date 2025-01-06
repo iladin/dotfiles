@@ -4,6 +4,21 @@ EXCLUSIONS := .DS_Store .git .gitmodules .travis.yml
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 all: install
+print-%  : ; @echo $* = $($*)
+# Mise section
+
+# Mise Install Dir
+MID := $(DOTPATH)/.config/mise
+.PHONY: mi mo
+mi:
+	mise install
+
+$(MID)/output/registry:
+	mkdir -p $(dir $@)
+	mise registry > $@
+mo: $(MID)/output/registry
+
+mo: .conf/
 
 help:
 	@echo "make list           #=> Show dot files in this repo"
