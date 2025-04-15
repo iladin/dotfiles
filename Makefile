@@ -61,9 +61,9 @@ clean:
 username := $(shell whoami)
 HOME_BIN := $(HOME)/.local/bin
 ## Enable passwordless sudo
-sudo: /etc/sudoers.d/$(username) ; @echo "Enable sudo"
-/etc/sudoers.d/$(username):
-	@echo "$(username) ALL=(ALL) NOPASSWD: ALL" | sudo tee $@ > /dev/null
+sudo: /etc/sudoers.d/$(username).f ; @echo "Enable sudo"
+/etc/sudoers.d/$(username).f:
+	echo "$(username) ALL=(ALL) NOPASSWD: ALL" | sudo tee $@ > /dev/null
 # Setup user for git
 $(HOME)/.gitconfig.user:
 	@git config --file $(HOME)/.gitconfig.user user.name "iladin"
