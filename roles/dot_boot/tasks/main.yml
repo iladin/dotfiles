@@ -1,0 +1,5 @@
+- name: Ensure home folders are created
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop: "{{ dot_boot_folders }}"

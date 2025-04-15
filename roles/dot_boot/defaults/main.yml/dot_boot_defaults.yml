@@ -1,0 +1,7 @@
+dot_boot_folders:
+  - .bashrc.d
+  - .zsh
+  - .vscode
+  - .git
+  - .local
+  - .config
