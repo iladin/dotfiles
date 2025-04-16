@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 mkdir -p ~/.linuxbrew/{,s}bin
 export PATH=~/.linuxbrew/bin:~/.linuxbrew/sbin:$PATH
-
+set -e 
 unset LD_LIBRARY_PATH PKG_CONFIG_PATH
 #apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
-yes | ruby -e "$(curl -fsSL https://raw.github.com/Linuxbrew/linuxbrew/go/install)"
+yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew doctor
 brew update
