@@ -3,5 +3,5 @@
 *.cmd      text eol=crlf
 # For everything else, use LF
 # Disabled because it corrupts zip files
-*          text eol=lf
+#*          text eol=lf
 *.ipynb filter=nbstrip_full
