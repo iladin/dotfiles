@@ -1,5 +1,6 @@
 - name: Ensure home folders are created
-  file:
+  ansible.builtin.file:
     path: "{{ item }}"
     state: directory
+    mode: '0700'
   loop: "{{ dot_boot_folders }}"
