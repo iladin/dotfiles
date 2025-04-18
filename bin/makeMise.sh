@@ -10,13 +10,13 @@ if ! hash mise; then
         curl https://mise.run | sh
     fi
 fi
-#TODO work on none bash shell
-if [ "${SHELL##*/}" == "bash" ]; then
-    # Ensure our activate script is in .bashrc, otherwise add it
-    if ! grep -q "mise activate" ~/.bashrc; then
-        echo "eval \"\$($(which mise) activate ${SHELL##*/})\"" >> ~/.bashrc
-    fi
-fi
+# Removed due to hanging
+# if [ "${SHELL##*/}" == "bash" ]; then
+#     # Ensure our activate script is in .bashrc, otherwise add it
+#     if ! grep -q "mise activate" ~/.bashrc; then
+#         echo "eval \"\$($(which mise) activate ${SHELL##*/})\"" >> ~/.bashrc
+#     fi
+# fi
 
 # TODO test to ensure this script is sourced or move it to a different file
 # ae was chosen as the function name because it is easy to type
