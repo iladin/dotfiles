@@ -4,3 +4,5 @@
     state: directory
     mode: '0700'
   loop: "{{ dot_boot_folders }}"
+- import_tasks: root_tasks.yml
+  become: true

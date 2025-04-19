@@ -1,0 +1,10 @@
+- name: Install packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ dot_boot_packages }}"
+  when: ansible_os_family != 'Windows'
+- name: Updatedb
+  ansible.builtin.command:
+    cmd: updatedb
+    creates: /var/lib/mlocate/mlocate.db

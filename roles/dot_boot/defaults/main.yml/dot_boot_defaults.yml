@@ -5,3 +5,5 @@ dot_boot_folders:
   - .git
   - .local
   - .config
+dot_boot_packages:
+  - mlocate
