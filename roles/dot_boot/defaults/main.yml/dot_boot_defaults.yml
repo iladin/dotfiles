@@ -7,3 +7,5 @@ dot_boot_folders:
   - .config
 dot_boot_packages:
   - mlocate
+dot_boot_homebrew_packages:
+  - kubernetes-cli

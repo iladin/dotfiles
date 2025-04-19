@@ -4,5 +4,13 @@
     state: directory
     mode: '0700'
   loop: "{{ dot_boot_folders }}"
-- import_tasks: root_tasks.yml
+- name: Root tasks
+  import_tasks: root_tasks.yml
   become: true
+- name: Include tasks
+  ansible.builtin.include_tasks:
+    file: "{{ item }}"
+  loop_control:
+    label: "tasks"
+  loop:
+    - setup_homebrew.yml

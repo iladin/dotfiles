@@ -1,0 +1,8 @@
+- name: Install homebrew
+  ansible.builtin.command:
+    cmd: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    creates: /home/linuxbrew
+- name: Install homebrew packages
+  community.general.homebrew:
+    name: "{{ item }}"
+  loop: "{{ dot_boot_homebrew_packages }}"
