@@ -94,8 +94,8 @@ alias nowdate='date +"%d-%m-%Y"'
 alias mostRecentFileInDir='ls -rt | tail -1'
 
 # Docker
-alias che='sudo docker run --net=host --name che -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/che/lib:/home/user/che/lib-copy -v /home/user/che/workspaces:/home/user/che/workspaces -v /home/user/che/storage:/home/user/che/storage codenvy/che'
-alias codenvy='sudo docker run -it --rm -v /var/tmp:/data -v /var/run/docker.sock:/var/run/docker.sock codenvy/cli start'
-alias portainer='sudo docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer && echo "open me http://localhost:9000/"'
-alias sen='sudo docker run -v /var/run/docker.sock:/run/docker.sock -ti -e TERM tomastomecek/sen'
+alias che='docker run --net=host --name che -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/che/lib:/home/user/che/lib-copy -v /home/user/che/workspaces:/home/user/che/workspaces -v /home/user/che/storage:/home/user/che/storage codenvy/che'
+alias codenvy='docker run -it --rm -v /var/tmp:/data -v /var/run/docker.sock:/var/run/docker.sock codenvy/cli start'
+alias portainer='docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer && echo "open me http://localhost:9000/"'
+alias sen='docker run -v /var/run/docker.sock:/run/docker.sock -ti -e TERM tomastomecek/sen'
 
