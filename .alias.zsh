@@ -99,3 +99,9 @@ alias codenvy='docker run -it --rm -v /var/tmp:/data -v /var/run/docker.sock:/va
 alias portainer='docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer && echo "open me http://localhost:9000/"'
 alias sen='docker run -v /var/run/docker.sock:/run/docker.sock -ti -e TERM tomastomecek/sen'
 
+# Code
+if hash code; then
+    if hash code-insiders; then
+        alias code='code-insiders'
+    fi
+fi
