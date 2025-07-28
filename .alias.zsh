@@ -100,8 +100,8 @@ alias portainer='docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/doc
 alias sen='docker run -v /var/run/docker.sock:/run/docker.sock -ti -e TERM tomastomecek/sen'
 
 # Code
-if hash code; then
-    if hash code-insiders; then
+if hash code &> /dev/null; then
+    if hash code-insiders &> /dev/null; then
         alias code='code-insiders'
     fi
 fi
